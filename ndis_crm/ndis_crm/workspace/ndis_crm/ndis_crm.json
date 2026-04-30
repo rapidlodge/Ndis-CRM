@@ -1,0 +1,168 @@
+{
+ "app": "ndis_crm",
+ "charts": [],
+ "content": "[{\"id\":\"NDzpoZtAGn\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">NDIS CRM</span>\",\"col\":12}},{\"id\":\"fg15VIGUKg\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Quick Actions</span>\",\"col\":12}},{\"id\":\"RV_M-_FLsn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Participant Intake\",\"col\":3}},{\"id\":\"ofwHoUldBm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Participant Intakes\",\"col\":3}},{\"id\":\"ZQl3i26Eu4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"NDIS Service Lines\",\"col\":3}},{\"id\":\"fEnzdRYcXm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Desk Leads\",\"col\":3}},{\"id\":\"uBlCdNh4IR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Desk Opportunities\",\"col\":3}},{\"id\":\"-EgbrTRwUS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CRM Leads\",\"col\":3}},{\"id\":\"tjcX9uPnzC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CRM Deals\",\"col\":3}},{\"id\":\"Wc562hjGDP\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"NrBhlgtnO8\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Modules</span>\",\"col\":12}},{\"id\":\"GR8vBLV_XL\",\"type\":\"card\",\"data\":{\"card_name\":\"NDIS Intake\",\"col\":4}},{\"id\":\"cdlZFcUATa\",\"type\":\"card\",\"data\":{\"card_name\":\"Frappe CRM\",\"col\":4}}]",
+ "creation": "2026-04-29 14:18:35.256852",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "organization",
+ "idx": 0,
+ "indicator_color": "blue",
+ "is_hidden": 0,
+ "label": "NDIS CRM",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "NDIS Intake",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Participant Intake",
+   "link_count": 0,
+   "link_to": "NDIS Participant Intake",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "NDIS Service Line",
+   "link_count": 0,
+   "link_to": "NDIS Service Line",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lead",
+   "link_count": 0,
+   "link_to": "Lead",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Opportunity",
+   "link_count": 0,
+   "link_to": "Opportunity",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Frappe CRM",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CRM Lead",
+   "link_count": 0,
+   "link_to": "CRM Lead",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CRM Deal",
+   "link_count": 0,
+   "link_to": "CRM Deal",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-04-29 18:34:29.734294",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 25.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "New",
+   "label": "New Participant Intake",
+   "link_to": "NDIS Participant Intake",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Participant Intakes",
+   "link_to": "NDIS Participant Intake",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "NDIS Service Lines",
+   "link_to": "NDIS Service Line",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Desk Leads",
+   "link_to": "Lead",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Desk Opportunities",
+   "link_to": "Opportunity",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "CRM Leads",
+   "link_to": "CRM Lead",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "CRM Deals",
+   "link_to": "CRM Deal",
+   "type": "DocType"
+  }
+ ],
+ "title": "NDIS CRM",
+ "type": "Workspace"
+}

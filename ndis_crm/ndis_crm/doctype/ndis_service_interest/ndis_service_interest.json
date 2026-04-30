@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-28 12:58:21.559043",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "service_line",
+  "support_category",
+  "budget_type",
+  "priority",
+  "required_start_date",
+  "more_details_section",
+  "current_provider",
+  "reason_for_change",
+  "funding_available",
+  "assessment_required",
+  "documents_required",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_line",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Line",
+   "options": "NDIS Service Line",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "service_line.ndis_support_category",
+   "fieldname": "support_category",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Support Category",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "service_line.budget_type",
+   "fieldname": "budget_type",
+   "fieldtype": "Data",
+   "label": "Budget Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent"
+  },
+  {
+   "fieldname": "required_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Required Start Date"
+  },
+  {
+   "fieldname": "more_details_section",
+   "fieldtype": "Section Break",
+   "label": "More Details"
+  },
+  {
+   "fieldname": "current_provider",
+   "fieldtype": "Data",
+   "label": "Current Provider"
+  },
+  {
+   "fieldname": "reason_for_change",
+   "fieldtype": "Small Text",
+   "label": "Reason for Change"
+  },
+  {
+   "fieldname": "funding_available",
+   "fieldtype": "Select",
+   "label": "Funding Available?",
+   "options": "Yes\nNo\nUnknown"
+  },
+  {
+   "default": "0",
+   "fieldname": "assessment_required",
+   "fieldtype": "Check",
+   "label": "Assessment Required?"
+  },
+  {
+   "default": "0",
+   "fieldname": "documents_required",
+   "fieldtype": "Check",
+   "label": "Documents Required?"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-28 12:58:21.559043",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS Service Interest",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

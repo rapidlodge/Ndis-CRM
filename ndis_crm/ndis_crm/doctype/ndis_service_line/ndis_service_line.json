@@ -1,0 +1,209 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:service_line_name",
+ "creation": "2026-04-28 12:58:21.295300",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "service_details_section",
+  "service_line_name",
+  "service_code",
+  "demand_level",
+  "ndis_support_category",
+  "budget_type",
+  "rules_column_break",
+  "requires_intake_assessment",
+  "requires_document_checklist",
+  "requires_risk_screening",
+  "requires_clinical_review",
+  "requires_service_agreement",
+  "requires_roster_handover",
+  "requires_billing_setup",
+  "active",
+  "description_section",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_details_section",
+   "fieldtype": "Section Break",
+   "label": "Service Details"
+  },
+  {
+   "fieldname": "service_line_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service Line Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "service_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service Code"
+  },
+  {
+   "fieldname": "demand_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Demand Level",
+   "options": "Very High\nHigh\nMedium-High\nMedium\nLow"
+  },
+  {
+   "fieldname": "ndis_support_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "NDIS Support Category",
+   "options": "Assistance with Daily Life\nSupported Independent Living\nSocial & Community Participation\nImproved Daily Living\nSupport Coordination\nImproved Relationships\nTransport\nAssistive Technology\nImproved Life Choices\nOther"
+  },
+  {
+   "fieldname": "budget_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Budget Type",
+   "options": "Core\nCapacity Building\nCapital\nRecurring\nUnknown"
+  },
+  {
+   "fieldname": "rules_column_break",
+   "fieldtype": "Column Break",
+   "label": "Rules"
+  },
+  {
+   "default": "1",
+   "fieldname": "requires_intake_assessment",
+   "fieldtype": "Check",
+   "label": "Requires Intake Assessment"
+  },
+  {
+   "default": "1",
+   "fieldname": "requires_document_checklist",
+   "fieldtype": "Check",
+   "label": "Requires Document Checklist"
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_risk_screening",
+   "fieldtype": "Check",
+   "label": "Requires Risk Screening"
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_clinical_review",
+   "fieldtype": "Check",
+   "label": "Requires Clinical Review"
+  },
+  {
+   "default": "1",
+   "fieldname": "requires_service_agreement",
+   "fieldtype": "Check",
+   "label": "Requires Service Agreement"
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_roster_handover",
+   "fieldtype": "Check",
+   "label": "Requires Roster Handover"
+  },
+  {
+   "default": "1",
+   "fieldname": "requires_billing_setup",
+   "fieldtype": "Check",
+   "label": "Requires Billing Setup"
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-28 12:58:21.295300",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS Service Line",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Intake Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Service Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Read Only",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "service_line_name",
+ "track_changes": 1
+}

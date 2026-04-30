@@ -1,0 +1,336 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-04-28 12:58:21.774200",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "crm_links_section",
+  "participant_lead",
+  "opportunity",
+  "status",
+  "intake_officer",
+  "participant_details_section",
+  "participant_name",
+  "ndis_number",
+  "date_of_birth",
+  "primary_disability",
+  "preferred_contact_method",
+  "consent_to_contact",
+  "consent_notes",
+  "plan_details_section",
+  "has_current_ndis_plan",
+  "plan_start_date",
+  "plan_end_date",
+  "plan_management_type",
+  "support_coordinator_name",
+  "support_coordinator_email",
+  "plan_manager_name",
+  "plan_manager_email",
+  "service_needs_section",
+  "current_living_situation",
+  "enquiry_urgency",
+  "service_interests",
+  "risk_screening_section",
+  "risk_level",
+  "behaviour_support_plan_available",
+  "restrictive_practice_flag",
+  "manual_handling_needs",
+  "medication_support_required",
+  "clinical_review_required",
+  "internal_notes_section",
+  "intake_notes",
+  "decision_notes"
+ ],
+ "fields": [
+  {
+   "default": "NDIS-INTAKE-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "NDIS-INTAKE-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "crm_links_section",
+   "fieldtype": "Section Break",
+   "label": "CRM Links"
+  },
+  {
+   "fieldname": "participant_lead",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Participant Lead",
+   "options": "Lead"
+  },
+  {
+   "fieldname": "opportunity",
+   "fieldtype": "Link",
+   "label": "Opportunity",
+   "options": "Opportunity"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nContacted\nIntake Started\nWaiting Documents\nFunding Review\nSuitability Review\nQualified\nNot Suitable\nConverted"
+  },
+  {
+   "fieldname": "intake_officer",
+   "fieldtype": "Link",
+   "label": "Intake Officer",
+   "options": "User"
+  },
+  {
+   "fieldname": "participant_details_section",
+   "fieldtype": "Section Break",
+   "label": "Participant Details"
+  },
+  {
+   "fieldname": "participant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Participant Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ndis_number",
+   "fieldtype": "Data",
+   "label": "NDIS Number"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "primary_disability",
+   "fieldtype": "Data",
+   "label": "Primary Disability"
+  },
+  {
+   "fieldname": "preferred_contact_method",
+   "fieldtype": "Select",
+   "label": "Preferred Contact Method",
+   "options": "Phone\nEmail\nSMS\nIn Person\nSupport Coordinator\nFamily / Nominee"
+  },
+  {
+   "default": "0",
+   "fieldname": "consent_to_contact",
+   "fieldtype": "Check",
+   "label": "Consent to Contact"
+  },
+  {
+   "fieldname": "consent_notes",
+   "fieldtype": "Small Text",
+   "label": "Consent Notes"
+  },
+  {
+   "fieldname": "plan_details_section",
+   "fieldtype": "Section Break",
+   "label": "Plan Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "has_current_ndis_plan",
+   "fieldtype": "Check",
+   "label": "Has Current NDIS Plan"
+  },
+  {
+   "fieldname": "plan_start_date",
+   "fieldtype": "Date",
+   "label": "Plan Start Date"
+  },
+  {
+   "fieldname": "plan_end_date",
+   "fieldtype": "Date",
+   "label": "Plan End Date"
+  },
+  {
+   "fieldname": "plan_management_type",
+   "fieldtype": "Select",
+   "label": "Plan Management Type",
+   "options": "NDIA Managed\nPlan Managed\nSelf Managed\nMixed\nUnknown"
+  },
+  {
+   "fieldname": "support_coordinator_name",
+   "fieldtype": "Data",
+   "label": "Support Coordinator Name"
+  },
+  {
+   "fieldname": "support_coordinator_email",
+   "fieldtype": "Data",
+   "label": "Support Coordinator Email"
+  },
+  {
+   "fieldname": "plan_manager_name",
+   "fieldtype": "Data",
+   "label": "Plan Manager Name"
+  },
+  {
+   "fieldname": "plan_manager_email",
+   "fieldtype": "Data",
+   "label": "Plan Manager Email"
+  },
+  {
+   "fieldname": "service_needs_section",
+   "fieldtype": "Section Break",
+   "label": "Service Needs"
+  },
+  {
+   "fieldname": "current_living_situation",
+   "fieldtype": "Select",
+   "label": "Current Living Situation",
+   "options": "Own Home\nFamily Home\nHospital\nSIL\nSDA\nTemporary Accommodation\nAged Care\nHomeless / At Risk\nOther"
+  },
+  {
+   "fieldname": "enquiry_urgency",
+   "fieldtype": "Select",
+   "label": "Enquiry Urgency",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "service_interests",
+   "fieldtype": "Table",
+   "label": "Service Interests",
+   "options": "NDIS Service Interest"
+  },
+  {
+   "fieldname": "risk_screening_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Screening"
+  },
+  {
+   "fieldname": "risk_level",
+   "fieldtype": "Select",
+   "label": "Risk Level",
+   "options": "None\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "default": "0",
+   "fieldname": "behaviour_support_plan_available",
+   "fieldtype": "Check",
+   "label": "Behaviour Support Plan Available"
+  },
+  {
+   "default": "0",
+   "fieldname": "restrictive_practice_flag",
+   "fieldtype": "Check",
+   "label": "Restrictive Practice Flag"
+  },
+  {
+   "default": "0",
+   "fieldname": "manual_handling_needs",
+   "fieldtype": "Check",
+   "label": "Manual Handling Needs"
+  },
+  {
+   "default": "0",
+   "fieldname": "medication_support_required",
+   "fieldtype": "Check",
+   "label": "Medication Support Required"
+  },
+  {
+   "default": "0",
+   "fieldname": "clinical_review_required",
+   "fieldtype": "Check",
+   "label": "Clinical Review Required"
+  },
+  {
+   "fieldname": "internal_notes_section",
+   "fieldtype": "Section Break",
+   "label": "Internal Notes"
+  },
+  {
+   "fieldname": "intake_notes",
+   "fieldtype": "Small Text",
+   "label": "Intake Notes"
+  },
+  {
+   "fieldname": "decision_notes",
+   "fieldtype": "Small Text",
+   "label": "Decision Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-28 12:58:21.774200",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS Participant Intake",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Intake Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Service Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Read Only",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "participant_name",
+ "track_changes": 1
+}

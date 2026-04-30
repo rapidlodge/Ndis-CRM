@@ -11,15 +11,6 @@ app_license = "mit"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "ndis_crm",
-# 		"logo": "/assets/ndis_crm/logo.png",
-# 		"title": "NDIS CRM",
-# 		"route": "/ndis_crm",
-# 		"has_permission": "ndis_crm.api.permission.has_app_permission"
-# 	}
-# ]
 
 # Includes in <head>
 # ------------------
@@ -256,3 +247,116 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+
+# -------------------------------
+# NDIS CRM Foundation
+# -------------------------------
+
+after_install = "ndis_crm.setup.foundation.after_install"
+
+# fixtures = [
+#     {
+#         "doctype": "Custom Field",
+#         "filters": [
+#             [
+#                 "dt",
+#                 "in",
+#                 [
+#                     "Lead",
+#                     "Opportunity",
+#                     "CRM Lead",
+#                     "CRM Deal",
+#                 ]
+#             ]
+#         ]
+#     },
+#     {
+#         "doctype": "Role",
+#         "filters": [
+#             [
+#                 "name",
+#                 "in",
+#                 [
+#                     "NDIS CRM Manager",
+#                     "NDIS Intake Officer",
+#                     "NDIS Service Manager",
+#                     "NDIS Plan Management Officer",
+#                     "NDIS CRM Read Only"
+#                 ]
+#             ]
+#         ]
+#     }
+    
+# ]
+fixtures = [
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            [
+                "dt",
+                "in",
+                [
+                    "Lead",
+                    "Opportunity",
+                    "CRM Lead",
+                    "CRM Deal"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "Role",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "NDIS CRM Manager",
+                    "NDIS Intake Officer",
+                    "NDIS Service Manager",
+                    "NDIS Plan Management Officer",
+                    "NDIS CRM Read Only"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "Workspace",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "NDIS CRM"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "Desktop Icon",
+        "filters": [
+            [
+                "app",
+                "=",
+                "ndis_crm"
+            ]
+        ]
+    }
+]
+# -------------------------------
+# NDIS CRM App Icon - Final
+# -------------------------------
+
+# -------------------------------
+# NDIS CRM App Icon
+# -------------------------------
+
+add_to_apps_screen = [
+    {
+        "name": "ndis_crm",
+        "logo": "/assets/ndis_crm/images/ndis_crm.svg",
+        "title": "NDIS CRM",
+        "route": "/app/ndis-crm",
+        "has_permission": "ndis_crm.api.has_app_permission",
+    }
+]
