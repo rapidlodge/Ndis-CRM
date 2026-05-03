@@ -1,0 +1,142 @@
+[
+ {
+  "color": "teal",
+  "docstatus": 0,
+  "doctype": "CRM Lead Status",
+  "lead_status": "Contacted",
+  "modified": "2026-04-30 17:32:32.245666",
+  "name": "Contacted",
+  "position": 30,
+  "type": "Ongoing"
+ },
+ {
+  "color": "green",
+  "docstatus": 0,
+  "doctype": "CRM Lead Status",
+  "lead_status": "Converted",
+  "modified": "2026-04-30 17:32:32.285914",
+  "name": "Converted",
+  "position": 80,
+  "type": "Won"
+ },
+ {
+  "color": "blue",
+  "docstatus": 0,
+  "doctype": "CRM Lead Status",
+  "lead_status": "New Enquiry",
+  "modified": "2026-04-30 17:32:32.170866",
+  "name": "New Enquiry",
+  "position": 10,
+  "type": "Open"
+ },
+ {
+  "color": "cyan",
+  "docstatus": 0,
+  "doctype": "CRM Lead Status",
+  "lead_status": "Contact Attempted",
+  "modified": "2026-04-30 17:32:32.239973",
+  "name": "Contact Attempted",
+  "position": 20,
+  "type": "Ongoing"
+ },
+ {
+  "color": "orange",
+  "docstatus": 0,
+  "doctype": "CRM Lead Status",
+  "lead_status": "Intake Started",
+  "modified": "2026-04-30 17:32:32.252158",
+  "name": "Intake Started",
+  "position": 40,
+  "type": "Ongoing"
+ },
+ {
+  "color": "amber",
+  "docstatus": 0,
+  "doctype": "CRM Lead Status",
+  "lead_status": "Waiting Documents",
+  "modified": "2026-04-30 17:32:32.257597",
+  "name": "Waiting Documents",
+  "position": 50,
+  "type": "On Hold"
+ },
+ {
+  "color": "violet",
+  "docstatus": 0,
+  "doctype": "CRM Lead Status",
+  "lead_status": "Funding / Suitability Review",
+  "modified": "2026-04-30 17:32:32.270119",
+  "name": "Funding / Suitability Review",
+  "position": 60,
+  "type": "Ongoing"
+ },
+ {
+  "color": "red",
+  "docstatus": 0,
+  "doctype": "CRM Lead Status",
+  "lead_status": "Not Suitable",
+  "modified": "2026-04-30 17:32:32.292901",
+  "name": "Not Suitable",
+  "position": 90,
+  "type": "Lost"
+ },
+ {
+  "color": "gray",
+  "docstatus": 0,
+  "doctype": "CRM Lead Status",
+  "lead_status": "No Response",
+  "modified": "2026-04-30 17:32:32.306048",
+  "name": "No Response",
+  "position": 100,
+  "type": "Lost"
+ },
+ {
+  "color": "gray",
+  "docstatus": 0,
+  "doctype": "CRM Lead Status",
+  "lead_status": "Duplicate",
+  "modified": "2026-04-30 17:32:32.313991",
+  "name": "Duplicate",
+  "position": 110,
+  "type": "Lost"
+ },
+ {
+  "color": "red",
+  "docstatus": 0,
+  "doctype": "CRM Lead Status",
+  "lead_status": "Declined by Participant",
+  "modified": "2026-04-30 17:32:32.320400",
+  "name": "Declined by Participant",
+  "position": 120,
+  "type": "Lost"
+ },
+ {
+  "color": "red",
+  "docstatus": 0,
+  "doctype": "CRM Lead Status",
+  "lead_status": "No Funding",
+  "modified": "2026-04-30 17:32:32.332210",
+  "name": "No Funding",
+  "position": 130,
+  "type": "Lost"
+ },
+ {
+  "color": "orange",
+  "docstatus": 0,
+  "doctype": "CRM Lead Status",
+  "lead_status": "Provider Capacity Issue",
+  "modified": "2026-04-30 17:32:32.338363",
+  "name": "Provider Capacity Issue",
+  "position": 140,
+  "type": "On Hold"
+ },
+ {
+  "color": "green",
+  "docstatus": 0,
+  "doctype": "CRM Lead Status",
+  "lead_status": "Qualified",
+  "modified": "2026-04-30 17:32:32.276889",
+  "name": "Qualified",
+  "position": 70,
+  "type": "Won"
+ }
+]

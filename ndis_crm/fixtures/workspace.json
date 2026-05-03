@@ -2,11 +2,11 @@
  {
   "app": "ndis_crm",
   "charts": [],
-  "content": "[{\"id\":\"NDzpoZtAGn\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">NDIS CRM</span>\",\"col\":12}},{\"id\":\"fg15VIGUKg\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Quick Actions</span>\",\"col\":12}},{\"id\":\"RV_M-_FLsn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Participant Intake\",\"col\":3}},{\"id\":\"ofwHoUldBm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Participant Intakes\",\"col\":3}},{\"id\":\"ZQl3i26Eu4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"NDIS Service Lines\",\"col\":3}},{\"id\":\"fEnzdRYcXm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Desk Leads\",\"col\":3}},{\"id\":\"uBlCdNh4IR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Desk Opportunities\",\"col\":3}},{\"id\":\"-EgbrTRwUS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CRM Leads\",\"col\":3}},{\"id\":\"tjcX9uPnzC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CRM Deals\",\"col\":3}},{\"id\":\"Wc562hjGDP\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"NrBhlgtnO8\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Modules</span>\",\"col\":12}},{\"id\":\"GR8vBLV_XL\",\"type\":\"card\",\"data\":{\"card_name\":\"NDIS Intake\",\"col\":4}},{\"id\":\"cdlZFcUATa\",\"type\":\"card\",\"data\":{\"card_name\":\"Frappe CRM\",\"col\":4}}]",
+  "content": "[{\"id\":\"J3_rJNwifn\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">NDIS CRM</span>\",\"col\":12}},{\"id\":\"052F1sKvBP\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Quick Actions</span>\",\"col\":12}},{\"id\":\"EQQk0m3Lzx\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Participant Intake\",\"col\":3}},{\"id\":\"P2Ler3gwzT\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Participant Intakes\",\"col\":3}},{\"id\":\"xj9hi0IIKf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"NDIS Service Lines\",\"col\":3}},{\"id\":\"HP_eZ7KsW7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Desk Leads\",\"col\":3}},{\"id\":\"ChIZoABUP8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Desk Opportunities\",\"col\":3}},{\"id\":\"xhtIje-xsC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CRM Leads\",\"col\":3}},{\"id\":\"CMPg1otpkF\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CRM Deals\",\"col\":3}},{\"id\":\"yrVEVyuBOM\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Xbn45pI6Dr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Modules</span>\",\"col\":12}},{\"id\":\"ta3Iftdjum\",\"type\":\"card\",\"data\":{\"card_name\":\"NDIS Intake\",\"col\":4}},{\"id\":\"Y0TT08LvU0\",\"type\":\"card\",\"data\":{\"card_name\":\"ERPNext CRM\",\"col\":4}},{\"id\":\"cMT0UFUMKY\",\"type\":\"card\",\"data\":{\"card_name\":\"Frappe CRM\",\"col\":4}}]",
   "custom_blocks": [],
   "docstatus": 0,
   "doctype": "Workspace",
-  "external_link": null,
+  "external_link": "http://127.0.0.1:8000/desk/ndis-crm",
   "for_user": "",
   "hide_custom": 0,
   "icon": "organization",
@@ -60,6 +60,21 @@
     "only_for": null,
     "report_ref_doctype": null,
     "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "ERPNext CRM",
+    "link_count": 0,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "report_ref_doctype": null,
+    "type": "Card Break"
    },
    {
     "dependencies": "",
@@ -137,7 +152,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2026-04-29 18:34:29.734294",
+  "modified": "2026-05-02 15:02:04.271571",
   "module": "NDIS CRM",
   "name": "NDIS CRM",
   "number_cards": [],

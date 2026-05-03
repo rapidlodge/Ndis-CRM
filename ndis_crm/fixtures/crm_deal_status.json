@@ -1,0 +1,112 @@
+[
+ {
+  "color": "red",
+  "deal_status": "Lost",
+  "docstatus": 0,
+  "doctype": "CRM Deal Status",
+  "modified": "2026-04-30 17:32:32.470770",
+  "name": "Lost",
+  "position": 100,
+  "probability": 0.0,
+  "type": "Lost"
+ },
+ {
+  "color": "blue",
+  "deal_status": "New Opportunity",
+  "docstatus": 0,
+  "doctype": "CRM Deal Status",
+  "modified": "2026-04-30 17:32:32.374729",
+  "name": "New Opportunity",
+  "position": 10,
+  "probability": 5.0,
+  "type": "Open"
+ },
+ {
+  "color": "cyan",
+  "deal_status": "Service Need Confirmed",
+  "docstatus": 0,
+  "doctype": "CRM Deal Status",
+  "modified": "2026-04-30 17:32:32.400371",
+  "name": "Service Need Confirmed",
+  "position": 20,
+  "probability": 15.0,
+  "type": "Ongoing"
+ },
+ {
+  "color": "orange",
+  "deal_status": "Documents Requested",
+  "docstatus": 0,
+  "doctype": "CRM Deal Status",
+  "modified": "2026-04-30 17:32:32.409664",
+  "name": "Documents Requested",
+  "position": 30,
+  "probability": 25.0,
+  "type": "Ongoing"
+ },
+ {
+  "color": "teal",
+  "deal_status": "Documents Collected",
+  "docstatus": 0,
+  "doctype": "CRM Deal Status",
+  "modified": "2026-04-30 17:32:32.417895",
+  "name": "Documents Collected",
+  "position": 40,
+  "probability": 35.0,
+  "type": "Ongoing"
+ },
+ {
+  "color": "violet",
+  "deal_status": "Funding Verified",
+  "docstatus": 0,
+  "doctype": "CRM Deal Status",
+  "modified": "2026-04-30 17:32:32.429087",
+  "name": "Funding Verified",
+  "position": 50,
+  "probability": 50.0,
+  "type": "Ongoing"
+ },
+ {
+  "color": "amber",
+  "deal_status": "Service Agreement Sent",
+  "docstatus": 0,
+  "doctype": "CRM Deal Status",
+  "modified": "2026-04-30 17:32:32.435106",
+  "name": "Service Agreement Sent",
+  "position": 60,
+  "probability": 65.0,
+  "type": "Ongoing"
+ },
+ {
+  "color": "green",
+  "deal_status": "Service Agreement Signed",
+  "docstatus": 0,
+  "doctype": "CRM Deal Status",
+  "modified": "2026-04-30 17:32:32.441288",
+  "name": "Service Agreement Signed",
+  "position": 70,
+  "probability": 80.0,
+  "type": "Ongoing"
+ },
+ {
+  "color": "purple",
+  "deal_status": "Handover to Operations",
+  "docstatus": 0,
+  "doctype": "CRM Deal Status",
+  "modified": "2026-04-30 17:32:32.453925",
+  "name": "Handover to Operations",
+  "position": 80,
+  "probability": 90.0,
+  "type": "Ongoing"
+ },
+ {
+  "color": "green",
+  "deal_status": "Won / Active Client",
+  "docstatus": 0,
+  "doctype": "CRM Deal Status",
+  "modified": "2026-04-30 17:32:32.461656",
+  "name": "Won / Active Client",
+  "position": 90,
+  "probability": 100.0,
+  "type": "Won"
+ }
+]

@@ -356,7 +356,107 @@ add_to_apps_screen = [
         "name": "ndis_crm",
         "logo": "/assets/ndis_crm/images/ndis_crm.svg",
         "title": "NDIS CRM",
-        "route": "/app/ndis-crm",
+        "route": "/ndis-crm",
         "has_permission": "ndis_crm.api.has_app_permission",
     }
 ]
+
+# -------------------------------
+# NDIS CRM Phase 2 - Frappe CRM Hooks
+# -------------------------------
+
+try:
+    doc_events
+except NameError:
+    doc_events = {}
+
+doc_events.update({
+    "CRM Lead": {
+        "validate": "ndis_crm.phase2_api.validate_crm_lead"
+    },
+    "CRM Deal": {
+        "validate": "ndis_crm.phase2_api.validate_crm_deal"
+    },
+    "NDIS Participant Intake": {
+        "validate": "ndis_crm.phase2_api.validate_intake"
+    }
+})
+
+try:
+    fixtures
+except NameError:
+    fixtures = []
+
+fixtures.extend([
+    {
+        "doctype": "CRM Lead Status",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "New Enquiry",
+                    "Contact Attempted",
+                    "Contacted",
+                    "Intake Started",
+                    "Waiting Documents",
+                    "Funding / Suitability Review",
+                    "Qualified",
+                    "Converted",
+                    "Not Suitable",
+                    "No Response",
+                    "Duplicate",
+                    "Declined by Participant",
+                    "No Funding",
+                    "Provider Capacity Issue"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "CRM Deal Status",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "New Opportunity",
+                    "Service Need Confirmed",
+                    "Documents Requested",
+                    "Documents Collected",
+                    "Funding Verified",
+                    "Service Agreement Sent",
+                    "Service Agreement Signed",
+                    "Handover to Operations",
+                    "Won / Active Client",
+                    "Lost"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "CRM Form Script",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "NDIS CRM Lead Actions",
+                    "NDIS CRM Deal Actions"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "Client Script",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "NDIS Participant Intake Actions"
+                ]
+            ]
+        ]
+    }
+])

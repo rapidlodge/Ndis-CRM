@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "NDIS Participant Intake",
+  "enabled": 1,
+  "modified": "2026-04-30 17:32:32.578216",
+  "module": null,
+  "name": "NDIS Participant Intake Actions",
+  "script": "frappe.ui.form.on(\"NDIS Participant Intake\", {\n    refresh(frm) {\n        if (!frm.is_new()) {\n            frm.add_custom_button(__(\"Create CRM Deal\"), function () {\n                frappe.call({\n                    method: \"ndis_crm.phase2_api.create_crm_deal_from_intake\",\n                    args: {\n                        intake: frm.doc.name\n                    },\n                    freeze: true,\n                    freeze_message: __(\"Creating CRM Deal...\")\n                }).then((r) => {\n                    if (r.message && r.message.name) {\n                        frappe.show_alert({\n                            message: r.message.created ? __(\"CRM Deal created\") : __(\"Existing CRM Deal found\"),\n                            indicator: \"green\"\n                        });\n\n                        frm.reload_doc();\n\n                        frappe.set_route(\"Form\", \"CRM Deal\", r.message.name);\n                    }\n                });\n            }, __(\"Actions\"));\n        }\n    }\n});",
+  "view": "Form"
+ }
+]
