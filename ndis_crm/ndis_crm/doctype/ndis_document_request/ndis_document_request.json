@@ -1,0 +1,303 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-05-03 15:01:00.966678",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "source_links_section",
+  "crm_lead",
+  "participant_intake",
+  "crm_deal",
+  "participant_customer",
+  "source_reference_column",
+  "source_doctype",
+  "source_name",
+  "document_details_section",
+  "document_type",
+  "document_type_name",
+  "is_required",
+  "required_before",
+  "required_for_services",
+  "status_details_section",
+  "status",
+  "requested_date",
+  "due_date",
+  "received_date",
+  "expiry_date",
+  "file_review_section",
+  "uploaded_file",
+  "reviewed_by",
+  "reviewed_on",
+  "review_notes",
+  "missing_reason",
+  "notes_section",
+  "notes"
+ ],
+ "fields": [
+  {
+   "default": "NDIS-DOC-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "NDIS-DOC-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "source_links_section",
+   "fieldtype": "Section Break",
+   "label": "Source Links"
+  },
+  {
+   "fieldname": "crm_lead",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "CRM Lead",
+   "options": "CRM Lead"
+  },
+  {
+   "fieldname": "participant_intake",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NDIS Participant Intake",
+   "options": "NDIS Participant Intake"
+  },
+  {
+   "fieldname": "crm_deal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "CRM Deal",
+   "options": "CRM Deal"
+  },
+  {
+   "fieldname": "participant_customer",
+   "fieldtype": "Link",
+   "label": "Participant Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "source_reference_column",
+   "fieldtype": "Column Break",
+   "label": "Source Reference"
+  },
+  {
+   "fieldname": "source_doctype",
+   "fieldtype": "Data",
+   "label": "Source DocType",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_name",
+   "fieldtype": "Data",
+   "label": "Source Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "document_details_section",
+   "fieldtype": "Section Break",
+   "label": "Document Details"
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Document Type",
+   "options": "NDIS Document Type",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "document_type.document_type_name",
+   "fieldname": "document_type_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Document Type Name",
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_required",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Required?"
+  },
+  {
+   "fieldname": "required_before",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Required Before",
+   "options": "Intake Qualification\nFunding Verification\nService Agreement Sent\nOperations Handover"
+  },
+  {
+   "fieldname": "required_for_services",
+   "fieldtype": "Small Text",
+   "label": "Required For Services"
+  },
+  {
+   "fieldname": "status_details_section",
+   "fieldtype": "Section Break",
+   "label": "Status Details"
+  },
+  {
+   "default": "Requested",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Requested\nReceived\nReviewed\nAccepted\nRejected\nExpired\nNot Required"
+  },
+  {
+   "default": "Today",
+   "fieldname": "requested_date",
+   "fieldtype": "Date",
+   "label": "Requested Date"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "received_date",
+   "fieldtype": "Date",
+   "label": "Received Date"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "file_review_section",
+   "fieldtype": "Section Break",
+   "label": "File and Review"
+  },
+  {
+   "fieldname": "uploaded_file",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Uploaded File"
+  },
+  {
+   "fieldname": "reviewed_by",
+   "fieldtype": "Link",
+   "label": "Reviewed By",
+   "options": "User"
+  },
+  {
+   "fieldname": "reviewed_on",
+   "fieldtype": "Datetime",
+   "label": "Reviewed On"
+  },
+  {
+   "fieldname": "review_notes",
+   "fieldtype": "Small Text",
+   "label": "Review Notes"
+  },
+  {
+   "fieldname": "missing_reason",
+   "fieldtype": "Small Text",
+   "label": "Missing / Rejection Reason"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-03 15:01:00.966678",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS Document Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Intake Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Service Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Plan Management Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Read Only",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "document_type_name",
+ "track_changes": 1
+}

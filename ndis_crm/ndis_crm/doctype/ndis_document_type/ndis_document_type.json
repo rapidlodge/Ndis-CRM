@@ -1,0 +1,179 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:document_type_name",
+ "creation": "2026-05-03 15:00:58.239612",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "document_type_details_section",
+  "document_type_name",
+  "document_code",
+  "document_category",
+  "active",
+  "control_rules_column",
+  "requires_review",
+  "requires_expiry_date",
+  "default_mandatory",
+  "description_section",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "document_type_details_section",
+   "fieldtype": "Section Break",
+   "label": "Document Type Details"
+  },
+  {
+   "fieldname": "document_type_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Document Type Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "document_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Document Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "document_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Document Category",
+   "options": "Identity\nNDIS Plan\nConsent\nClinical\nRisk\nService Agreement\nFinance\nSIL\nTransport\nAssistive Technology\nOther"
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Active"
+  },
+  {
+   "fieldname": "control_rules_column",
+   "fieldtype": "Column Break",
+   "label": "Control Rules"
+  },
+  {
+   "default": "1",
+   "fieldname": "requires_review",
+   "fieldtype": "Check",
+   "label": "Requires Review"
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_expiry_date",
+   "fieldtype": "Check",
+   "label": "Requires Expiry Date"
+  },
+  {
+   "default": "1",
+   "fieldname": "default_mandatory",
+   "fieldtype": "Check",
+   "label": "Default Mandatory"
+  },
+  {
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-03 15:00:58.239612",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS Document Type",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Intake Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Service Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Plan Management Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Read Only",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "document_type_name",
+ "track_changes": 1
+}

@@ -460,3 +460,45 @@ fixtures.extend([
         ]
     }
 ])
+
+# -------------------------------
+# NDIS CRM Phase 3 - Document Collection Hooks
+# -------------------------------
+
+try:
+    doc_events
+except NameError:
+    doc_events = {}
+
+doc_events.setdefault("CRM Deal", {})
+doc_events["CRM Deal"]["validate"] = "ndis_crm.phase3_documents.validate_crm_deal_combined"
+
+doc_events.setdefault("NDIS Document Request", {})
+doc_events["NDIS Document Request"]["after_insert"] = "ndis_crm.phase3_documents.on_document_request_update"
+doc_events["NDIS Document Request"]["on_update"] = "ndis_crm.phase3_documents.on_document_request_update"
+
+try:
+    fixtures
+except NameError:
+    fixtures = []
+
+fixtures.extend([
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            [
+                "dt",
+                "in",
+                [
+                    "NDIS Participant Intake"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "NDIS Document Type"
+    },
+    {
+        "doctype": "NDIS Service Document Rule"
+    }
+])
