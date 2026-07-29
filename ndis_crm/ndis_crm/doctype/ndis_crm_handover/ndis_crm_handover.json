@@ -1,0 +1,368 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-07-29 16:09:24.960862",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "handover_status_section",
+  "status",
+  "handover_type",
+  "readiness_percent",
+  "handover_ready",
+  "crm_links_section",
+  "crm_lead",
+  "crm_deal",
+  "participant_intake",
+  "participant_customer",
+  "ndis_financial_profile",
+  "participant_details_section",
+  "participant_name",
+  "ndis_number",
+  "date_of_birth",
+  "plan_details_section",
+  "plan_start_date",
+  "plan_end_date",
+  "plan_management_type",
+  "funding_source",
+  "default_house",
+  "default_cost_center",
+  "deal_readiness_snapshot_section",
+  "funding_verified",
+  "service_agreement_status",
+  "required_documents_collected",
+  "team_assignment_section",
+  "operations_owner",
+  "finance_owner",
+  "rostering_owner",
+  "clinical_owner",
+  "target_start_date",
+  "checklist_section",
+  "checklist_items",
+  "notes_section",
+  "handover_notes",
+  "rejection_notes"
+ ],
+ "fields": [
+  {
+   "default": "NDIS-HANDOVER-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "NDIS-HANDOVER-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "handover_status_section",
+   "fieldtype": "Section Break",
+   "label": "Handover Status"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nChecklist Pending\nReady for Operations\nHanded Over\nAccepted\nRejected"
+  },
+  {
+   "fieldname": "handover_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Handover Type"
+  },
+  {
+   "fieldname": "readiness_percent",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Readiness %",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "handover_ready",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Handover Ready",
+   "read_only": 1
+  },
+  {
+   "fieldname": "crm_links_section",
+   "fieldtype": "Section Break",
+   "label": "CRM Links"
+  },
+  {
+   "fieldname": "crm_lead",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "CRM Lead",
+   "options": "CRM Lead"
+  },
+  {
+   "fieldname": "crm_deal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "CRM Deal",
+   "options": "CRM Deal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "participant_intake",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NDIS Participant Intake",
+   "options": "NDIS Participant Intake"
+  },
+  {
+   "fieldname": "participant_customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Participant Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "ndis_financial_profile",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NDIS Financial Profile",
+   "options": "NDIS Participant Financial Profile"
+  },
+  {
+   "fieldname": "participant_details_section",
+   "fieldtype": "Section Break",
+   "label": "Participant Details"
+  },
+  {
+   "fieldname": "participant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Participant Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ndis_number",
+   "fieldtype": "Data",
+   "label": "NDIS Number"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "plan_details_section",
+   "fieldtype": "Section Break",
+   "label": "Plan Details"
+  },
+  {
+   "fieldname": "plan_start_date",
+   "fieldtype": "Date",
+   "label": "Plan Start Date"
+  },
+  {
+   "fieldname": "plan_end_date",
+   "fieldtype": "Date",
+   "label": "Plan End Date"
+  },
+  {
+   "fieldname": "plan_management_type",
+   "fieldtype": "Select",
+   "label": "Plan Management Type",
+   "options": "NDIA Managed\nPlan Managed\nSelf Managed\nMixed\nUnknown"
+  },
+  {
+   "fieldname": "funding_source",
+   "fieldtype": "Link",
+   "label": "Funding Source",
+   "options": "NDIS Funding Source"
+  },
+  {
+   "fieldname": "default_house",
+   "fieldtype": "Link",
+   "label": "Default House",
+   "options": "NDIS House"
+  },
+  {
+   "fieldname": "default_cost_center",
+   "fieldtype": "Link",
+   "label": "Default Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "deal_readiness_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Deal Readiness Snapshot"
+  },
+  {
+   "default": "0",
+   "fieldname": "funding_verified",
+   "fieldtype": "Check",
+   "label": "Funding Verified",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_agreement_status",
+   "fieldtype": "Data",
+   "label": "Service Agreement Status",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "required_documents_collected",
+   "fieldtype": "Check",
+   "label": "Required Documents Collected",
+   "read_only": 1
+  },
+  {
+   "fieldname": "team_assignment_section",
+   "fieldtype": "Section Break",
+   "label": "Team Assignment"
+  },
+  {
+   "fieldname": "operations_owner",
+   "fieldtype": "Link",
+   "label": "Operations Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "finance_owner",
+   "fieldtype": "Link",
+   "label": "Finance Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "rostering_owner",
+   "fieldtype": "Link",
+   "label": "Rostering Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "clinical_owner",
+   "fieldtype": "Link",
+   "label": "Clinical Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "target_start_date",
+   "fieldtype": "Date",
+   "label": "Target Start Date"
+  },
+  {
+   "fieldname": "checklist_section",
+   "fieldtype": "Section Break",
+   "label": "Checklist"
+  },
+  {
+   "fieldname": "checklist_items",
+   "fieldtype": "Table",
+   "label": "Checklist Items",
+   "options": "NDIS CRM Handover Checklist Item"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "handover_notes",
+   "fieldtype": "Small Text",
+   "label": "Handover Notes"
+  },
+  {
+   "fieldname": "rejection_notes",
+   "fieldtype": "Small Text",
+   "label": "Rejection / Return Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-29 16:09:24.960862",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Handover",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Intake Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Service Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Plan Management Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Read Only",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "participant_name",
+ "track_changes": 1
+}

@@ -1,0 +1,305 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-07-29 18:48:06.112451",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "status_section",
+  "status",
+  "readiness_percent",
+  "finance_ready",
+  "source_links_section",
+  "handover",
+  "crm_deal",
+  "crm_lead",
+  "participant_intake",
+  "participant_customer",
+  "ndis_financial_profile",
+  "participant_details_section",
+  "participant_name",
+  "ndis_number",
+  "plan_finance_section",
+  "plan_start_date",
+  "plan_end_date",
+  "plan_management_type",
+  "funding_source",
+  "default_house",
+  "default_cost_center",
+  "finance_owner",
+  "target_finance_setup_date",
+  "service_setup_section",
+  "service_rows",
+  "notes_section",
+  "finance_setup_notes",
+  "returned_notes"
+ ],
+ "fields": [
+  {
+   "default": "NDIS-FIN-ONB-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "NDIS-FIN-ONB-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nIn Review\nReady for Finance\nFinance Setup Started\nBudget Setup Complete\nService Booking Complete\nCompleted\nReturned to CRM\nCancelled"
+  },
+  {
+   "fieldname": "readiness_percent",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Readiness %",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "finance_ready",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Finance Ready",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_links_section",
+   "fieldtype": "Section Break",
+   "label": "Source Links"
+  },
+  {
+   "fieldname": "handover",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NDIS CRM Handover",
+   "options": "NDIS CRM Handover",
+   "reqd": 1
+  },
+  {
+   "fieldname": "crm_deal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "CRM Deal",
+   "options": "CRM Deal"
+  },
+  {
+   "fieldname": "crm_lead",
+   "fieldtype": "Link",
+   "label": "CRM Lead",
+   "options": "CRM Lead"
+  },
+  {
+   "fieldname": "participant_intake",
+   "fieldtype": "Link",
+   "label": "NDIS Participant Intake",
+   "options": "NDIS Participant Intake"
+  },
+  {
+   "fieldname": "participant_customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Participant Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "ndis_financial_profile",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NDIS Participant Financial Profile",
+   "options": "NDIS Participant Financial Profile"
+  },
+  {
+   "fieldname": "participant_details_section",
+   "fieldtype": "Section Break",
+   "label": "Participant Details"
+  },
+  {
+   "fieldname": "participant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Participant Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ndis_number",
+   "fieldtype": "Data",
+   "label": "NDIS Number"
+  },
+  {
+   "fieldname": "plan_finance_section",
+   "fieldtype": "Section Break",
+   "label": "Plan and Finance Details"
+  },
+  {
+   "fieldname": "plan_start_date",
+   "fieldtype": "Date",
+   "label": "Plan Start Date"
+  },
+  {
+   "fieldname": "plan_end_date",
+   "fieldtype": "Date",
+   "label": "Plan End Date"
+  },
+  {
+   "fieldname": "plan_management_type",
+   "fieldtype": "Select",
+   "label": "Plan Management Type",
+   "options": "NDIA Managed\nPlan Managed\nSelf Managed\nMixed\nUnknown"
+  },
+  {
+   "fieldname": "funding_source",
+   "fieldtype": "Link",
+   "label": "Funding Source",
+   "options": "NDIS Funding Source"
+  },
+  {
+   "fieldname": "default_house",
+   "fieldtype": "Link",
+   "label": "Default House",
+   "options": "NDIS House"
+  },
+  {
+   "fieldname": "default_cost_center",
+   "fieldtype": "Link",
+   "label": "Default Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "finance_owner",
+   "fieldtype": "Link",
+   "label": "Finance Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "target_finance_setup_date",
+   "fieldtype": "Date",
+   "label": "Target Finance Setup Date"
+  },
+  {
+   "fieldname": "service_setup_section",
+   "fieldtype": "Section Break",
+   "label": "Service Setup Rows"
+  },
+  {
+   "fieldname": "service_rows",
+   "fieldtype": "Table",
+   "label": "Service Rows",
+   "options": "NDIS CRM Finance Onboarding Service"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "finance_setup_notes",
+   "fieldtype": "Small Text",
+   "label": "Finance Setup Notes"
+  },
+  {
+   "fieldname": "returned_notes",
+   "fieldtype": "Small Text",
+   "label": "Returned / Blocker Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-29 18:48:06.112451",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Finance Onboarding",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Intake Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Service Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Plan Management Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Read Only",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "participant_name",
+ "track_changes": 1
+}

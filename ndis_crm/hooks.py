@@ -502,3 +502,129 @@ fixtures.extend([
         "doctype": "NDIS Service Document Rule"
     }
 ])
+
+# -------------------------------
+# NDIS CRM Phase 4 - Handover Hooks
+# -------------------------------
+
+try:
+    doc_events
+except NameError:
+    doc_events = {}
+
+doc_events.setdefault("CRM Deal", {})
+doc_events["CRM Deal"]["validate"] = "ndis_crm.phase4_handover.validate_crm_deal_phase4_combined"
+
+doc_events.setdefault("NDIS CRM Handover", {})
+doc_events["NDIS CRM Handover"]["validate"] = "ndis_crm.phase4_handover.validate_handover"
+doc_events["NDIS CRM Handover"]["on_update"] = "ndis_crm.phase4_handover.on_handover_update"
+
+try:
+    fixtures
+except NameError:
+    fixtures = []
+
+fixtures.extend([
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            [
+                "dt",
+                "in",
+                [
+                    "CRM Deal",
+                    "NDIS Participant Intake"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "CRM Form Script",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "NDIS CRM Deal Actions"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "Client Script",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "NDIS Participant Intake Actions",
+                    "NDIS CRM Handover Actions"
+                ]
+            ]
+        ]
+    }
+])
+
+# -------------------------------
+# NDIS CRM Phase 5 - Finance Onboarding Hooks
+# -------------------------------
+
+try:
+    doc_events
+except NameError:
+    doc_events = {}
+
+doc_events.setdefault("CRM Deal", {})
+doc_events["CRM Deal"]["validate"] = "ndis_crm.phase5_finance_onboarding.validate_crm_deal_phase5_combined"
+
+doc_events.setdefault("NDIS CRM Finance Onboarding", {})
+doc_events["NDIS CRM Finance Onboarding"]["validate"] = "ndis_crm.phase5_finance_onboarding.validate_finance_onboarding"
+doc_events["NDIS CRM Finance Onboarding"]["on_update"] = "ndis_crm.phase5_finance_onboarding.on_finance_onboarding_update"
+
+try:
+    fixtures
+except NameError:
+    fixtures = []
+
+fixtures.extend([
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            [
+                "dt",
+                "in",
+                [
+                    "NDIS Service Line",
+                    "CRM Deal",
+                    "NDIS CRM Handover",
+                    "NDIS Participant Intake"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "CRM Form Script",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "NDIS CRM Deal Actions"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "Client Script",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "NDIS CRM Handover Actions",
+                    "NDIS CRM Finance Onboarding Actions"
+                ]
+            ]
+        ]
+    }
+])
