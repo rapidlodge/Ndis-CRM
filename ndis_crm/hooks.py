@@ -628,3 +628,55 @@ fixtures.extend([
         ]
     }
 ])
+
+# -------------------------------
+# NDIS CRM Phase 6 - Finance Budget and Service Booking Draft Hooks
+# -------------------------------
+
+try:
+    doc_events
+except NameError:
+    doc_events = {}
+
+doc_events.setdefault("NDIS CRM Finance Onboarding", {})
+doc_events["NDIS CRM Finance Onboarding"]["validate"] = "ndis_crm.phase6_finance_drafts.validate_finance_onboarding_phase6_combined"
+doc_events["NDIS CRM Finance Onboarding"]["on_update"] = "ndis_crm.phase6_finance_drafts.on_finance_onboarding_phase6_update"
+
+try:
+    fixtures
+except NameError:
+    fixtures = []
+
+fixtures.extend([
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            [
+                "dt",
+                "in",
+                [
+                    "NDIS CRM Finance Onboarding",
+                    "NDIS CRM Finance Onboarding Service",
+                    "NDIS Plan Budget",
+                    "NDIS Service Booking",
+                    "CRM Deal",
+                    "NDIS CRM Handover"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "Client Script",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "NDIS Participant Intake Actions",
+                    "NDIS CRM Handover Actions",
+                    "NDIS CRM Finance Onboarding Actions"
+                ]
+            ]
+        ]
+    }
+])
