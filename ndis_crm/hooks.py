@@ -746,3 +746,71 @@ fixtures.extend([
         ]
     }
 ])
+
+# -------------------------------
+# NDIS CRM Phase 8 - Service Schedule Draft Hooks
+# -------------------------------
+
+try:
+    doc_events
+except NameError:
+    doc_events = {}
+
+doc_events.setdefault("CRM Deal", {})
+doc_events["CRM Deal"]["validate"] = "ndis_crm.phase8_service_schedule.validate_crm_deal_phase8_combined"
+
+doc_events.setdefault("NDIS CRM Service Schedule Draft", {})
+doc_events["NDIS CRM Service Schedule Draft"]["validate"] = "ndis_crm.phase8_service_schedule.validate_schedule_draft"
+doc_events["NDIS CRM Service Schedule Draft"]["on_update"] = "ndis_crm.phase8_service_schedule.on_schedule_draft_update"
+
+try:
+    fixtures
+except NameError:
+    fixtures = []
+
+fixtures.extend([
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            [
+                "dt",
+                "in",
+                [
+                    "CRM Deal",
+                    "NDIS CRM Handover",
+                    "NDIS CRM Finance Onboarding",
+                    "NDIS CRM Operations Setup",
+                    "NDIS Participant Intake"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "CRM Form Script",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "NDIS CRM Deal Actions"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "Client Script",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "NDIS Participant Intake Actions",
+                    "NDIS CRM Handover Actions",
+                    "NDIS CRM Finance Onboarding Actions",
+                    "NDIS CRM Operations Setup Actions",
+                    "NDIS CRM Service Schedule Draft Actions"
+                ]
+            ]
+        ]
+    }
+])
