@@ -884,3 +884,75 @@ fixtures.extend([
         ]
     }
 ])
+
+# -------------------------------
+# NDIS CRM Phase 10 - Active Participant Service File Hooks
+# -------------------------------
+
+try:
+    doc_events
+except NameError:
+    doc_events = {}
+
+doc_events.setdefault("CRM Deal", {})
+doc_events["CRM Deal"]["validate"] = "ndis_crm.phase10_service_file.validate_crm_deal_phase10_combined"
+
+doc_events.setdefault("NDIS Participant Service File", {})
+doc_events["NDIS Participant Service File"]["validate"] = "ndis_crm.phase10_service_file.validate_service_file"
+doc_events["NDIS Participant Service File"]["on_update"] = "ndis_crm.phase10_service_file.on_service_file_update"
+
+try:
+    fixtures
+except NameError:
+    fixtures = []
+
+fixtures.extend([
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            [
+                "dt",
+                "in",
+                [
+                    "CRM Deal",
+                    "NDIS CRM Handover",
+                    "NDIS CRM Finance Onboarding",
+                    "NDIS CRM Operations Setup",
+                    "NDIS CRM Service Schedule Draft",
+                    "NDIS CRM Roster Build Request",
+                    "NDIS Participant Intake"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "CRM Form Script",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "NDIS CRM Deal Actions"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "Client Script",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "NDIS Participant Intake Actions",
+                    "NDIS CRM Handover Actions",
+                    "NDIS CRM Finance Onboarding Actions",
+                    "NDIS CRM Operations Setup Actions",
+                    "NDIS CRM Service Schedule Draft Actions",
+                    "NDIS CRM Roster Build Request Actions",
+                    "NDIS Participant Service File Actions"
+                ]
+            ]
+        ]
+    }
+])
