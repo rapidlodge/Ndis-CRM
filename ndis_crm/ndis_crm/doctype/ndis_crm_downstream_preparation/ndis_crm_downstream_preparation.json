@@ -1,0 +1,465 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-08-02 12:58:18.276331",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "status_section",
+  "status",
+  "readiness_percent",
+  "downstream_ready",
+  "preparation_line_count",
+  "preparation_summary_section",
+  "delivered_hours_total",
+  "estimated_worker_hours_total",
+  "attendance_ready_count",
+  "billing_ready_count",
+  "payroll_ready_count",
+  "claim_ready_count",
+  "attendance_hold_count",
+  "billing_hold_count",
+  "payroll_hold_count",
+  "claim_hold_count",
+  "source_links_section",
+  "crm_lead",
+  "crm_deal",
+  "participant_intake",
+  "handover",
+  "finance_onboarding",
+  "operations_setup",
+  "service_schedule_draft",
+  "roster_build_request",
+  "participant_service_file",
+  "service_session_draft",
+  "delivery_evidence_review",
+  "participant_customer",
+  "ndis_financial_profile",
+  "participant_details_section",
+  "participant_name",
+  "ndis_number",
+  "plan_start_date",
+  "plan_end_date",
+  "preparation_window_section",
+  "preparation_period_start",
+  "preparation_period_end",
+  "owners_section",
+  "preparation_owner",
+  "operations_owner",
+  "rostering_owner",
+  "service_manager",
+  "clinical_owner",
+  "default_cost_center",
+  "default_house",
+  "preparation_lines_section",
+  "preparation_lines",
+  "notes_section",
+  "downstream_preparation_notes",
+  "returned_notes"
+ ],
+ "fields": [
+  {
+   "default": "NDIS-DOWNSTREAM-PREP-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "NDIS-DOWNSTREAM-PREP-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nIn Review\nReady for Downstream Processing\nDownstream Preparation Approved\nReturned to Evidence Review\nCancelled"
+  },
+  {
+   "fieldname": "readiness_percent",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Readiness %",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "downstream_ready",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Downstream Ready",
+   "read_only": 1
+  },
+  {
+   "fieldname": "preparation_line_count",
+   "fieldtype": "Int",
+   "label": "Preparation Line Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "preparation_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Preparation Summary"
+  },
+  {
+   "fieldname": "delivered_hours_total",
+   "fieldtype": "Float",
+   "label": "Delivered Hours Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "estimated_worker_hours_total",
+   "fieldtype": "Float",
+   "label": "Estimated Worker Hours Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attendance_ready_count",
+   "fieldtype": "Int",
+   "label": "Attendance Ready Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "billing_ready_count",
+   "fieldtype": "Int",
+   "label": "Billing Ready Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payroll_ready_count",
+   "fieldtype": "Int",
+   "label": "Payroll Ready Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "claim_ready_count",
+   "fieldtype": "Int",
+   "label": "Claim Ready Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attendance_hold_count",
+   "fieldtype": "Int",
+   "label": "Attendance Hold Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "billing_hold_count",
+   "fieldtype": "Int",
+   "label": "Billing Hold Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payroll_hold_count",
+   "fieldtype": "Int",
+   "label": "Payroll Hold Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "claim_hold_count",
+   "fieldtype": "Int",
+   "label": "Claim Hold Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_links_section",
+   "fieldtype": "Section Break",
+   "label": "Source Links"
+  },
+  {
+   "fieldname": "crm_lead",
+   "fieldtype": "Link",
+   "label": "CRM Lead",
+   "options": "CRM Lead"
+  },
+  {
+   "fieldname": "crm_deal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "CRM Deal",
+   "options": "CRM Deal"
+  },
+  {
+   "fieldname": "participant_intake",
+   "fieldtype": "Link",
+   "label": "NDIS Participant Intake",
+   "options": "NDIS Participant Intake"
+  },
+  {
+   "fieldname": "handover",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Handover",
+   "options": "NDIS CRM Handover"
+  },
+  {
+   "fieldname": "finance_onboarding",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Finance Onboarding",
+   "options": "NDIS CRM Finance Onboarding"
+  },
+  {
+   "fieldname": "operations_setup",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Operations Setup",
+   "options": "NDIS CRM Operations Setup"
+  },
+  {
+   "fieldname": "service_schedule_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Service Schedule Draft",
+   "options": "NDIS CRM Service Schedule Draft"
+  },
+  {
+   "fieldname": "roster_build_request",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Roster Build Request",
+   "options": "NDIS CRM Roster Build Request"
+  },
+  {
+   "fieldname": "participant_service_file",
+   "fieldtype": "Link",
+   "label": "NDIS Participant Service File",
+   "options": "NDIS Participant Service File"
+  },
+  {
+   "fieldname": "service_session_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Service Session Draft",
+   "options": "NDIS CRM Service Session Draft"
+  },
+  {
+   "fieldname": "delivery_evidence_review",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NDIS CRM Delivery Evidence Review",
+   "options": "NDIS CRM Service Delivery Evidence Review",
+   "reqd": 1
+  },
+  {
+   "fieldname": "participant_customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Participant Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "ndis_financial_profile",
+   "fieldtype": "Link",
+   "label": "NDIS Financial Profile",
+   "options": "NDIS Participant Financial Profile"
+  },
+  {
+   "fieldname": "participant_details_section",
+   "fieldtype": "Section Break",
+   "label": "Participant Details"
+  },
+  {
+   "fieldname": "participant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Participant Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ndis_number",
+   "fieldtype": "Data",
+   "label": "NDIS Number"
+  },
+  {
+   "fieldname": "plan_start_date",
+   "fieldtype": "Date",
+   "label": "Plan Start Date"
+  },
+  {
+   "fieldname": "plan_end_date",
+   "fieldtype": "Date",
+   "label": "Plan End Date"
+  },
+  {
+   "fieldname": "preparation_window_section",
+   "fieldtype": "Section Break",
+   "label": "Preparation Window"
+  },
+  {
+   "fieldname": "preparation_period_start",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Preparation Period Start"
+  },
+  {
+   "fieldname": "preparation_period_end",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Preparation Period End"
+  },
+  {
+   "fieldname": "owners_section",
+   "fieldtype": "Section Break",
+   "label": "Owners"
+  },
+  {
+   "fieldname": "preparation_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Preparation Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "operations_owner",
+   "fieldtype": "Link",
+   "label": "Operations Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "rostering_owner",
+   "fieldtype": "Link",
+   "label": "Rostering Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "service_manager",
+   "fieldtype": "Link",
+   "label": "Service Manager",
+   "options": "User"
+  },
+  {
+   "fieldname": "clinical_owner",
+   "fieldtype": "Link",
+   "label": "Clinical Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "default_cost_center",
+   "fieldtype": "Link",
+   "label": "Default Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "default_house",
+   "fieldtype": "Link",
+   "label": "Default House",
+   "options": "NDIS House"
+  },
+  {
+   "fieldname": "preparation_lines_section",
+   "fieldtype": "Section Break",
+   "label": "Preparation Lines"
+  },
+  {
+   "fieldname": "preparation_lines",
+   "fieldtype": "Table",
+   "label": "Preparation Lines",
+   "options": "NDIS CRM Downstream Preparation Line"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "downstream_preparation_notes",
+   "fieldtype": "Small Text",
+   "label": "Downstream Preparation Notes"
+  },
+  {
+   "fieldname": "returned_notes",
+   "fieldtype": "Small Text",
+   "label": "Returned / Blocker Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-02 12:58:18.276331",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Downstream Preparation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Intake Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Service Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Plan Management Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Read Only",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "participant_name",
+ "track_changes": 1
+}
