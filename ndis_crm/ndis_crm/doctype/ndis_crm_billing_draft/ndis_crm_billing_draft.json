@@ -1,0 +1,474 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-08-02 17:43:47.385674",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "status_section",
+  "status",
+  "readiness_percent",
+  "billing_draft_ready",
+  "invoice_creation_allowed",
+  "billing_summary_section",
+  "billing_line_count",
+  "billable_quantity_total",
+  "billing_amount_total",
+  "billing_ready_count",
+  "billing_approved_count",
+  "billing_hold_count",
+  "manual_rate_count",
+  "missing_service_booking_count",
+  "source_links_section",
+  "crm_lead",
+  "crm_deal",
+  "participant_intake",
+  "handover",
+  "finance_onboarding",
+  "operations_setup",
+  "service_schedule_draft",
+  "roster_build_request",
+  "participant_service_file",
+  "service_session_draft",
+  "delivery_evidence_review",
+  "downstream_preparation",
+  "attendance_draft",
+  "participant_customer",
+  "ndis_financial_profile",
+  "participant_details_section",
+  "participant_name",
+  "ndis_number",
+  "plan_start_date",
+  "plan_end_date",
+  "billing_window_section",
+  "billing_period_start",
+  "billing_period_end",
+  "owners_section",
+  "billing_owner",
+  "preparation_owner",
+  "operations_owner",
+  "rostering_owner",
+  "service_manager",
+  "clinical_owner",
+  "default_cost_center",
+  "default_house",
+  "billing_lines_section",
+  "billing_lines",
+  "notes_section",
+  "billing_draft_notes",
+  "returned_notes"
+ ],
+ "fields": [
+  {
+   "default": "NDIS-BILL-DRAFT-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "NDIS-BILL-DRAFT-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nIn Review\nReady for Billing Review\nBilling Draft Approved\nReturned to Downstream Preparation\nCancelled"
+  },
+  {
+   "fieldname": "readiness_percent",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Readiness %",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "billing_draft_ready",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Billing Draft Ready",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "description": "Always blocked in Phase 15.",
+   "fieldname": "invoice_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Invoice Creation Allowed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "billing_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Billing Summary"
+  },
+  {
+   "fieldname": "billing_line_count",
+   "fieldtype": "Int",
+   "label": "Billing Line Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "billable_quantity_total",
+   "fieldtype": "Float",
+   "label": "Billable Quantity Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "billing_amount_total",
+   "fieldtype": "Currency",
+   "label": "Billing Amount Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "billing_ready_count",
+   "fieldtype": "Int",
+   "label": "Billing Ready Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "billing_approved_count",
+   "fieldtype": "Int",
+   "label": "Billing Approved Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "billing_hold_count",
+   "fieldtype": "Int",
+   "label": "Billing Hold Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "manual_rate_count",
+   "fieldtype": "Int",
+   "label": "Manual Rate Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "missing_service_booking_count",
+   "fieldtype": "Int",
+   "label": "Missing Service Booking Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_links_section",
+   "fieldtype": "Section Break",
+   "label": "Source Links"
+  },
+  {
+   "fieldname": "crm_lead",
+   "fieldtype": "Link",
+   "label": "CRM Lead",
+   "options": "CRM Lead"
+  },
+  {
+   "fieldname": "crm_deal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "CRM Deal",
+   "options": "CRM Deal"
+  },
+  {
+   "fieldname": "participant_intake",
+   "fieldtype": "Link",
+   "label": "NDIS Participant Intake",
+   "options": "NDIS Participant Intake"
+  },
+  {
+   "fieldname": "handover",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Handover",
+   "options": "NDIS CRM Handover"
+  },
+  {
+   "fieldname": "finance_onboarding",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Finance Onboarding",
+   "options": "NDIS CRM Finance Onboarding"
+  },
+  {
+   "fieldname": "operations_setup",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Operations Setup",
+   "options": "NDIS CRM Operations Setup"
+  },
+  {
+   "fieldname": "service_schedule_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Service Schedule Draft",
+   "options": "NDIS CRM Service Schedule Draft"
+  },
+  {
+   "fieldname": "roster_build_request",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Roster Build Request",
+   "options": "NDIS CRM Roster Build Request"
+  },
+  {
+   "fieldname": "participant_service_file",
+   "fieldtype": "Link",
+   "label": "NDIS Participant Service File",
+   "options": "NDIS Participant Service File"
+  },
+  {
+   "fieldname": "service_session_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Service Session Draft",
+   "options": "NDIS CRM Service Session Draft"
+  },
+  {
+   "fieldname": "delivery_evidence_review",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Delivery Evidence Review",
+   "options": "NDIS CRM Service Delivery Evidence Review"
+  },
+  {
+   "fieldname": "downstream_preparation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NDIS CRM Downstream Preparation",
+   "options": "NDIS CRM Downstream Preparation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attendance_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Attendance Draft",
+   "options": "NDIS CRM Attendance Draft"
+  },
+  {
+   "fieldname": "participant_customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Participant Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "ndis_financial_profile",
+   "fieldtype": "Link",
+   "label": "NDIS Financial Profile",
+   "options": "NDIS Participant Financial Profile"
+  },
+  {
+   "fieldname": "participant_details_section",
+   "fieldtype": "Section Break",
+   "label": "Participant Details"
+  },
+  {
+   "fieldname": "participant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Participant Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ndis_number",
+   "fieldtype": "Data",
+   "label": "NDIS Number"
+  },
+  {
+   "fieldname": "plan_start_date",
+   "fieldtype": "Date",
+   "label": "Plan Start Date"
+  },
+  {
+   "fieldname": "plan_end_date",
+   "fieldtype": "Date",
+   "label": "Plan End Date"
+  },
+  {
+   "fieldname": "billing_window_section",
+   "fieldtype": "Section Break",
+   "label": "Billing Window"
+  },
+  {
+   "fieldname": "billing_period_start",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Billing Period Start"
+  },
+  {
+   "fieldname": "billing_period_end",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Billing Period End"
+  },
+  {
+   "fieldname": "owners_section",
+   "fieldtype": "Section Break",
+   "label": "Owners"
+  },
+  {
+   "fieldname": "billing_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Billing Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "preparation_owner",
+   "fieldtype": "Link",
+   "label": "Preparation Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "operations_owner",
+   "fieldtype": "Link",
+   "label": "Operations Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "rostering_owner",
+   "fieldtype": "Link",
+   "label": "Rostering Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "service_manager",
+   "fieldtype": "Link",
+   "label": "Service Manager",
+   "options": "User"
+  },
+  {
+   "fieldname": "clinical_owner",
+   "fieldtype": "Link",
+   "label": "Clinical Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "default_cost_center",
+   "fieldtype": "Link",
+   "label": "Default Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "default_house",
+   "fieldtype": "Link",
+   "label": "Default House",
+   "options": "NDIS House"
+  },
+  {
+   "fieldname": "billing_lines_section",
+   "fieldtype": "Section Break",
+   "label": "Billing Lines"
+  },
+  {
+   "fieldname": "billing_lines",
+   "fieldtype": "Table",
+   "label": "Billing Lines",
+   "options": "NDIS CRM Billing Draft Line"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "billing_draft_notes",
+   "fieldtype": "Small Text",
+   "label": "Billing Draft Notes"
+  },
+  {
+   "fieldname": "returned_notes",
+   "fieldtype": "Small Text",
+   "label": "Returned / Blocker Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-02 17:43:47.385674",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Billing Draft",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Intake Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Service Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Plan Management Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Read Only",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "participant_name",
+ "track_changes": 1
+}
