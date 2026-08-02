@@ -1184,3 +1184,83 @@ fixtures.extend([
         ]
     }
 ])
+
+# -------------------------------
+# NDIS CRM Phase 14 - Controlled Attendance Draft Hooks
+# -------------------------------
+
+try:
+    doc_events
+except NameError:
+    doc_events = {}
+
+doc_events.setdefault("CRM Deal", {})
+doc_events["CRM Deal"]["validate"] = "ndis_crm.phase14_attendance_draft.validate_crm_deal_phase14_combined"
+
+doc_events.setdefault("NDIS CRM Attendance Draft", {})
+doc_events["NDIS CRM Attendance Draft"]["validate"] = "ndis_crm.phase14_attendance_draft.validate_attendance_draft"
+doc_events["NDIS CRM Attendance Draft"]["on_update"] = "ndis_crm.phase14_attendance_draft.on_attendance_draft_update"
+
+try:
+    fixtures
+except NameError:
+    fixtures = []
+
+fixtures.extend([
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            [
+                "dt",
+                "in",
+                [
+                    "CRM Deal",
+                    "NDIS CRM Handover",
+                    "NDIS CRM Finance Onboarding",
+                    "NDIS CRM Operations Setup",
+                    "NDIS CRM Service Schedule Draft",
+                    "NDIS CRM Roster Build Request",
+                    "NDIS Participant Service File",
+                    "NDIS CRM Service Session Draft",
+                    "NDIS CRM Service Delivery Evidence Review",
+                    "NDIS CRM Downstream Preparation",
+                    "NDIS Participant Intake"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "CRM Form Script",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "NDIS CRM Deal Actions"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "Client Script",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "NDIS Participant Intake Actions",
+                    "NDIS CRM Handover Actions",
+                    "NDIS CRM Finance Onboarding Actions",
+                    "NDIS CRM Operations Setup Actions",
+                    "NDIS CRM Service Schedule Draft Actions",
+                    "NDIS CRM Roster Build Request Actions",
+                    "NDIS Participant Service File Actions",
+                    "NDIS CRM Service Session Draft Actions",
+                    "NDIS CRM Service Delivery Evidence Review Actions",
+                    "NDIS CRM Downstream Preparation Actions",
+                    "NDIS CRM Attendance Draft Actions"
+                ]
+            ]
+        ]
+    }
+])
