@@ -1,0 +1,399 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-02 12:02:36.938968",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "source_section",
+  "session_source_key",
+  "service_line",
+  "service_code",
+  "service_model",
+  "planned_session_section",
+  "session_date",
+  "planned_start_time",
+  "planned_end_time",
+  "planned_hours",
+  "workers_required",
+  "estimated_worker_hours",
+  "actual_delivery_section",
+  "support_worker_user",
+  "support_worker_employee",
+  "support_worker_name",
+  "actual_start_time",
+  "actual_end_time",
+  "delivered_hours",
+  "participant_attended",
+  "non_attendance_reason",
+  "service_delivered",
+  "finance_links_section",
+  "finance_service_type",
+  "support_item",
+  "plan_budget",
+  "service_booking",
+  "location_risk_section",
+  "default_house",
+  "delivery_location",
+  "support_ratio",
+  "overnight_model",
+  "requires_roster",
+  "requires_house",
+  "requires_clinical_review",
+  "clinical_review_complete",
+  "transport_required",
+  "worker_skill_requirements",
+  "clinical_risk_notes",
+  "evidence_holds_section",
+  "progress_note_required",
+  "progress_note",
+  "incident_flag",
+  "incident_notes",
+  "billing_precheck_required",
+  "billing_precheck_ready",
+  "billing_hold",
+  "payroll_hold",
+  "review_status_section",
+  "evidence_reviewed",
+  "reviewed_by",
+  "reviewed_on",
+  "line_ready_for_downstream_review",
+  "evidence_status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_section",
+   "fieldtype": "Section Break",
+   "label": "Source"
+  },
+  {
+   "fieldname": "session_source_key",
+   "fieldtype": "Data",
+   "label": "Session Source Key",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_line",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Line",
+   "options": "NDIS Service Line",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service_code",
+   "fieldtype": "Data",
+   "label": "Service Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_model",
+   "fieldtype": "Data",
+   "label": "Service Model"
+  },
+  {
+   "fieldname": "planned_session_section",
+   "fieldtype": "Section Break",
+   "label": "Planned Session"
+  },
+  {
+   "fieldname": "session_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Session Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "planned_start_time",
+   "fieldtype": "Time",
+   "label": "Planned Start Time"
+  },
+  {
+   "fieldname": "planned_end_time",
+   "fieldtype": "Time",
+   "label": "Planned End Time"
+  },
+  {
+   "fieldname": "planned_hours",
+   "fieldtype": "Float",
+   "label": "Planned Hours"
+  },
+  {
+   "default": "1",
+   "fieldname": "workers_required",
+   "fieldtype": "Int",
+   "label": "Workers Required"
+  },
+  {
+   "fieldname": "estimated_worker_hours",
+   "fieldtype": "Float",
+   "label": "Estimated Worker Hours"
+  },
+  {
+   "fieldname": "actual_delivery_section",
+   "fieldtype": "Section Break",
+   "label": "Actual Delivery Evidence"
+  },
+  {
+   "fieldname": "support_worker_user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Support Worker User",
+   "options": "User"
+  },
+  {
+   "fieldname": "support_worker_employee",
+   "fieldtype": "Link",
+   "label": "Support Worker Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "support_worker_name",
+   "fieldtype": "Data",
+   "label": "Support Worker Name"
+  },
+  {
+   "fieldname": "actual_start_time",
+   "fieldtype": "Time",
+   "label": "Actual Start Time"
+  },
+  {
+   "fieldname": "actual_end_time",
+   "fieldtype": "Time",
+   "label": "Actual End Time"
+  },
+  {
+   "fieldname": "delivered_hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Delivered Hours"
+  },
+  {
+   "default": "1",
+   "fieldname": "participant_attended",
+   "fieldtype": "Check",
+   "label": "Participant Attended"
+  },
+  {
+   "fieldname": "non_attendance_reason",
+   "fieldtype": "Small Text",
+   "label": "Non Attendance Reason"
+  },
+  {
+   "default": "0",
+   "fieldname": "service_delivered",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Service Delivered"
+  },
+  {
+   "fieldname": "finance_links_section",
+   "fieldtype": "Section Break",
+   "label": "Finance Links"
+  },
+  {
+   "fieldname": "finance_service_type",
+   "fieldtype": "Link",
+   "label": "Finance Service Type",
+   "options": "NDIS Service Type"
+  },
+  {
+   "fieldname": "support_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Support Item",
+   "options": "NDIS Support Item"
+  },
+  {
+   "fieldname": "plan_budget",
+   "fieldtype": "Link",
+   "label": "NDIS Plan Budget",
+   "options": "NDIS Plan Budget"
+  },
+  {
+   "fieldname": "service_booking",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NDIS Service Booking",
+   "options": "NDIS Service Booking"
+  },
+  {
+   "fieldname": "location_risk_section",
+   "fieldtype": "Section Break",
+   "label": "Location / Risk"
+  },
+  {
+   "fieldname": "default_house",
+   "fieldtype": "Link",
+   "label": "Default House",
+   "options": "NDIS House"
+  },
+  {
+   "fieldname": "delivery_location",
+   "fieldtype": "Data",
+   "label": "Delivery Location"
+  },
+  {
+   "fieldname": "support_ratio",
+   "fieldtype": "Data",
+   "label": "Support Ratio"
+  },
+  {
+   "fieldname": "overnight_model",
+   "fieldtype": "Data",
+   "label": "Overnight Model"
+  },
+  {
+   "default": "1",
+   "fieldname": "requires_roster",
+   "fieldtype": "Check",
+   "label": "Requires Roster"
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_house",
+   "fieldtype": "Check",
+   "label": "Requires House"
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_clinical_review",
+   "fieldtype": "Check",
+   "label": "Requires Clinical Review"
+  },
+  {
+   "default": "0",
+   "fieldname": "clinical_review_complete",
+   "fieldtype": "Check",
+   "label": "Clinical Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "transport_required",
+   "fieldtype": "Check",
+   "label": "Transport Required"
+  },
+  {
+   "fieldname": "worker_skill_requirements",
+   "fieldtype": "Small Text",
+   "label": "Worker Skill Requirements"
+  },
+  {
+   "fieldname": "clinical_risk_notes",
+   "fieldtype": "Small Text",
+   "label": "Clinical / Risk Notes"
+  },
+  {
+   "fieldname": "evidence_holds_section",
+   "fieldtype": "Section Break",
+   "label": "Evidence / Holds"
+  },
+  {
+   "default": "1",
+   "fieldname": "progress_note_required",
+   "fieldtype": "Check",
+   "label": "Progress Note Required"
+  },
+  {
+   "fieldname": "progress_note",
+   "fieldtype": "Text Editor",
+   "label": "Progress Note"
+  },
+  {
+   "default": "0",
+   "fieldname": "incident_flag",
+   "fieldtype": "Check",
+   "label": "Incident Flag"
+  },
+  {
+   "fieldname": "incident_notes",
+   "fieldtype": "Small Text",
+   "label": "Incident Notes"
+  },
+  {
+   "default": "1",
+   "fieldname": "billing_precheck_required",
+   "fieldtype": "Check",
+   "label": "Billing Precheck Required"
+  },
+  {
+   "default": "0",
+   "fieldname": "billing_precheck_ready",
+   "fieldtype": "Check",
+   "label": "Billing Precheck Ready"
+  },
+  {
+   "default": "0",
+   "fieldname": "billing_hold",
+   "fieldtype": "Check",
+   "label": "Billing Hold"
+  },
+  {
+   "default": "0",
+   "fieldname": "payroll_hold",
+   "fieldtype": "Check",
+   "label": "Payroll Hold"
+  },
+  {
+   "fieldname": "review_status_section",
+   "fieldtype": "Section Break",
+   "label": "Review Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "evidence_reviewed",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Evidence Reviewed"
+  },
+  {
+   "fieldname": "reviewed_by",
+   "fieldtype": "Link",
+   "label": "Reviewed By",
+   "options": "User"
+  },
+  {
+   "fieldname": "reviewed_on",
+   "fieldtype": "Datetime",
+   "label": "Reviewed On"
+  },
+  {
+   "default": "0",
+   "fieldname": "line_ready_for_downstream_review",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Line Ready for Downstream Review"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "evidence_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Evidence Status",
+   "options": "Draft\nReady\nReviewed\nApproved\nReturned\nCancelled"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-02 12:02:36.938968",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Service Delivery Evidence Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
