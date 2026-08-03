@@ -1,0 +1,373 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-03 14:49:03.795272",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "source_section",
+  "claim_source_key",
+  "service_line",
+  "service_code",
+  "service_model",
+  "submitted_sales_invoice_section",
+  "sales_invoice",
+  "sales_invoice_docstatus",
+  "sales_invoice_status",
+  "claim_source_section",
+  "service_date",
+  "billable_date",
+  "claim_quantity",
+  "claim_unit",
+  "claim_rate",
+  "claim_amount",
+  "gst_treatment",
+  "rate_source",
+  "finance_links_section",
+  "finance_service_type",
+  "support_item",
+  "plan_budget",
+  "service_booking",
+  "funding_source",
+  "default_house",
+  "delivery_location",
+  "evidence_snapshot_section",
+  "participant_attended",
+  "service_delivered",
+  "support_worker_user",
+  "support_worker_employee",
+  "support_worker_name",
+  "progress_note",
+  "incident_flag",
+  "incident_notes",
+  "readiness_holds_section",
+  "invoice_group_key",
+  "invoice_draft_reference",
+  "claim_preparation_ready",
+  "submitted_invoice_ready",
+  "claim_batch_mapping_ready",
+  "claim_batch_draft_creation_ready",
+  "claim_batch_draft_creation_hold",
+  "claim_batch_draft_creation_hold_reason",
+  "draft_output_section",
+  "ndis_claim_batch",
+  "ndis_claim_line",
+  "review_status_section",
+  "line_ready_for_claim_batch_draft_creation",
+  "claim_batch_draft_status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_section",
+   "fieldtype": "Section Break",
+   "label": "Source"
+  },
+  {
+   "fieldname": "claim_source_key",
+   "fieldtype": "Data",
+   "label": "Claim Source Key",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_line",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Line",
+   "options": "NDIS Service Line"
+  },
+  {
+   "fieldname": "service_code",
+   "fieldtype": "Data",
+   "label": "Service Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_model",
+   "fieldtype": "Data",
+   "label": "Service Model"
+  },
+  {
+   "fieldname": "submitted_sales_invoice_section",
+   "fieldtype": "Section Break",
+   "label": "Submitted Sales Invoice"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "sales_invoice_docstatus",
+   "fieldtype": "Int",
+   "label": "Sales Invoice Docstatus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice_status",
+   "fieldtype": "Data",
+   "label": "Sales Invoice Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "claim_source_section",
+   "fieldtype": "Section Break",
+   "label": "Claim Source"
+  },
+  {
+   "fieldname": "service_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Service Date"
+  },
+  {
+   "fieldname": "billable_date",
+   "fieldtype": "Date",
+   "label": "Billable Date"
+  },
+  {
+   "fieldname": "claim_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Claim Quantity"
+  },
+  {
+   "default": "Hour",
+   "fieldname": "claim_unit",
+   "fieldtype": "Data",
+   "label": "Claim Unit"
+  },
+  {
+   "fieldname": "claim_rate",
+   "fieldtype": "Currency",
+   "label": "Claim Rate"
+  },
+  {
+   "fieldname": "claim_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Claim Amount"
+  },
+  {
+   "fieldname": "gst_treatment",
+   "fieldtype": "Data",
+   "label": "GST Treatment"
+  },
+  {
+   "fieldname": "rate_source",
+   "fieldtype": "Data",
+   "label": "Rate Source"
+  },
+  {
+   "fieldname": "finance_links_section",
+   "fieldtype": "Section Break",
+   "label": "Finance Links"
+  },
+  {
+   "fieldname": "finance_service_type",
+   "fieldtype": "Link",
+   "label": "Finance Service Type",
+   "options": "NDIS Service Type"
+  },
+  {
+   "fieldname": "support_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Support Item",
+   "options": "NDIS Support Item"
+  },
+  {
+   "fieldname": "plan_budget",
+   "fieldtype": "Link",
+   "label": "NDIS Plan Budget",
+   "options": "NDIS Plan Budget"
+  },
+  {
+   "fieldname": "service_booking",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NDIS Service Booking",
+   "options": "NDIS Service Booking"
+  },
+  {
+   "fieldname": "funding_source",
+   "fieldtype": "Data",
+   "label": "Funding Source"
+  },
+  {
+   "fieldname": "default_house",
+   "fieldtype": "Link",
+   "label": "Default House",
+   "options": "NDIS House"
+  },
+  {
+   "fieldname": "delivery_location",
+   "fieldtype": "Data",
+   "label": "Delivery Location"
+  },
+  {
+   "fieldname": "evidence_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Evidence Snapshot"
+  },
+  {
+   "default": "1",
+   "fieldname": "participant_attended",
+   "fieldtype": "Check",
+   "label": "Participant Attended"
+  },
+  {
+   "default": "1",
+   "fieldname": "service_delivered",
+   "fieldtype": "Check",
+   "label": "Service Delivered"
+  },
+  {
+   "fieldname": "support_worker_user",
+   "fieldtype": "Link",
+   "label": "Support Worker User",
+   "options": "User"
+  },
+  {
+   "fieldname": "support_worker_employee",
+   "fieldtype": "Link",
+   "label": "Support Worker Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "support_worker_name",
+   "fieldtype": "Data",
+   "label": "Support Worker Name"
+  },
+  {
+   "fieldname": "progress_note",
+   "fieldtype": "Text Editor",
+   "label": "Progress Note"
+  },
+  {
+   "default": "0",
+   "fieldname": "incident_flag",
+   "fieldtype": "Check",
+   "label": "Incident Flag"
+  },
+  {
+   "fieldname": "incident_notes",
+   "fieldtype": "Small Text",
+   "label": "Incident Notes"
+  },
+  {
+   "fieldname": "readiness_holds_section",
+   "fieldtype": "Section Break",
+   "label": "Readiness / Holds"
+  },
+  {
+   "fieldname": "invoice_group_key",
+   "fieldtype": "Data",
+   "label": "Invoice Group Key"
+  },
+  {
+   "fieldname": "invoice_draft_reference",
+   "fieldtype": "Data",
+   "label": "Invoice Draft Reference"
+  },
+  {
+   "default": "0",
+   "fieldname": "claim_preparation_ready",
+   "fieldtype": "Check",
+   "label": "Claim Preparation Ready"
+  },
+  {
+   "default": "0",
+   "fieldname": "submitted_invoice_ready",
+   "fieldtype": "Check",
+   "label": "Submitted Invoice Ready"
+  },
+  {
+   "default": "0",
+   "fieldname": "claim_batch_mapping_ready",
+   "fieldtype": "Check",
+   "label": "Claim Batch Mapping Ready"
+  },
+  {
+   "default": "0",
+   "fieldname": "claim_batch_draft_creation_ready",
+   "fieldtype": "Check",
+   "label": "Claim Batch Draft Creation Ready"
+  },
+  {
+   "default": "1",
+   "fieldname": "claim_batch_draft_creation_hold",
+   "fieldtype": "Check",
+   "label": "Claim Batch Draft Creation Hold"
+  },
+  {
+   "fieldname": "claim_batch_draft_creation_hold_reason",
+   "fieldtype": "Small Text",
+   "label": "Claim Batch Draft Creation Hold Reason"
+  },
+  {
+   "fieldname": "draft_output_section",
+   "fieldtype": "Section Break",
+   "label": "Draft Output Links"
+  },
+  {
+   "fieldname": "ndis_claim_batch",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NDIS Claim Batch",
+   "options": "NDIS Claim Batch",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ndis_claim_line",
+   "fieldtype": "Link",
+   "label": "NDIS Claim Line",
+   "options": "NDIS Claim Line",
+   "read_only": 1
+  },
+  {
+   "fieldname": "review_status_section",
+   "fieldtype": "Section Break",
+   "label": "Review Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "line_ready_for_claim_batch_draft_creation",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Line Ready for Claim Batch Draft Creation"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "claim_batch_draft_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Claim Batch Draft Status",
+   "options": "Draft\nReady\nApproved\nDraft Claim Batch Created\nReturned\nCancelled"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-03 14:49:03.795272",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Claim Batch Draft Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
