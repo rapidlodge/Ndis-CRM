@@ -1,0 +1,411 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-03 12:13:37.600954",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "source_section",
+  "invoice_source_key",
+  "service_line",
+  "service_code",
+  "service_model",
+  "invoice_grouping_section",
+  "invoice_group_key",
+  "proposed_invoice_reference",
+  "invoice_source_section",
+  "invoice_date",
+  "billable_date",
+  "session_date",
+  "actual_start_time",
+  "actual_end_time",
+  "delivered_hours",
+  "invoice_quantity",
+  "invoice_unit",
+  "invoice_rate",
+  "invoice_amount",
+  "gst_treatment",
+  "rate_source",
+  "erpnext_mapping_section",
+  "erp_item_code",
+  "item_ready",
+  "income_account",
+  "cost_center",
+  "sales_invoice",
+  "evidence_snapshot_section",
+  "support_worker_user",
+  "support_worker_employee",
+  "support_worker_name",
+  "participant_attended",
+  "service_delivered",
+  "progress_note",
+  "incident_flag",
+  "incident_notes",
+  "finance_links_section",
+  "finance_service_type",
+  "support_item",
+  "plan_budget",
+  "service_booking",
+  "funding_source",
+  "location_snapshot_section",
+  "default_house",
+  "delivery_location",
+  "readiness_holds_section",
+  "billing_preparation_ready",
+  "claim_preparation_ready",
+  "billing_hold",
+  "billing_hold_reason",
+  "sales_invoice_draft_creation_ready",
+  "sales_invoice_draft_creation_hold",
+  "review_status_section",
+  "line_ready_for_draft_sales_invoice_creation",
+  "sales_invoice_draft_status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_section",
+   "fieldtype": "Section Break",
+   "label": "Source"
+  },
+  {
+   "fieldname": "invoice_source_key",
+   "fieldtype": "Data",
+   "label": "Invoice Source Key",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_line",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Line",
+   "options": "NDIS Service Line",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service_code",
+   "fieldtype": "Data",
+   "label": "Service Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_model",
+   "fieldtype": "Data",
+   "label": "Service Model"
+  },
+  {
+   "fieldname": "invoice_grouping_section",
+   "fieldtype": "Section Break",
+   "label": "Invoice Grouping"
+  },
+  {
+   "fieldname": "invoice_group_key",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Invoice Group Key"
+  },
+  {
+   "fieldname": "proposed_invoice_reference",
+   "fieldtype": "Data",
+   "label": "Proposed Invoice Reference"
+  },
+  {
+   "fieldname": "invoice_source_section",
+   "fieldtype": "Section Break",
+   "label": "Invoice Source"
+  },
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Invoice Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "billable_date",
+   "fieldtype": "Date",
+   "label": "Billable Date"
+  },
+  {
+   "fieldname": "session_date",
+   "fieldtype": "Date",
+   "label": "Session Date"
+  },
+  {
+   "fieldname": "actual_start_time",
+   "fieldtype": "Time",
+   "label": "Actual Start Time"
+  },
+  {
+   "fieldname": "actual_end_time",
+   "fieldtype": "Time",
+   "label": "Actual End Time"
+  },
+  {
+   "fieldname": "delivered_hours",
+   "fieldtype": "Float",
+   "label": "Delivered Hours"
+  },
+  {
+   "fieldname": "invoice_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Invoice Quantity",
+   "reqd": 1
+  },
+  {
+   "default": "Hour",
+   "fieldname": "invoice_unit",
+   "fieldtype": "Data",
+   "label": "Invoice Unit"
+  },
+  {
+   "fieldname": "invoice_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Invoice Rate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "invoice_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Invoice Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gst_treatment",
+   "fieldtype": "Data",
+   "label": "GST Treatment"
+  },
+  {
+   "fieldname": "rate_source",
+   "fieldtype": "Data",
+   "label": "Rate Source"
+  },
+  {
+   "fieldname": "erpnext_mapping_section",
+   "fieldtype": "Section Break",
+   "label": "ERPNext Sales Invoice Mapping"
+  },
+  {
+   "fieldname": "erp_item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "ERPNext Item Code",
+   "options": "Item"
+  },
+  {
+   "default": "0",
+   "fieldname": "item_ready",
+   "fieldtype": "Check",
+   "label": "Item Ready"
+  },
+  {
+   "fieldname": "income_account",
+   "fieldtype": "Link",
+   "label": "Income Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "evidence_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Evidence Snapshot"
+  },
+  {
+   "fieldname": "support_worker_user",
+   "fieldtype": "Link",
+   "label": "Support Worker User",
+   "options": "User"
+  },
+  {
+   "fieldname": "support_worker_employee",
+   "fieldtype": "Link",
+   "label": "Support Worker Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "support_worker_name",
+   "fieldtype": "Data",
+   "label": "Support Worker Name"
+  },
+  {
+   "default": "1",
+   "fieldname": "participant_attended",
+   "fieldtype": "Check",
+   "label": "Participant Attended"
+  },
+  {
+   "default": "1",
+   "fieldname": "service_delivered",
+   "fieldtype": "Check",
+   "label": "Service Delivered"
+  },
+  {
+   "fieldname": "progress_note",
+   "fieldtype": "Text Editor",
+   "label": "Progress Note"
+  },
+  {
+   "default": "0",
+   "fieldname": "incident_flag",
+   "fieldtype": "Check",
+   "label": "Incident Flag"
+  },
+  {
+   "fieldname": "incident_notes",
+   "fieldtype": "Small Text",
+   "label": "Incident Notes"
+  },
+  {
+   "fieldname": "finance_links_section",
+   "fieldtype": "Section Break",
+   "label": "Finance Links"
+  },
+  {
+   "fieldname": "finance_service_type",
+   "fieldtype": "Link",
+   "label": "Finance Service Type",
+   "options": "NDIS Service Type"
+  },
+  {
+   "fieldname": "support_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Support Item",
+   "options": "NDIS Support Item"
+  },
+  {
+   "fieldname": "plan_budget",
+   "fieldtype": "Link",
+   "label": "NDIS Plan Budget",
+   "options": "NDIS Plan Budget"
+  },
+  {
+   "fieldname": "service_booking",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NDIS Service Booking",
+   "options": "NDIS Service Booking"
+  },
+  {
+   "fieldname": "funding_source",
+   "fieldtype": "Data",
+   "label": "Funding Source"
+  },
+  {
+   "fieldname": "location_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Location Snapshot"
+  },
+  {
+   "fieldname": "default_house",
+   "fieldtype": "Link",
+   "label": "Default House",
+   "options": "NDIS House"
+  },
+  {
+   "fieldname": "delivery_location",
+   "fieldtype": "Data",
+   "label": "Delivery Location"
+  },
+  {
+   "fieldname": "readiness_holds_section",
+   "fieldtype": "Section Break",
+   "label": "Readiness / Holds"
+  },
+  {
+   "default": "0",
+   "fieldname": "billing_preparation_ready",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Billing Preparation Ready"
+  },
+  {
+   "default": "0",
+   "fieldname": "claim_preparation_ready",
+   "fieldtype": "Check",
+   "label": "Claim Preparation Ready"
+  },
+  {
+   "default": "0",
+   "fieldname": "billing_hold",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Billing Hold"
+  },
+  {
+   "fieldname": "billing_hold_reason",
+   "fieldtype": "Small Text",
+   "label": "Billing Hold Reason"
+  },
+  {
+   "default": "0",
+   "fieldname": "sales_invoice_draft_creation_ready",
+   "fieldtype": "Check",
+   "label": "Sales Invoice Draft Creation Ready"
+  },
+  {
+   "default": "1",
+   "fieldname": "sales_invoice_draft_creation_hold",
+   "fieldtype": "Check",
+   "label": "Sales Invoice Draft Creation Hold"
+  },
+  {
+   "fieldname": "review_status_section",
+   "fieldtype": "Section Break",
+   "label": "Review Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "line_ready_for_draft_sales_invoice_creation",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Line Ready for Draft Sales Invoice Creation"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "sales_invoice_draft_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Sales Invoice Draft Status",
+   "options": "Draft\nReady\nApproved\nDraft Sales Invoice Created\nReturned\nCancelled"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-03 12:13:37.600954",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Sales Invoice Draft Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
