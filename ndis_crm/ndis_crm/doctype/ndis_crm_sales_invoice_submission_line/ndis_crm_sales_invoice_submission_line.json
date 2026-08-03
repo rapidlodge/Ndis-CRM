@@ -1,0 +1,319 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-03 13:19:15.039990",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "source_section",
+  "sales_invoice_source_key",
+  "sales_invoice",
+  "sales_invoice_docstatus",
+  "sales_invoice_status",
+  "customer",
+  "company",
+  "posting_date",
+  "due_date",
+  "sales_invoice_total",
+  "service_snapshot_section",
+  "service_line",
+  "service_code",
+  "service_model",
+  "invoice_group_key",
+  "invoice_date",
+  "invoice_quantity",
+  "invoice_rate",
+  "invoice_amount",
+  "erpnext_mapping_section",
+  "erp_item_code",
+  "income_account",
+  "cost_center",
+  "ndis_finance_section",
+  "support_item",
+  "finance_service_type",
+  "plan_budget",
+  "service_booking",
+  "funding_source",
+  "default_house",
+  "submission_controls_section",
+  "billing_preparation_ready",
+  "submission_precheck_ready",
+  "finance_submission_review_complete",
+  "submit_authorized",
+  "submission_hold",
+  "submission_hold_reason",
+  "line_ready_for_sales_invoice_submit",
+  "submission_status",
+  "submitted_by",
+  "submitted_on",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_section",
+   "fieldtype": "Section Break",
+   "label": "Source"
+  },
+  {
+   "fieldname": "sales_invoice_source_key",
+   "fieldtype": "Data",
+   "label": "Sales Invoice Source Key",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "sales_invoice_docstatus",
+   "fieldtype": "Int",
+   "label": "Sales Invoice Docstatus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice_status",
+   "fieldtype": "Data",
+   "label": "Sales Invoice Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice_total",
+   "fieldtype": "Currency",
+   "label": "Sales Invoice Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Service Snapshot"
+  },
+  {
+   "fieldname": "service_line",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Line",
+   "options": "NDIS Service Line"
+  },
+  {
+   "fieldname": "service_code",
+   "fieldtype": "Data",
+   "label": "Service Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_model",
+   "fieldtype": "Data",
+   "label": "Service Model"
+  },
+  {
+   "fieldname": "invoice_group_key",
+   "fieldtype": "Data",
+   "label": "Invoice Group Key"
+  },
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "label": "Invoice Date"
+  },
+  {
+   "fieldname": "invoice_quantity",
+   "fieldtype": "Float",
+   "label": "Invoice Quantity"
+  },
+  {
+   "fieldname": "invoice_rate",
+   "fieldtype": "Currency",
+   "label": "Invoice Rate"
+  },
+  {
+   "fieldname": "invoice_amount",
+   "fieldtype": "Currency",
+   "label": "Invoice Amount"
+  },
+  {
+   "fieldname": "erpnext_mapping_section",
+   "fieldtype": "Section Break",
+   "label": "ERPNext Mapping Snapshot"
+  },
+  {
+   "fieldname": "erp_item_code",
+   "fieldtype": "Link",
+   "label": "ERPNext Item Code",
+   "options": "Item"
+  },
+  {
+   "fieldname": "income_account",
+   "fieldtype": "Link",
+   "label": "Income Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "ndis_finance_section",
+   "fieldtype": "Section Break",
+   "label": "NDIS Finance Snapshot"
+  },
+  {
+   "fieldname": "support_item",
+   "fieldtype": "Link",
+   "label": "Support Item",
+   "options": "NDIS Support Item"
+  },
+  {
+   "fieldname": "finance_service_type",
+   "fieldtype": "Link",
+   "label": "Finance Service Type",
+   "options": "NDIS Service Type"
+  },
+  {
+   "fieldname": "plan_budget",
+   "fieldtype": "Link",
+   "label": "NDIS Plan Budget",
+   "options": "NDIS Plan Budget"
+  },
+  {
+   "fieldname": "service_booking",
+   "fieldtype": "Link",
+   "label": "NDIS Service Booking",
+   "options": "NDIS Service Booking"
+  },
+  {
+   "fieldname": "funding_source",
+   "fieldtype": "Data",
+   "label": "Funding Source"
+  },
+  {
+   "fieldname": "default_house",
+   "fieldtype": "Link",
+   "label": "Default House",
+   "options": "NDIS House"
+  },
+  {
+   "fieldname": "submission_controls_section",
+   "fieldtype": "Section Break",
+   "label": "Submission Controls"
+  },
+  {
+   "default": "0",
+   "fieldname": "billing_preparation_ready",
+   "fieldtype": "Check",
+   "label": "Billing Preparation Ready"
+  },
+  {
+   "default": "0",
+   "fieldname": "submission_precheck_ready",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Submission Precheck Ready"
+  },
+  {
+   "default": "0",
+   "fieldname": "finance_submission_review_complete",
+   "fieldtype": "Check",
+   "label": "Finance Submission Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "submit_authorized",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Submit Authorized"
+  },
+  {
+   "default": "1",
+   "fieldname": "submission_hold",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Submission Hold"
+  },
+  {
+   "fieldname": "submission_hold_reason",
+   "fieldtype": "Small Text",
+   "label": "Submission Hold Reason"
+  },
+  {
+   "default": "0",
+   "fieldname": "line_ready_for_sales_invoice_submit",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Line Ready for Sales Invoice Submit"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "submission_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Submission Status",
+   "options": "Draft\nReady\nApproved\nSubmitted\nReturned\nCancelled"
+  },
+  {
+   "fieldname": "submitted_by",
+   "fieldtype": "Link",
+   "label": "Submitted By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "submitted_on",
+   "fieldtype": "Datetime",
+   "label": "Submitted On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-03 13:19:15.039990",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Sales Invoice Submission Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

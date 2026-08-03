@@ -1604,3 +1604,93 @@ fixtures.extend([
         ]
     }
 ])
+
+# -------------------------------
+# NDIS CRM Phase 19 - Controlled Sales Invoice Submission Hooks
+# -------------------------------
+
+try:
+    doc_events
+except NameError:
+    doc_events = {}
+
+doc_events.setdefault("CRM Deal", {})
+doc_events["CRM Deal"]["validate"] = "ndis_crm.phase19_sales_invoice_submission.validate_crm_deal_phase19_combined"
+
+doc_events.setdefault("NDIS CRM Sales Invoice Submission Run", {})
+doc_events["NDIS CRM Sales Invoice Submission Run"]["validate"] = "ndis_crm.phase19_sales_invoice_submission.validate_sales_invoice_submission_run"
+doc_events["NDIS CRM Sales Invoice Submission Run"]["on_update"] = "ndis_crm.phase19_sales_invoice_submission.on_sales_invoice_submission_run_update"
+
+try:
+    fixtures
+except NameError:
+    fixtures = []
+
+fixtures.extend([
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            [
+                "dt",
+                "in",
+                [
+                    "CRM Deal",
+                    "NDIS CRM Handover",
+                    "NDIS CRM Finance Onboarding",
+                    "NDIS CRM Operations Setup",
+                    "NDIS CRM Service Schedule Draft",
+                    "NDIS CRM Roster Build Request",
+                    "NDIS Participant Service File",
+                    "NDIS CRM Service Session Draft",
+                    "NDIS CRM Service Delivery Evidence Review",
+                    "NDIS CRM Downstream Preparation",
+                    "NDIS CRM Attendance Draft",
+                    "NDIS CRM Billing Draft",
+                    "NDIS CRM Claim Draft",
+                    "NDIS CRM Invoice Draft",
+                    "NDIS CRM Sales Invoice Draft Run",
+                    "NDIS Participant Intake"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "CRM Form Script",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "NDIS CRM Deal Actions"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "Client Script",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "NDIS Participant Intake Actions",
+                    "NDIS CRM Handover Actions",
+                    "NDIS CRM Finance Onboarding Actions",
+                    "NDIS CRM Operations Setup Actions",
+                    "NDIS CRM Service Schedule Draft Actions",
+                    "NDIS CRM Roster Build Request Actions",
+                    "NDIS Participant Service File Actions",
+                    "NDIS CRM Service Session Draft Actions",
+                    "NDIS CRM Service Delivery Evidence Review Actions",
+                    "NDIS CRM Downstream Preparation Actions",
+                    "NDIS CRM Attendance Draft Actions",
+                    "NDIS CRM Billing Draft Actions",
+                    "NDIS CRM Claim Draft Actions",
+                    "NDIS CRM Invoice Draft Actions",
+                    "NDIS CRM Sales Invoice Draft Run Actions",
+                    "NDIS CRM Sales Invoice Submission Run Actions"
+                ]
+            ]
+        ]
+    }
+])
