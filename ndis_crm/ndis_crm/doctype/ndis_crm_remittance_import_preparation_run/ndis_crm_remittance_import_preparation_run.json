@@ -1,0 +1,677 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-08-04 14:19:41.977525",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "status_section",
+  "status",
+  "readiness_percent",
+  "remittance_import_preparation_run_ready",
+  "template_format",
+  "remittance_template_generation_allowed",
+  "actual_remittance_import_allowed",
+  "payment_entry_creation_allowed",
+  "generated_template_section",
+  "generated_template_file",
+  "generated_template_file_name",
+  "generated_template_file_hash",
+  "generated_template_file_on",
+  "generated_template_file_by",
+  "generated_payload_preview",
+  "summary_section",
+  "remittance_line_count",
+  "claim_batch_count",
+  "claim_amount_total",
+  "expected_paid_amount_total",
+  "expected_rejected_amount_total",
+  "remittance_ready_count",
+  "remittance_template_line_count",
+  "remittance_hold_count",
+  "missing_lodgement_reference_count",
+  "blocked_payment_authorization_count",
+  "blocked_write_off_authorization_count",
+  "blocked_recovery_authorization_count",
+  "source_links_section",
+  "crm_lead",
+  "crm_deal",
+  "participant_intake",
+  "handover",
+  "finance_onboarding",
+  "operations_setup",
+  "service_schedule_draft",
+  "roster_build_request",
+  "participant_service_file",
+  "service_session_draft",
+  "delivery_evidence_review",
+  "downstream_preparation",
+  "attendance_draft",
+  "billing_draft",
+  "claim_draft",
+  "invoice_draft",
+  "sales_invoice_draft_run",
+  "sales_invoice_submission_run",
+  "claim_batch_draft_run",
+  "claim_batch_submission_run",
+  "claim_export_preparation_run",
+  "claim_lodgement_confirmation_run",
+  "participant_customer",
+  "ndis_financial_profile",
+  "participant_details_section",
+  "participant_name",
+  "ndis_number",
+  "plan_start_date",
+  "plan_end_date",
+  "company",
+  "claim_remittance_window_section",
+  "claim_period_start",
+  "claim_period_end",
+  "lodgement_date",
+  "expected_remittance_date",
+  "external_reference_section",
+  "external_lodgement_reference",
+  "external_batch_reference",
+  "generated_export_file",
+  "generated_export_file_hash",
+  "lodgement_evidence_file",
+  "owners_section",
+  "remittance_owner",
+  "claim_lodgement_owner",
+  "claim_export_owner",
+  "claim_batch_owner",
+  "claim_owner",
+  "billing_owner",
+  "remittance_lines_section",
+  "remittance_lines",
+  "notes_section",
+  "remittance_preparation_notes",
+  "returned_notes"
+ ],
+ "fields": [
+  {
+   "default": "NDIS-REMIT-PREP-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "NDIS-REMIT-PREP-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nIn Review\nReady for Remittance Import Preparation\nRemittance Import Preparation Approved\nRemittance Matching Template Prepared\nReturned to Lodgement Confirmation\nCancelled"
+  },
+  {
+   "fieldname": "readiness_percent",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Readiness %",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "remittance_import_preparation_run_ready",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Remittance Import Preparation Run Ready",
+   "read_only": 1
+  },
+  {
+   "default": "CSV Matching Template",
+   "fieldname": "template_format",
+   "fieldtype": "Select",
+   "label": "Template Format",
+   "options": "CSV Matching Template\nJSON Matching Payload"
+  },
+  {
+   "default": "0",
+   "fieldname": "remittance_template_generation_allowed",
+   "fieldtype": "Check",
+   "label": "Remittance Template Generation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 24.",
+   "fieldname": "actual_remittance_import_allowed",
+   "fieldtype": "Check",
+   "label": "Actual Remittance Import Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 24.",
+   "fieldname": "payment_entry_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Payment Entry Creation Allowed"
+  },
+  {
+   "fieldname": "generated_template_section",
+   "fieldtype": "Section Break",
+   "label": "Generated Template"
+  },
+  {
+   "fieldname": "generated_template_file",
+   "fieldtype": "Attach",
+   "label": "Generated Template File",
+   "read_only": 1
+  },
+  {
+   "fieldname": "generated_template_file_name",
+   "fieldtype": "Data",
+   "label": "Generated Template File Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "generated_template_file_hash",
+   "fieldtype": "Data",
+   "label": "Generated Template File SHA256",
+   "read_only": 1
+  },
+  {
+   "fieldname": "generated_template_file_on",
+   "fieldtype": "Datetime",
+   "label": "Generated Template File On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "generated_template_file_by",
+   "fieldtype": "Link",
+   "label": "Generated Template File By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "generated_payload_preview",
+   "fieldtype": "Code",
+   "label": "Generated Payload Preview",
+   "read_only": 1
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "remittance_line_count",
+   "fieldtype": "Int",
+   "label": "Remittance Line Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "claim_batch_count",
+   "fieldtype": "Int",
+   "label": "Claim Batch Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "claim_amount_total",
+   "fieldtype": "Currency",
+   "label": "Claim Amount Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expected_paid_amount_total",
+   "fieldtype": "Currency",
+   "label": "Expected Paid Amount Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expected_rejected_amount_total",
+   "fieldtype": "Currency",
+   "label": "Expected Rejected Amount Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remittance_ready_count",
+   "fieldtype": "Int",
+   "label": "Remittance Ready Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remittance_template_line_count",
+   "fieldtype": "Int",
+   "label": "Remittance Template Line Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remittance_hold_count",
+   "fieldtype": "Int",
+   "label": "Remittance Hold Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "missing_lodgement_reference_count",
+   "fieldtype": "Int",
+   "label": "Missing Lodgement Reference Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_payment_authorization_count",
+   "fieldtype": "Int",
+   "label": "Blocked Payment Authorization Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_write_off_authorization_count",
+   "fieldtype": "Int",
+   "label": "Blocked Write Off Authorization Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_recovery_authorization_count",
+   "fieldtype": "Int",
+   "label": "Blocked Recovery Authorization Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_links_section",
+   "fieldtype": "Section Break",
+   "label": "Source Links"
+  },
+  {
+   "fieldname": "crm_lead",
+   "fieldtype": "Link",
+   "label": "CRM Lead",
+   "options": "CRM Lead"
+  },
+  {
+   "fieldname": "crm_deal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "CRM Deal",
+   "options": "CRM Deal"
+  },
+  {
+   "fieldname": "participant_intake",
+   "fieldtype": "Link",
+   "label": "NDIS Participant Intake",
+   "options": "NDIS Participant Intake"
+  },
+  {
+   "fieldname": "handover",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Handover",
+   "options": "NDIS CRM Handover"
+  },
+  {
+   "fieldname": "finance_onboarding",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Finance Onboarding",
+   "options": "NDIS CRM Finance Onboarding"
+  },
+  {
+   "fieldname": "operations_setup",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Operations Setup",
+   "options": "NDIS CRM Operations Setup"
+  },
+  {
+   "fieldname": "service_schedule_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Service Schedule Draft",
+   "options": "NDIS CRM Service Schedule Draft"
+  },
+  {
+   "fieldname": "roster_build_request",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Roster Build Request",
+   "options": "NDIS CRM Roster Build Request"
+  },
+  {
+   "fieldname": "participant_service_file",
+   "fieldtype": "Link",
+   "label": "NDIS Participant Service File",
+   "options": "NDIS Participant Service File"
+  },
+  {
+   "fieldname": "service_session_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Service Session Draft",
+   "options": "NDIS CRM Service Session Draft"
+  },
+  {
+   "fieldname": "delivery_evidence_review",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Delivery Evidence Review",
+   "options": "NDIS CRM Service Delivery Evidence Review"
+  },
+  {
+   "fieldname": "downstream_preparation",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Downstream Preparation",
+   "options": "NDIS CRM Downstream Preparation"
+  },
+  {
+   "fieldname": "attendance_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Attendance Draft",
+   "options": "NDIS CRM Attendance Draft"
+  },
+  {
+   "fieldname": "billing_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Billing Draft",
+   "options": "NDIS CRM Billing Draft"
+  },
+  {
+   "fieldname": "claim_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Claim Draft",
+   "options": "NDIS CRM Claim Draft"
+  },
+  {
+   "fieldname": "invoice_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Invoice Draft",
+   "options": "NDIS CRM Invoice Draft"
+  },
+  {
+   "fieldname": "sales_invoice_draft_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Sales Invoice Draft Run",
+   "options": "NDIS CRM Sales Invoice Draft Run"
+  },
+  {
+   "fieldname": "sales_invoice_submission_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Sales Invoice Submission Run",
+   "options": "NDIS CRM Sales Invoice Submission Run"
+  },
+  {
+   "fieldname": "claim_batch_draft_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Claim Batch Draft Run",
+   "options": "NDIS CRM Claim Batch Draft Run"
+  },
+  {
+   "fieldname": "claim_batch_submission_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Claim Batch Submission Run",
+   "options": "NDIS CRM Claim Batch Submission Run"
+  },
+  {
+   "fieldname": "claim_export_preparation_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Claim Export Preparation Run",
+   "options": "NDIS CRM Claim Export Preparation Run"
+  },
+  {
+   "fieldname": "claim_lodgement_confirmation_run",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NDIS CRM Claim Lodgement Confirmation Run",
+   "options": "NDIS CRM Claim Lodgement Confirmation Run",
+   "reqd": 1
+  },
+  {
+   "fieldname": "participant_customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Participant Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "ndis_financial_profile",
+   "fieldtype": "Link",
+   "label": "NDIS Financial Profile",
+   "options": "NDIS Participant Financial Profile"
+  },
+  {
+   "fieldname": "participant_details_section",
+   "fieldtype": "Section Break",
+   "label": "Participant Details"
+  },
+  {
+   "fieldname": "participant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Participant Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ndis_number",
+   "fieldtype": "Data",
+   "label": "NDIS Number"
+  },
+  {
+   "fieldname": "plan_start_date",
+   "fieldtype": "Date",
+   "label": "Plan Start Date"
+  },
+  {
+   "fieldname": "plan_end_date",
+   "fieldtype": "Date",
+   "label": "Plan End Date"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "claim_remittance_window_section",
+   "fieldtype": "Section Break",
+   "label": "Claim / Remittance Window"
+  },
+  {
+   "fieldname": "claim_period_start",
+   "fieldtype": "Date",
+   "label": "Claim Period Start"
+  },
+  {
+   "fieldname": "claim_period_end",
+   "fieldtype": "Date",
+   "label": "Claim Period End"
+  },
+  {
+   "fieldname": "lodgement_date",
+   "fieldtype": "Date",
+   "label": "Lodgement Date"
+  },
+  {
+   "fieldname": "expected_remittance_date",
+   "fieldtype": "Date",
+   "label": "Expected Remittance Date"
+  },
+  {
+   "fieldname": "external_reference_section",
+   "fieldtype": "Section Break",
+   "label": "External Reference Snapshot"
+  },
+  {
+   "fieldname": "external_lodgement_reference",
+   "fieldtype": "Data",
+   "label": "External Lodgement Reference"
+  },
+  {
+   "fieldname": "external_batch_reference",
+   "fieldtype": "Data",
+   "label": "External Batch Reference"
+  },
+  {
+   "fieldname": "generated_export_file",
+   "fieldtype": "Attach",
+   "label": "Generated Export File",
+   "read_only": 1
+  },
+  {
+   "fieldname": "generated_export_file_hash",
+   "fieldtype": "Data",
+   "label": "Generated Export File SHA256",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lodgement_evidence_file",
+   "fieldtype": "Attach",
+   "label": "Lodgement Evidence File"
+  },
+  {
+   "fieldname": "owners_section",
+   "fieldtype": "Section Break",
+   "label": "Owners"
+  },
+  {
+   "fieldname": "remittance_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Remittance Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "claim_lodgement_owner",
+   "fieldtype": "Link",
+   "label": "Claim Lodgement Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "claim_export_owner",
+   "fieldtype": "Link",
+   "label": "Claim Export Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "claim_batch_owner",
+   "fieldtype": "Link",
+   "label": "Claim Batch Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "claim_owner",
+   "fieldtype": "Link",
+   "label": "Claim Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "billing_owner",
+   "fieldtype": "Link",
+   "label": "Billing Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "remittance_lines_section",
+   "fieldtype": "Section Break",
+   "label": "Remittance Lines"
+  },
+  {
+   "fieldname": "remittance_lines",
+   "fieldtype": "Table",
+   "label": "Remittance Lines",
+   "options": "NDIS CRM Remittance Import Preparation Line"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "remittance_preparation_notes",
+   "fieldtype": "Small Text",
+   "label": "Remittance Preparation Notes"
+  },
+  {
+   "fieldname": "returned_notes",
+   "fieldtype": "Small Text",
+   "label": "Returned / Blocker Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-04 14:19:41.977525",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Remittance Import Preparation Run",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Plan Management Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Read Only",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "participant_name",
+ "track_changes": 1
+}
