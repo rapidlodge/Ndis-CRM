@@ -1,0 +1,509 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-05 20:16:02.890782",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "source_section",
+  "payment_entry_source_key",
+  "payment_entry",
+  "payment_entry_docstatus",
+  "remittance_claim_links_section",
+  "ndis_remittance_import",
+  "ndis_remittance_import_docstatus",
+  "ndis_remittance_import_status",
+  "ndis_claim_batch",
+  "ndis_claim_line",
+  "sales_invoice_snapshot_section",
+  "sales_invoice",
+  "sales_invoice_docstatus",
+  "sales_invoice_status",
+  "sales_invoice_outstanding_amount",
+  "service_snapshot_section",
+  "service_line",
+  "service_code",
+  "service_model",
+  "service_date",
+  "claim_amount",
+  "expected_paid_amount",
+  "actual_paid_amount",
+  "actual_rejected_amount",
+  "variance_amount",
+  "proposed_payment_amount",
+  "short_paid_amount",
+  "overpaid_amount",
+  "rejected_amount",
+  "ndis_finance_snapshot_section",
+  "support_item",
+  "finance_service_type",
+  "plan_budget",
+  "service_booking",
+  "funding_source",
+  "default_house",
+  "invoice_group_key",
+  "payment_reference_section",
+  "external_lodgement_reference",
+  "external_batch_reference",
+  "external_line_reference",
+  "actual_payment_reference",
+  "actual_payment_date",
+  "actual_remittance_status",
+  "allocation_type",
+  "recommended_next_action",
+  "payment_entry_mapping_section",
+  "payment_entry_type",
+  "party_type",
+  "party",
+  "receivable_account",
+  "paid_to_account",
+  "mode_of_payment",
+  "payment_entry_posting_date",
+  "payment_entry_reference_no",
+  "payment_entry_reference_date",
+  "draft_controls_section",
+  "payment_entry_source_ready",
+  "payment_entry_review_complete",
+  "payment_entry_draft_authorized",
+  "payment_entry_submit_authorized",
+  "journal_authorized",
+  "write_off_authorized",
+  "recovery_authorized",
+  "bank_reconciliation_authorized",
+  "payment_entry_hold",
+  "payment_entry_hold_reason",
+  "line_status_section",
+  "line_ready_for_payment_entry_draft",
+  "payment_entry_line_status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_section",
+   "fieldtype": "Section Break",
+   "label": "Source"
+  },
+  {
+   "fieldname": "payment_entry_source_key",
+   "fieldtype": "Data",
+   "label": "Payment Entry Source Key",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_entry",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Payment Entry",
+   "options": "Payment Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_entry_docstatus",
+   "fieldtype": "Int",
+   "label": "Payment Entry Docstatus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remittance_claim_links_section",
+   "fieldtype": "Section Break",
+   "label": "Remittance / Claim Links"
+  },
+  {
+   "fieldname": "ndis_remittance_import",
+   "fieldtype": "Link",
+   "label": "NDIS Remittance Import",
+   "options": "NDIS Remittance Import"
+  },
+  {
+   "fieldname": "ndis_remittance_import_docstatus",
+   "fieldtype": "Int",
+   "label": "NDIS Remittance Import Docstatus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ndis_remittance_import_status",
+   "fieldtype": "Data",
+   "label": "NDIS Remittance Import Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ndis_claim_batch",
+   "fieldtype": "Link",
+   "label": "NDIS Claim Batch",
+   "options": "NDIS Claim Batch"
+  },
+  {
+   "fieldname": "ndis_claim_line",
+   "fieldtype": "Link",
+   "label": "NDIS Claim Line",
+   "options": "NDIS Claim Line"
+  },
+  {
+   "fieldname": "sales_invoice_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Sales Invoice Snapshot"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "sales_invoice_docstatus",
+   "fieldtype": "Int",
+   "label": "Sales Invoice Docstatus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice_status",
+   "fieldtype": "Data",
+   "label": "Sales Invoice Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice_outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Sales Invoice Outstanding Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Service Snapshot"
+  },
+  {
+   "fieldname": "service_line",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Line",
+   "options": "NDIS Service Line"
+  },
+  {
+   "fieldname": "service_code",
+   "fieldtype": "Data",
+   "label": "Service Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_model",
+   "fieldtype": "Data",
+   "label": "Service Model"
+  },
+  {
+   "fieldname": "service_date",
+   "fieldtype": "Date",
+   "label": "Service Date"
+  },
+  {
+   "fieldname": "claim_amount",
+   "fieldtype": "Currency",
+   "label": "Claim Amount"
+  },
+  {
+   "fieldname": "expected_paid_amount",
+   "fieldtype": "Currency",
+   "label": "Expected Paid Amount"
+  },
+  {
+   "fieldname": "actual_paid_amount",
+   "fieldtype": "Currency",
+   "label": "Actual Paid Amount"
+  },
+  {
+   "fieldname": "actual_rejected_amount",
+   "fieldtype": "Currency",
+   "label": "Actual Rejected Amount"
+  },
+  {
+   "fieldname": "variance_amount",
+   "fieldtype": "Currency",
+   "label": "Variance Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "proposed_payment_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Proposed Payment Amount"
+  },
+  {
+   "fieldname": "short_paid_amount",
+   "fieldtype": "Currency",
+   "label": "Short Paid Amount"
+  },
+  {
+   "fieldname": "overpaid_amount",
+   "fieldtype": "Currency",
+   "label": "Overpaid Amount"
+  },
+  {
+   "fieldname": "rejected_amount",
+   "fieldtype": "Currency",
+   "label": "Rejected Amount"
+  },
+  {
+   "fieldname": "ndis_finance_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "NDIS Finance Snapshot"
+  },
+  {
+   "fieldname": "support_item",
+   "fieldtype": "Link",
+   "label": "Support Item",
+   "options": "NDIS Support Item"
+  },
+  {
+   "fieldname": "finance_service_type",
+   "fieldtype": "Link",
+   "label": "Finance Service Type",
+   "options": "NDIS Service Type"
+  },
+  {
+   "fieldname": "plan_budget",
+   "fieldtype": "Link",
+   "label": "NDIS Plan Budget",
+   "options": "NDIS Plan Budget"
+  },
+  {
+   "fieldname": "service_booking",
+   "fieldtype": "Link",
+   "label": "NDIS Service Booking",
+   "options": "NDIS Service Booking"
+  },
+  {
+   "fieldname": "funding_source",
+   "fieldtype": "Data",
+   "label": "Funding Source"
+  },
+  {
+   "fieldname": "default_house",
+   "fieldtype": "Link",
+   "label": "Default House",
+   "options": "NDIS House"
+  },
+  {
+   "fieldname": "invoice_group_key",
+   "fieldtype": "Data",
+   "label": "Invoice Group Key"
+  },
+  {
+   "fieldname": "payment_reference_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Reference"
+  },
+  {
+   "fieldname": "external_lodgement_reference",
+   "fieldtype": "Data",
+   "label": "External Lodgement Reference"
+  },
+  {
+   "fieldname": "external_batch_reference",
+   "fieldtype": "Data",
+   "label": "External Batch Reference"
+  },
+  {
+   "fieldname": "external_line_reference",
+   "fieldtype": "Data",
+   "label": "External Line Reference"
+  },
+  {
+   "fieldname": "actual_payment_reference",
+   "fieldtype": "Data",
+   "label": "Actual Payment Reference"
+  },
+  {
+   "fieldname": "actual_payment_date",
+   "fieldtype": "Date",
+   "label": "Actual Payment Date"
+  },
+  {
+   "fieldname": "actual_remittance_status",
+   "fieldtype": "Data",
+   "label": "Actual Remittance Status"
+  },
+  {
+   "fieldname": "allocation_type",
+   "fieldtype": "Data",
+   "label": "Allocation Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "recommended_next_action",
+   "fieldtype": "Data",
+   "label": "Recommended Next Action",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_entry_mapping_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Entry Mapping"
+  },
+  {
+   "default": "Receive",
+   "fieldname": "payment_entry_type",
+   "fieldtype": "Select",
+   "label": "Payment Entry Type",
+   "options": "Receive"
+  },
+  {
+   "default": "Customer",
+   "fieldname": "party_type",
+   "fieldtype": "Select",
+   "label": "Party Type",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "party",
+   "fieldtype": "Link",
+   "label": "Party",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "receivable_account",
+   "fieldtype": "Link",
+   "label": "Receivable Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "paid_to_account",
+   "fieldtype": "Link",
+   "label": "Paid To Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "label": "Mode of Payment",
+   "options": "Mode of Payment"
+  },
+  {
+   "fieldname": "payment_entry_posting_date",
+   "fieldtype": "Date",
+   "label": "Payment Entry Posting Date"
+  },
+  {
+   "fieldname": "payment_entry_reference_no",
+   "fieldtype": "Data",
+   "label": "Payment Entry Reference No"
+  },
+  {
+   "fieldname": "payment_entry_reference_date",
+   "fieldtype": "Date",
+   "label": "Payment Entry Reference Date"
+  },
+  {
+   "fieldname": "draft_controls_section",
+   "fieldtype": "Section Break",
+   "label": "Draft Controls"
+  },
+  {
+   "default": "0",
+   "fieldname": "payment_entry_source_ready",
+   "fieldtype": "Check",
+   "label": "Payment Entry Source Ready"
+  },
+  {
+   "default": "0",
+   "fieldname": "payment_entry_review_complete",
+   "fieldtype": "Check",
+   "label": "Payment Entry Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "payment_entry_draft_authorized",
+   "fieldtype": "Check",
+   "label": "Payment Entry Draft Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 28.",
+   "fieldname": "payment_entry_submit_authorized",
+   "fieldtype": "Check",
+   "label": "Payment Entry Submit Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 28.",
+   "fieldname": "journal_authorized",
+   "fieldtype": "Check",
+   "label": "Journal Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 28.",
+   "fieldname": "write_off_authorized",
+   "fieldtype": "Check",
+   "label": "Write Off Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 28.",
+   "fieldname": "recovery_authorized",
+   "fieldtype": "Check",
+   "label": "Recovery Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 28.",
+   "fieldname": "bank_reconciliation_authorized",
+   "fieldtype": "Check",
+   "label": "Bank Reconciliation Authorized"
+  },
+  {
+   "default": "1",
+   "fieldname": "payment_entry_hold",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Payment Entry Hold"
+  },
+  {
+   "fieldname": "payment_entry_hold_reason",
+   "fieldtype": "Small Text",
+   "label": "Payment Entry Hold Reason"
+  },
+  {
+   "fieldname": "line_status_section",
+   "fieldtype": "Section Break",
+   "label": "Line Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "line_ready_for_payment_entry_draft",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Line Ready for Payment Entry Draft"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "payment_entry_line_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Payment Entry Line Status",
+   "options": "Draft\nReady\nApproved\nDraft Payment Entry Created\nExcluded / No Payment\nReturned\nCancelled"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-05 20:16:02.890782",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Payment Entry Draft Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
