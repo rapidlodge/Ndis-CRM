@@ -1,0 +1,481 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-05 16:53:43.690426",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "source_section",
+  "payment_allocation_source_key",
+  "ndis_remittance_import",
+  "ndis_remittance_import_docstatus",
+  "ndis_remittance_import_status",
+  "claim_links_section",
+  "ndis_claim_batch",
+  "ndis_claim_line",
+  "claim_batch_status",
+  "claim_line_status",
+  "sales_invoice_snapshot_section",
+  "sales_invoice",
+  "sales_invoice_docstatus",
+  "sales_invoice_status",
+  "sales_invoice_outstanding_amount",
+  "service_snapshot_section",
+  "service_line",
+  "service_code",
+  "service_model",
+  "service_date",
+  "claim_quantity",
+  "claim_unit",
+  "claim_rate",
+  "claim_amount",
+  "expected_paid_amount",
+  "actual_paid_amount",
+  "actual_rejected_amount",
+  "variance_amount",
+  "proposed_allocation_amount",
+  "short_paid_amount",
+  "overpaid_amount",
+  "rejected_amount",
+  "ndis_finance_snapshot_section",
+  "support_item",
+  "finance_service_type",
+  "plan_budget",
+  "service_booking",
+  "funding_source",
+  "default_house",
+  "invoice_group_key",
+  "actual_remittance_snapshot_section",
+  "external_lodgement_reference",
+  "external_batch_reference",
+  "external_line_reference",
+  "actual_payment_reference",
+  "actual_payment_date",
+  "actual_remittance_status",
+  "allocation_decision_section",
+  "matching_result",
+  "matching_reason",
+  "allocation_type",
+  "recommended_next_action",
+  "payment_allocation_source_ready",
+  "payment_allocation_review_complete",
+  "allocation_decision_authorized",
+  "requires_manual_review",
+  "blocked_future_actions_section",
+  "payment_entry_authorized",
+  "journal_authorized",
+  "write_off_authorized",
+  "recovery_authorized",
+  "payment_allocation_hold",
+  "payment_allocation_hold_reason",
+  "line_status_section",
+  "line_ready_for_payment_allocation_preparation",
+  "payment_allocation_line_status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_section",
+   "fieldtype": "Section Break",
+   "label": "Source"
+  },
+  {
+   "fieldname": "payment_allocation_source_key",
+   "fieldtype": "Data",
+   "label": "Payment Allocation Source Key",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ndis_remittance_import",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NDIS Remittance Import",
+   "options": "NDIS Remittance Import"
+  },
+  {
+   "fieldname": "ndis_remittance_import_docstatus",
+   "fieldtype": "Int",
+   "label": "NDIS Remittance Import Docstatus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ndis_remittance_import_status",
+   "fieldtype": "Data",
+   "label": "NDIS Remittance Import Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "claim_links_section",
+   "fieldtype": "Section Break",
+   "label": "Claim Links"
+  },
+  {
+   "fieldname": "ndis_claim_batch",
+   "fieldtype": "Link",
+   "label": "NDIS Claim Batch",
+   "options": "NDIS Claim Batch"
+  },
+  {
+   "fieldname": "ndis_claim_line",
+   "fieldtype": "Link",
+   "label": "NDIS Claim Line",
+   "options": "NDIS Claim Line"
+  },
+  {
+   "fieldname": "claim_batch_status",
+   "fieldtype": "Data",
+   "label": "Claim Batch Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "claim_line_status",
+   "fieldtype": "Data",
+   "label": "Claim Line Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Sales Invoice Snapshot"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "sales_invoice_docstatus",
+   "fieldtype": "Int",
+   "label": "Sales Invoice Docstatus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice_status",
+   "fieldtype": "Data",
+   "label": "Sales Invoice Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice_outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Sales Invoice Outstanding Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Service Snapshot"
+  },
+  {
+   "fieldname": "service_line",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Line",
+   "options": "NDIS Service Line"
+  },
+  {
+   "fieldname": "service_code",
+   "fieldtype": "Data",
+   "label": "Service Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_model",
+   "fieldtype": "Data",
+   "label": "Service Model"
+  },
+  {
+   "fieldname": "service_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Service Date"
+  },
+  {
+   "fieldname": "claim_quantity",
+   "fieldtype": "Float",
+   "label": "Claim Quantity"
+  },
+  {
+   "default": "Hour",
+   "fieldname": "claim_unit",
+   "fieldtype": "Data",
+   "label": "Claim Unit"
+  },
+  {
+   "fieldname": "claim_rate",
+   "fieldtype": "Currency",
+   "label": "Claim Rate"
+  },
+  {
+   "fieldname": "claim_amount",
+   "fieldtype": "Currency",
+   "label": "Claim Amount"
+  },
+  {
+   "fieldname": "expected_paid_amount",
+   "fieldtype": "Currency",
+   "label": "Expected Paid Amount"
+  },
+  {
+   "fieldname": "actual_paid_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Actual Paid Amount"
+  },
+  {
+   "fieldname": "actual_rejected_amount",
+   "fieldtype": "Currency",
+   "label": "Actual Rejected Amount"
+  },
+  {
+   "fieldname": "variance_amount",
+   "fieldtype": "Currency",
+   "label": "Variance Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "proposed_allocation_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Proposed Allocation Amount"
+  },
+  {
+   "fieldname": "short_paid_amount",
+   "fieldtype": "Currency",
+   "label": "Short Paid Amount"
+  },
+  {
+   "fieldname": "overpaid_amount",
+   "fieldtype": "Currency",
+   "label": "Overpaid Amount"
+  },
+  {
+   "fieldname": "rejected_amount",
+   "fieldtype": "Currency",
+   "label": "Rejected Amount"
+  },
+  {
+   "fieldname": "ndis_finance_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "NDIS Finance Snapshot"
+  },
+  {
+   "fieldname": "support_item",
+   "fieldtype": "Link",
+   "label": "Support Item",
+   "options": "NDIS Support Item"
+  },
+  {
+   "fieldname": "finance_service_type",
+   "fieldtype": "Link",
+   "label": "Finance Service Type",
+   "options": "NDIS Service Type"
+  },
+  {
+   "fieldname": "plan_budget",
+   "fieldtype": "Link",
+   "label": "NDIS Plan Budget",
+   "options": "NDIS Plan Budget"
+  },
+  {
+   "fieldname": "service_booking",
+   "fieldtype": "Link",
+   "label": "NDIS Service Booking",
+   "options": "NDIS Service Booking"
+  },
+  {
+   "fieldname": "funding_source",
+   "fieldtype": "Data",
+   "label": "Funding Source"
+  },
+  {
+   "fieldname": "default_house",
+   "fieldtype": "Link",
+   "label": "Default House",
+   "options": "NDIS House"
+  },
+  {
+   "fieldname": "invoice_group_key",
+   "fieldtype": "Data",
+   "label": "Invoice Group Key"
+  },
+  {
+   "fieldname": "actual_remittance_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Actual Remittance Snapshot"
+  },
+  {
+   "fieldname": "external_lodgement_reference",
+   "fieldtype": "Data",
+   "label": "External Lodgement Reference"
+  },
+  {
+   "fieldname": "external_batch_reference",
+   "fieldtype": "Data",
+   "label": "External Batch Reference"
+  },
+  {
+   "fieldname": "external_line_reference",
+   "fieldtype": "Data",
+   "label": "External Line Reference"
+  },
+  {
+   "fieldname": "actual_payment_reference",
+   "fieldtype": "Data",
+   "label": "Actual Payment Reference"
+  },
+  {
+   "fieldname": "actual_payment_date",
+   "fieldtype": "Date",
+   "label": "Actual Payment Date"
+  },
+  {
+   "fieldname": "actual_remittance_status",
+   "fieldtype": "Data",
+   "label": "Actual Remittance Status"
+  },
+  {
+   "fieldname": "allocation_decision_section",
+   "fieldtype": "Section Break",
+   "label": "Allocation Decision"
+  },
+  {
+   "fieldname": "matching_result",
+   "fieldtype": "Data",
+   "label": "Matching Result",
+   "read_only": 1
+  },
+  {
+   "fieldname": "matching_reason",
+   "fieldtype": "Small Text",
+   "label": "Matching Reason",
+   "read_only": 1
+  },
+  {
+   "fieldname": "allocation_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Allocation Type",
+   "options": "Full Payment Allocation\nPartial Payment Allocation\nNo Payment / Rejected\nOverpayment Review\nUnderpayment Review\nManual Review"
+  },
+  {
+   "fieldname": "recommended_next_action",
+   "fieldtype": "Data",
+   "label": "Recommended Next Action",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "payment_allocation_source_ready",
+   "fieldtype": "Check",
+   "label": "Payment Allocation Source Ready"
+  },
+  {
+   "default": "0",
+   "fieldname": "payment_allocation_review_complete",
+   "fieldtype": "Check",
+   "label": "Payment Allocation Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "allocation_decision_authorized",
+   "fieldtype": "Check",
+   "label": "Allocation Decision Authorized"
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_manual_review",
+   "fieldtype": "Check",
+   "label": "Requires Manual Review"
+  },
+  {
+   "fieldname": "blocked_future_actions_section",
+   "fieldtype": "Section Break",
+   "label": "Blocked Future Actions"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 27.",
+   "fieldname": "payment_entry_authorized",
+   "fieldtype": "Check",
+   "label": "Payment Entry Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 27.",
+   "fieldname": "journal_authorized",
+   "fieldtype": "Check",
+   "label": "Journal Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 27.",
+   "fieldname": "write_off_authorized",
+   "fieldtype": "Check",
+   "label": "Write Off Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 27.",
+   "fieldname": "recovery_authorized",
+   "fieldtype": "Check",
+   "label": "Recovery Authorized"
+  },
+  {
+   "default": "1",
+   "fieldname": "payment_allocation_hold",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Payment Allocation Hold"
+  },
+  {
+   "fieldname": "payment_allocation_hold_reason",
+   "fieldtype": "Small Text",
+   "label": "Payment Allocation Hold Reason"
+  },
+  {
+   "fieldname": "line_status_section",
+   "fieldtype": "Section Break",
+   "label": "Line Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "line_ready_for_payment_allocation_preparation",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Line Ready for Payment Allocation Preparation"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "payment_allocation_line_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Payment Allocation Line Status",
+   "options": "Draft\nReady\nApproved\nPayment Allocation Prepared\nReturned\nCancelled"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-05 16:53:43.690426",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Payment Allocation Preparation Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
