@@ -1,0 +1,418 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-06 11:58:49.855162",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "source_section",
+  "remittance_finalisation_source_key",
+  "ndis_remittance_import",
+  "ndis_remittance_import_docstatus",
+  "ndis_remittance_import_status",
+  "payment_entry_section",
+  "payment_entry",
+  "payment_entry_docstatus",
+  "payment_entry_status",
+  "payment_entry_type",
+  "party_type",
+  "party",
+  "payment_entry_posting_date",
+  "payment_entry_reference_no",
+  "payment_entry_reference_date",
+  "proposed_payment_amount",
+  "paid_amount",
+  "received_amount",
+  "invoice_claim_section",
+  "sales_invoice",
+  "sales_invoice_docstatus",
+  "sales_invoice_status",
+  "sales_invoice_outstanding_amount",
+  "ndis_claim_batch",
+  "ndis_claim_line",
+  "service_snapshot_section",
+  "service_line",
+  "service_code",
+  "service_model",
+  "service_date",
+  "support_item",
+  "finance_service_type",
+  "plan_budget",
+  "service_booking",
+  "funding_source",
+  "default_house",
+  "external_references_section",
+  "external_lodgement_reference",
+  "external_batch_reference",
+  "external_line_reference",
+  "actual_payment_reference",
+  "actual_payment_date",
+  "finalisation_controls_section",
+  "finalisation_source_ready",
+  "remittance_import_finalisation_review_complete",
+  "remittance_import_finalisation_authorized",
+  "remittance_import_submit_authorized",
+  "journal_authorized",
+  "write_off_authorized",
+  "recovery_authorized",
+  "bank_reconciliation_authorized",
+  "finalisation_hold",
+  "finalisation_hold_reason",
+  "line_status_section",
+  "line_ready_for_remittance_import_finalisation",
+  "remittance_finalisation_line_status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_section",
+   "fieldtype": "Section Break",
+   "label": "Source"
+  },
+  {
+   "fieldname": "remittance_finalisation_source_key",
+   "fieldtype": "Data",
+   "label": "Remittance Finalisation Source Key",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ndis_remittance_import",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NDIS Remittance Import",
+   "options": "NDIS Remittance Import"
+  },
+  {
+   "fieldname": "ndis_remittance_import_docstatus",
+   "fieldtype": "Int",
+   "label": "NDIS Remittance Import Docstatus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ndis_remittance_import_status",
+   "fieldtype": "Data",
+   "label": "NDIS Remittance Import Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_entry_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Entry"
+  },
+  {
+   "fieldname": "payment_entry",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Payment Entry",
+   "options": "Payment Entry"
+  },
+  {
+   "fieldname": "payment_entry_docstatus",
+   "fieldtype": "Int",
+   "label": "Payment Entry Docstatus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_entry_status",
+   "fieldtype": "Data",
+   "label": "Payment Entry Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_entry_type",
+   "fieldtype": "Data",
+   "label": "Payment Entry Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "party_type",
+   "fieldtype": "Data",
+   "label": "Party Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "party",
+   "fieldtype": "Link",
+   "label": "Party",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_entry_posting_date",
+   "fieldtype": "Date",
+   "label": "Payment Entry Posting Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_entry_reference_no",
+   "fieldtype": "Data",
+   "label": "Payment Entry Reference No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_entry_reference_date",
+   "fieldtype": "Date",
+   "label": "Payment Entry Reference Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "proposed_payment_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Proposed Payment Amount"
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "received_amount",
+   "fieldtype": "Currency",
+   "label": "Received Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "invoice_claim_section",
+   "fieldtype": "Section Break",
+   "label": "Invoice / Claim"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "sales_invoice_docstatus",
+   "fieldtype": "Int",
+   "label": "Sales Invoice Docstatus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice_status",
+   "fieldtype": "Data",
+   "label": "Sales Invoice Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice_outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Sales Invoice Outstanding Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ndis_claim_batch",
+   "fieldtype": "Link",
+   "label": "NDIS Claim Batch",
+   "options": "NDIS Claim Batch"
+  },
+  {
+   "fieldname": "ndis_claim_line",
+   "fieldtype": "Link",
+   "label": "NDIS Claim Line",
+   "options": "NDIS Claim Line"
+  },
+  {
+   "fieldname": "service_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Service Snapshot"
+  },
+  {
+   "fieldname": "service_line",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Line",
+   "options": "NDIS Service Line"
+  },
+  {
+   "fieldname": "service_code",
+   "fieldtype": "Data",
+   "label": "Service Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_model",
+   "fieldtype": "Data",
+   "label": "Service Model"
+  },
+  {
+   "fieldname": "service_date",
+   "fieldtype": "Date",
+   "label": "Service Date"
+  },
+  {
+   "fieldname": "support_item",
+   "fieldtype": "Data",
+   "label": "Support Item"
+  },
+  {
+   "fieldname": "finance_service_type",
+   "fieldtype": "Data",
+   "label": "Finance Service Type"
+  },
+  {
+   "fieldname": "plan_budget",
+   "fieldtype": "Data",
+   "label": "NDIS Plan Budget"
+  },
+  {
+   "fieldname": "service_booking",
+   "fieldtype": "Data",
+   "label": "NDIS Service Booking"
+  },
+  {
+   "fieldname": "funding_source",
+   "fieldtype": "Data",
+   "label": "Funding Source"
+  },
+  {
+   "fieldname": "default_house",
+   "fieldtype": "Data",
+   "label": "Default House"
+  },
+  {
+   "fieldname": "external_references_section",
+   "fieldtype": "Section Break",
+   "label": "External References"
+  },
+  {
+   "fieldname": "external_lodgement_reference",
+   "fieldtype": "Data",
+   "label": "External Lodgement Reference"
+  },
+  {
+   "fieldname": "external_batch_reference",
+   "fieldtype": "Data",
+   "label": "External Batch Reference"
+  },
+  {
+   "fieldname": "external_line_reference",
+   "fieldtype": "Data",
+   "label": "External Line Reference"
+  },
+  {
+   "fieldname": "actual_payment_reference",
+   "fieldtype": "Data",
+   "label": "Actual Payment Reference"
+  },
+  {
+   "fieldname": "actual_payment_date",
+   "fieldtype": "Date",
+   "label": "Actual Payment Date"
+  },
+  {
+   "fieldname": "finalisation_controls_section",
+   "fieldtype": "Section Break",
+   "label": "Finalisation Controls"
+  },
+  {
+   "default": "0",
+   "fieldname": "finalisation_source_ready",
+   "fieldtype": "Check",
+   "label": "Finalisation Source Ready"
+  },
+  {
+   "default": "0",
+   "fieldname": "remittance_import_finalisation_review_complete",
+   "fieldtype": "Check",
+   "label": "Remittance Import Finalisation Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "remittance_import_finalisation_authorized",
+   "fieldtype": "Check",
+   "label": "Remittance Import Finalisation Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Legacy direct submit flag remains blocked. Use run-level Finalisation Allowed.",
+   "fieldname": "remittance_import_submit_authorized",
+   "fieldtype": "Check",
+   "label": "Remittance Import Submit Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 30.",
+   "fieldname": "journal_authorized",
+   "fieldtype": "Check",
+   "label": "Journal Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 30.",
+   "fieldname": "write_off_authorized",
+   "fieldtype": "Check",
+   "label": "Write Off Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 30.",
+   "fieldname": "recovery_authorized",
+   "fieldtype": "Check",
+   "label": "Recovery Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 30.",
+   "fieldname": "bank_reconciliation_authorized",
+   "fieldtype": "Check",
+   "label": "Bank Reconciliation Authorized"
+  },
+  {
+   "default": "1",
+   "fieldname": "finalisation_hold",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Finalisation Hold"
+  },
+  {
+   "fieldname": "finalisation_hold_reason",
+   "fieldtype": "Small Text",
+   "label": "Finalisation Hold Reason"
+  },
+  {
+   "fieldname": "line_status_section",
+   "fieldtype": "Section Break",
+   "label": "Line Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "line_ready_for_remittance_import_finalisation",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Line Ready for Remittance Import Finalisation"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "remittance_finalisation_line_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Remittance Finalisation Line Status",
+   "options": "Draft\nReady\nApproved\nRemittance Import Submitted\nRemittance Import Finalised\nReturned\nCancelled"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-06 11:58:49.855162",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Remittance Import Finalisation Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
