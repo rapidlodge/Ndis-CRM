@@ -1,0 +1,483 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-09 12:11:13.873982",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "source_section",
+  "variance_review_source_key",
+  "document_links_section",
+  "ndis_remittance_import",
+  "ndis_remittance_import_docstatus",
+  "ndis_remittance_import_status",
+  "payment_entry",
+  "payment_entry_docstatus",
+  "payment_entry_status",
+  "sales_invoice",
+  "sales_invoice_docstatus",
+  "sales_invoice_status",
+  "sales_invoice_outstanding_amount",
+  "ndis_claim_batch",
+  "ndis_claim_line",
+  "service_snapshot_section",
+  "service_line",
+  "service_code",
+  "service_model",
+  "service_date",
+  "support_item",
+  "finance_service_type",
+  "plan_budget",
+  "service_booking",
+  "funding_source",
+  "default_house",
+  "external_references_section",
+  "external_lodgement_reference",
+  "external_batch_reference",
+  "external_line_reference",
+  "actual_payment_reference",
+  "actual_payment_date",
+  "amounts_section",
+  "matching_result",
+  "allocation_type",
+  "claim_amount",
+  "expected_paid_amount",
+  "actual_paid_amount",
+  "actual_rejected_amount",
+  "variance_amount",
+  "proposed_allocation_amount",
+  "short_paid_amount",
+  "overpaid_amount",
+  "rejected_amount",
+  "review_decision_section",
+  "review_category",
+  "recommended_resolution",
+  "write_off_candidate",
+  "recovery_candidate",
+  "adjustment_candidate",
+  "dispute_candidate",
+  "bank_reconciliation_candidate",
+  "review_controls_section",
+  "variance_review_source_ready",
+  "variance_review_complete",
+  "variance_decision_authorized",
+  "write_off_authorized",
+  "recovery_authorized",
+  "adjustment_authorized",
+  "journal_authorized",
+  "bank_reconciliation_authorized",
+  "variance_review_hold",
+  "variance_review_hold_reason",
+  "line_status_section",
+  "line_ready_for_variance_review_completion",
+  "variance_review_line_status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_section",
+   "fieldtype": "Section Break",
+   "label": "Source"
+  },
+  {
+   "fieldname": "variance_review_source_key",
+   "fieldtype": "Data",
+   "label": "Variance Review Source Key",
+   "read_only": 1
+  },
+  {
+   "fieldname": "document_links_section",
+   "fieldtype": "Section Break",
+   "label": "Document Links"
+  },
+  {
+   "fieldname": "ndis_remittance_import",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NDIS Remittance Import",
+   "options": "NDIS Remittance Import"
+  },
+  {
+   "fieldname": "ndis_remittance_import_docstatus",
+   "fieldtype": "Int",
+   "label": "NDIS Remittance Import Docstatus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ndis_remittance_import_status",
+   "fieldtype": "Data",
+   "label": "NDIS Remittance Import Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_entry",
+   "fieldtype": "Link",
+   "label": "Payment Entry",
+   "options": "Payment Entry"
+  },
+  {
+   "fieldname": "payment_entry_docstatus",
+   "fieldtype": "Int",
+   "label": "Payment Entry Docstatus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_entry_status",
+   "fieldtype": "Data",
+   "label": "Payment Entry Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "sales_invoice_docstatus",
+   "fieldtype": "Int",
+   "label": "Sales Invoice Docstatus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice_status",
+   "fieldtype": "Data",
+   "label": "Sales Invoice Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice_outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Sales Invoice Outstanding Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ndis_claim_batch",
+   "fieldtype": "Link",
+   "label": "NDIS Claim Batch",
+   "options": "NDIS Claim Batch"
+  },
+  {
+   "fieldname": "ndis_claim_line",
+   "fieldtype": "Link",
+   "label": "NDIS Claim Line",
+   "options": "NDIS Claim Line"
+  },
+  {
+   "fieldname": "service_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Service Snapshot"
+  },
+  {
+   "fieldname": "service_line",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Line",
+   "options": "NDIS Service Line"
+  },
+  {
+   "fieldname": "service_code",
+   "fieldtype": "Data",
+   "label": "Service Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_model",
+   "fieldtype": "Data",
+   "label": "Service Model"
+  },
+  {
+   "fieldname": "service_date",
+   "fieldtype": "Date",
+   "label": "Service Date"
+  },
+  {
+   "fieldname": "support_item",
+   "fieldtype": "Data",
+   "label": "Support Item"
+  },
+  {
+   "fieldname": "finance_service_type",
+   "fieldtype": "Data",
+   "label": "Finance Service Type"
+  },
+  {
+   "fieldname": "plan_budget",
+   "fieldtype": "Data",
+   "label": "NDIS Plan Budget"
+  },
+  {
+   "fieldname": "service_booking",
+   "fieldtype": "Data",
+   "label": "NDIS Service Booking"
+  },
+  {
+   "fieldname": "funding_source",
+   "fieldtype": "Data",
+   "label": "Funding Source"
+  },
+  {
+   "fieldname": "default_house",
+   "fieldtype": "Data",
+   "label": "Default House"
+  },
+  {
+   "fieldname": "external_references_section",
+   "fieldtype": "Section Break",
+   "label": "External References"
+  },
+  {
+   "fieldname": "external_lodgement_reference",
+   "fieldtype": "Data",
+   "label": "External Lodgement Reference"
+  },
+  {
+   "fieldname": "external_batch_reference",
+   "fieldtype": "Data",
+   "label": "External Batch Reference"
+  },
+  {
+   "fieldname": "external_line_reference",
+   "fieldtype": "Data",
+   "label": "External Line Reference"
+  },
+  {
+   "fieldname": "actual_payment_reference",
+   "fieldtype": "Data",
+   "label": "Actual Payment Reference"
+  },
+  {
+   "fieldname": "actual_payment_date",
+   "fieldtype": "Date",
+   "label": "Actual Payment Date"
+  },
+  {
+   "fieldname": "amounts_section",
+   "fieldtype": "Section Break",
+   "label": "Amounts"
+  },
+  {
+   "fieldname": "matching_result",
+   "fieldtype": "Data",
+   "label": "Matching Result",
+   "read_only": 1
+  },
+  {
+   "fieldname": "allocation_type",
+   "fieldtype": "Data",
+   "label": "Allocation Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "claim_amount",
+   "fieldtype": "Currency",
+   "label": "Claim Amount"
+  },
+  {
+   "fieldname": "expected_paid_amount",
+   "fieldtype": "Currency",
+   "label": "Expected Paid Amount"
+  },
+  {
+   "fieldname": "actual_paid_amount",
+   "fieldtype": "Currency",
+   "label": "Actual Paid Amount"
+  },
+  {
+   "fieldname": "actual_rejected_amount",
+   "fieldtype": "Currency",
+   "label": "Actual Rejected Amount"
+  },
+  {
+   "fieldname": "variance_amount",
+   "fieldtype": "Currency",
+   "label": "Variance Amount"
+  },
+  {
+   "fieldname": "proposed_allocation_amount",
+   "fieldtype": "Currency",
+   "label": "Proposed Allocation Amount"
+  },
+  {
+   "fieldname": "short_paid_amount",
+   "fieldtype": "Currency",
+   "label": "Short Paid Amount"
+  },
+  {
+   "fieldname": "overpaid_amount",
+   "fieldtype": "Currency",
+   "label": "Overpaid Amount"
+  },
+  {
+   "fieldname": "rejected_amount",
+   "fieldtype": "Currency",
+   "label": "Rejected Amount"
+  },
+  {
+   "fieldname": "review_decision_section",
+   "fieldtype": "Section Break",
+   "label": "Review Decision"
+  },
+  {
+   "fieldname": "review_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Review Category",
+   "options": "Rejected Claim\nShort Payment\nOverpayment\nUnmatched\nManual Review\nVariance Investigation"
+  },
+  {
+   "fieldname": "recommended_resolution",
+   "fieldtype": "Data",
+   "label": "Recommended Resolution",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "write_off_candidate",
+   "fieldtype": "Check",
+   "label": "Write Off Candidate",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "recovery_candidate",
+   "fieldtype": "Check",
+   "label": "Recovery Candidate",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "adjustment_candidate",
+   "fieldtype": "Check",
+   "label": "Adjustment Candidate",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "dispute_candidate",
+   "fieldtype": "Check",
+   "label": "Dispute Candidate",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "bank_reconciliation_candidate",
+   "fieldtype": "Check",
+   "label": "Bank Reconciliation Candidate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "review_controls_section",
+   "fieldtype": "Section Break",
+   "label": "Review Controls"
+  },
+  {
+   "default": "0",
+   "fieldname": "variance_review_source_ready",
+   "fieldtype": "Check",
+   "label": "Variance Review Source Ready"
+  },
+  {
+   "default": "0",
+   "fieldname": "variance_review_complete",
+   "fieldtype": "Check",
+   "label": "Variance Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "variance_decision_authorized",
+   "fieldtype": "Check",
+   "label": "Variance Decision Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 31.",
+   "fieldname": "write_off_authorized",
+   "fieldtype": "Check",
+   "label": "Write Off Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 31.",
+   "fieldname": "recovery_authorized",
+   "fieldtype": "Check",
+   "label": "Recovery Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 31.",
+   "fieldname": "adjustment_authorized",
+   "fieldtype": "Check",
+   "label": "Adjustment Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 31.",
+   "fieldname": "journal_authorized",
+   "fieldtype": "Check",
+   "label": "Journal Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 31.",
+   "fieldname": "bank_reconciliation_authorized",
+   "fieldtype": "Check",
+   "label": "Bank Reconciliation Authorized"
+  },
+  {
+   "default": "1",
+   "fieldname": "variance_review_hold",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Variance Review Hold"
+  },
+  {
+   "fieldname": "variance_review_hold_reason",
+   "fieldtype": "Small Text",
+   "label": "Variance Review Hold Reason"
+  },
+  {
+   "fieldname": "line_status_section",
+   "fieldtype": "Section Break",
+   "label": "Line Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "line_ready_for_variance_review_completion",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Line Ready for Variance Review Completion"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "variance_review_line_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Variance Review Line Status",
+   "options": "Draft\nReady\nApproved\nVariance Review Completed\nReturned\nCancelled"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-09 12:11:13.873982",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Variance Rejection Review Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

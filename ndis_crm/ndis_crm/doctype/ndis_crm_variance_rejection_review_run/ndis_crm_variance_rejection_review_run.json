@@ -1,0 +1,731 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-08-09 12:11:16.084732",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "status_section",
+  "status",
+  "readiness_percent",
+  "variance_rejection_review_run_ready",
+  "no_variance_or_rejection_found",
+  "variance_review_completion_allowed",
+  "write_off_creation_allowed",
+  "recovery_creation_allowed",
+  "adjustment_creation_allowed",
+  "journal_creation_allowed",
+  "bank_reconciliation_allowed",
+  "summary_section",
+  "variance_review_line_count",
+  "variance_amount_total",
+  "short_paid_amount_total",
+  "overpaid_amount_total",
+  "rejected_amount_total",
+  "variance_review_ready_count",
+  "variance_review_hold_count",
+  "rejected_claim_count",
+  "short_payment_count",
+  "overpayment_count",
+  "manual_review_count",
+  "unmatched_count",
+  "variance_investigation_count",
+  "write_off_candidate_count",
+  "recovery_candidate_count",
+  "adjustment_candidate_count",
+  "dispute_candidate_count",
+  "bank_reconciliation_candidate_count",
+  "blocked_write_off_authorization_count",
+  "blocked_recovery_authorization_count",
+  "blocked_adjustment_authorization_count",
+  "blocked_journal_authorization_count",
+  "blocked_bank_reconciliation_count",
+  "source_links_section",
+  "crm_lead",
+  "crm_deal",
+  "participant_intake",
+  "handover",
+  "finance_onboarding",
+  "operations_setup",
+  "service_schedule_draft",
+  "roster_build_request",
+  "participant_service_file",
+  "service_session_draft",
+  "delivery_evidence_review",
+  "downstream_preparation",
+  "attendance_draft",
+  "billing_draft",
+  "claim_draft",
+  "invoice_draft",
+  "sales_invoice_draft_run",
+  "sales_invoice_submission_run",
+  "claim_batch_draft_run",
+  "claim_batch_submission_run",
+  "claim_export_preparation_run",
+  "claim_lodgement_confirmation_run",
+  "remittance_import_preparation_run",
+  "actual_remittance_import_run",
+  "remittance_matching_review_run",
+  "payment_allocation_preparation_run",
+  "payment_entry_draft_run",
+  "payment_entry_submission_run",
+  "remittance_import_finalisation_run",
+  "ndis_remittance_import",
+  "participant_customer",
+  "ndis_financial_profile",
+  "participant_details_section",
+  "participant_name",
+  "ndis_number",
+  "plan_start_date",
+  "plan_end_date",
+  "company",
+  "claim_window_section",
+  "claim_period_start",
+  "claim_period_end",
+  "owners_section",
+  "variance_review_owner",
+  "remittance_finalisation_owner",
+  "payment_entry_submission_owner",
+  "completed_by",
+  "completed_on",
+  "variance_review_lines_section",
+  "variance_review_lines",
+  "notes_section",
+  "variance_rejection_review_notes",
+  "returned_notes"
+ ],
+ "fields": [
+  {
+   "default": "NDIS-VAR-REJ-REV-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "NDIS-VAR-REJ-REV-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nIn Review\nReady for Variance Rejection Review\nVariance Rejection Review Approved\nVariance Rejection Review Completed\nReturned to Remittance Finalisation\nCancelled"
+  },
+  {
+   "fieldname": "readiness_percent",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Readiness %",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "variance_rejection_review_run_ready",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Variance Rejection Review Run Ready",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "no_variance_or_rejection_found",
+   "fieldtype": "Check",
+   "label": "No Variance or Rejection Found",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "variance_review_completion_allowed",
+   "fieldtype": "Check",
+   "label": "Variance Review Completion Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 31.",
+   "fieldname": "write_off_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Write Off Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 31.",
+   "fieldname": "recovery_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Recovery Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 31.",
+   "fieldname": "adjustment_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Adjustment Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 31.",
+   "fieldname": "journal_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Journal Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 31.",
+   "fieldname": "bank_reconciliation_allowed",
+   "fieldtype": "Check",
+   "label": "Bank Reconciliation Allowed"
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "variance_review_line_count",
+   "fieldtype": "Int",
+   "label": "Variance Review Line Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "variance_amount_total",
+   "fieldtype": "Currency",
+   "label": "Variance Amount Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "short_paid_amount_total",
+   "fieldtype": "Currency",
+   "label": "Short Paid Amount Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "overpaid_amount_total",
+   "fieldtype": "Currency",
+   "label": "Overpaid Amount Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rejected_amount_total",
+   "fieldtype": "Currency",
+   "label": "Rejected Amount Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "variance_review_ready_count",
+   "fieldtype": "Int",
+   "label": "Variance Review Ready Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "variance_review_hold_count",
+   "fieldtype": "Int",
+   "label": "Variance Review Hold Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rejected_claim_count",
+   "fieldtype": "Int",
+   "label": "Rejected Claim Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "short_payment_count",
+   "fieldtype": "Int",
+   "label": "Short Payment Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "overpayment_count",
+   "fieldtype": "Int",
+   "label": "Overpayment Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "manual_review_count",
+   "fieldtype": "Int",
+   "label": "Manual Review Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unmatched_count",
+   "fieldtype": "Int",
+   "label": "Unmatched Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "variance_investigation_count",
+   "fieldtype": "Int",
+   "label": "Variance Investigation Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "write_off_candidate_count",
+   "fieldtype": "Int",
+   "label": "Write Off Candidate Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "recovery_candidate_count",
+   "fieldtype": "Int",
+   "label": "Recovery Candidate Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "adjustment_candidate_count",
+   "fieldtype": "Int",
+   "label": "Adjustment Candidate Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "dispute_candidate_count",
+   "fieldtype": "Int",
+   "label": "Dispute Candidate Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bank_reconciliation_candidate_count",
+   "fieldtype": "Int",
+   "label": "Bank Reconciliation Candidate Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_write_off_authorization_count",
+   "fieldtype": "Int",
+   "label": "Blocked Write Off Authorization Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_recovery_authorization_count",
+   "fieldtype": "Int",
+   "label": "Blocked Recovery Authorization Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_adjustment_authorization_count",
+   "fieldtype": "Int",
+   "label": "Blocked Adjustment Authorization Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_journal_authorization_count",
+   "fieldtype": "Int",
+   "label": "Blocked Journal Authorization Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_bank_reconciliation_count",
+   "fieldtype": "Int",
+   "label": "Blocked Bank Reconciliation Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_links_section",
+   "fieldtype": "Section Break",
+   "label": "Source Links"
+  },
+  {
+   "fieldname": "crm_lead",
+   "fieldtype": "Link",
+   "label": "CRM Lead",
+   "options": "CRM Lead"
+  },
+  {
+   "fieldname": "crm_deal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "CRM Deal",
+   "options": "CRM Deal"
+  },
+  {
+   "fieldname": "participant_intake",
+   "fieldtype": "Link",
+   "label": "NDIS Participant Intake",
+   "options": "NDIS Participant Intake"
+  },
+  {
+   "fieldname": "handover",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Handover",
+   "options": "NDIS CRM Handover"
+  },
+  {
+   "fieldname": "finance_onboarding",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Finance Onboarding",
+   "options": "NDIS CRM Finance Onboarding"
+  },
+  {
+   "fieldname": "operations_setup",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Operations Setup",
+   "options": "NDIS CRM Operations Setup"
+  },
+  {
+   "fieldname": "service_schedule_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Service Schedule Draft",
+   "options": "NDIS CRM Service Schedule Draft"
+  },
+  {
+   "fieldname": "roster_build_request",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Roster Build Request",
+   "options": "NDIS CRM Roster Build Request"
+  },
+  {
+   "fieldname": "participant_service_file",
+   "fieldtype": "Link",
+   "label": "NDIS Participant Service File",
+   "options": "NDIS Participant Service File"
+  },
+  {
+   "fieldname": "service_session_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Service Session Draft",
+   "options": "NDIS CRM Service Session Draft"
+  },
+  {
+   "fieldname": "delivery_evidence_review",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Delivery Evidence Review",
+   "options": "NDIS CRM Service Delivery Evidence Review"
+  },
+  {
+   "fieldname": "downstream_preparation",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Downstream Preparation",
+   "options": "NDIS CRM Downstream Preparation"
+  },
+  {
+   "fieldname": "attendance_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Attendance Draft",
+   "options": "NDIS CRM Attendance Draft"
+  },
+  {
+   "fieldname": "billing_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Billing Draft",
+   "options": "NDIS CRM Billing Draft"
+  },
+  {
+   "fieldname": "claim_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Claim Draft",
+   "options": "NDIS CRM Claim Draft"
+  },
+  {
+   "fieldname": "invoice_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Invoice Draft",
+   "options": "NDIS CRM Invoice Draft"
+  },
+  {
+   "fieldname": "sales_invoice_draft_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Sales Invoice Draft Run",
+   "options": "NDIS CRM Sales Invoice Draft Run"
+  },
+  {
+   "fieldname": "sales_invoice_submission_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Sales Invoice Submission Run",
+   "options": "NDIS CRM Sales Invoice Submission Run"
+  },
+  {
+   "fieldname": "claim_batch_draft_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Claim Batch Draft Run",
+   "options": "NDIS CRM Claim Batch Draft Run"
+  },
+  {
+   "fieldname": "claim_batch_submission_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Claim Batch Submission Run",
+   "options": "NDIS CRM Claim Batch Submission Run"
+  },
+  {
+   "fieldname": "claim_export_preparation_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Claim Export Preparation Run",
+   "options": "NDIS CRM Claim Export Preparation Run"
+  },
+  {
+   "fieldname": "claim_lodgement_confirmation_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Claim Lodgement Confirmation Run",
+   "options": "NDIS CRM Claim Lodgement Confirmation Run"
+  },
+  {
+   "fieldname": "remittance_import_preparation_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Remittance Import Preparation Run",
+   "options": "NDIS CRM Remittance Import Preparation Run"
+  },
+  {
+   "fieldname": "actual_remittance_import_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Actual Remittance Import Run",
+   "options": "NDIS CRM Actual Remittance Import Run"
+  },
+  {
+   "fieldname": "remittance_matching_review_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Remittance Matching Review Run",
+   "options": "NDIS CRM Remittance Matching Review Run"
+  },
+  {
+   "fieldname": "payment_allocation_preparation_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Payment Allocation Preparation Run",
+   "options": "NDIS CRM Payment Allocation Preparation Run",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_entry_draft_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Payment Entry Draft Run",
+   "options": "NDIS CRM Payment Entry Draft Run"
+  },
+  {
+   "fieldname": "payment_entry_submission_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Payment Entry Submission Run",
+   "options": "NDIS CRM Payment Entry Submission Run"
+  },
+  {
+   "fieldname": "remittance_import_finalisation_run",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NDIS CRM Remittance Import Finalisation Run",
+   "options": "NDIS CRM Remittance Import Finalisation Run",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ndis_remittance_import",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NDIS Remittance Import",
+   "options": "NDIS Remittance Import"
+  },
+  {
+   "fieldname": "participant_customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Participant Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "ndis_financial_profile",
+   "fieldtype": "Link",
+   "label": "NDIS Financial Profile",
+   "options": "NDIS Participant Financial Profile"
+  },
+  {
+   "fieldname": "participant_details_section",
+   "fieldtype": "Section Break",
+   "label": "Participant Details"
+  },
+  {
+   "fieldname": "participant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Participant Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ndis_number",
+   "fieldtype": "Data",
+   "label": "NDIS Number"
+  },
+  {
+   "fieldname": "plan_start_date",
+   "fieldtype": "Date",
+   "label": "Plan Start Date"
+  },
+  {
+   "fieldname": "plan_end_date",
+   "fieldtype": "Date",
+   "label": "Plan End Date"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "claim_window_section",
+   "fieldtype": "Section Break",
+   "label": "Claim Window"
+  },
+  {
+   "fieldname": "claim_period_start",
+   "fieldtype": "Date",
+   "label": "Claim Period Start"
+  },
+  {
+   "fieldname": "claim_period_end",
+   "fieldtype": "Date",
+   "label": "Claim Period End"
+  },
+  {
+   "fieldname": "owners_section",
+   "fieldtype": "Section Break",
+   "label": "Owners"
+  },
+  {
+   "fieldname": "variance_review_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Variance Review Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "remittance_finalisation_owner",
+   "fieldtype": "Link",
+   "label": "Remittance Finalisation Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "payment_entry_submission_owner",
+   "fieldtype": "Link",
+   "label": "Payment Entry Submission Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "completed_by",
+   "fieldtype": "Link",
+   "label": "Completed By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "completed_on",
+   "fieldtype": "Datetime",
+   "label": "Completed On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "variance_review_lines_section",
+   "fieldtype": "Section Break",
+   "label": "Variance Review Lines"
+  },
+  {
+   "fieldname": "variance_review_lines",
+   "fieldtype": "Table",
+   "label": "Variance Review Lines",
+   "options": "NDIS CRM Variance Rejection Review Line"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "variance_rejection_review_notes",
+   "fieldtype": "Small Text",
+   "label": "Variance Rejection Review Notes"
+  },
+  {
+   "fieldname": "returned_notes",
+   "fieldtype": "Small Text",
+   "label": "Returned / Blocker Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-09 12:11:16.084732",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Variance Rejection Review Run",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Plan Management Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Read Only",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "participant_name",
+ "track_changes": 1
+}
