@@ -1,0 +1,560 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-10 19:55:03.872332",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "source_section",
+  "recovery_case_draft_source_key",
+  "target_case_doctype",
+  "target_case_name",
+  "target_case_docstatus",
+  "recovery_preparation_source_type",
+  "accounting_outcome_section",
+  "journal_entry",
+  "journal_entry_docstatus",
+  "journal_entry_status",
+  "standard_gl_entry_count",
+  "document_links_section",
+  "ndis_remittance_import",
+  "ndis_remittance_import_docstatus",
+  "ndis_remittance_import_status",
+  "payment_entry",
+  "payment_entry_docstatus",
+  "payment_entry_status",
+  "sales_invoice",
+  "sales_invoice_docstatus",
+  "sales_invoice_status",
+  "sales_invoice_outstanding_amount",
+  "ndis_claim_batch",
+  "ndis_claim_line",
+  "service_snapshot_section",
+  "service_line",
+  "service_code",
+  "service_model",
+  "service_date",
+  "support_item",
+  "finance_service_type",
+  "plan_budget",
+  "service_booking",
+  "funding_source",
+  "default_house",
+  "external_references_section",
+  "external_lodgement_reference",
+  "external_batch_reference",
+  "external_line_reference",
+  "actual_payment_reference",
+  "actual_payment_date",
+  "recovery_values_section",
+  "review_category",
+  "recommended_resolution",
+  "matching_result",
+  "allocation_type",
+  "claim_amount",
+  "expected_paid_amount",
+  "actual_paid_amount",
+  "actual_rejected_amount",
+  "variance_amount",
+  "short_paid_amount",
+  "rejected_amount",
+  "proposed_recovery_amount",
+  "recovery_type",
+  "recovery_route",
+  "recovery_reason",
+  "recovery_party_type",
+  "recovery_party",
+  "recovery_contact_name",
+  "recovery_contact_email",
+  "recovery_due_date",
+  "draft_controls_section",
+  "recovery_case_draft_source_ready",
+  "recovery_case_draft_review_complete",
+  "recovery_case_draft_authorized",
+  "recovery_case_submit_authorized",
+  "journal_entry_authorized",
+  "manual_gl_authorized",
+  "payment_entry_authorized",
+  "sales_invoice_authorized",
+  "adjustment_authorized",
+  "bank_reconciliation_authorized",
+  "recovery_case_draft_hold",
+  "recovery_case_draft_hold_reason",
+  "line_status_section",
+  "line_ready_for_recovery_case_draft",
+  "recovery_case_draft_line_status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_section",
+   "fieldtype": "Section Break",
+   "label": "Source"
+  },
+  {
+   "fieldname": "recovery_case_draft_source_key",
+   "fieldtype": "Data",
+   "label": "Recovery Case Draft Source Key",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_case_doctype",
+   "fieldtype": "Data",
+   "label": "Target Case DocType",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_case_name",
+   "fieldtype": "Data",
+   "label": "Target Case Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_case_docstatus",
+   "fieldtype": "Int",
+   "label": "Target Case Docstatus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "recovery_preparation_source_type",
+   "fieldtype": "Data",
+   "label": "Recovery Preparation Source Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "accounting_outcome_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Outcome Snapshot"
+  },
+  {
+   "fieldname": "journal_entry",
+   "fieldtype": "Link",
+   "label": "Journal Entry",
+   "options": "Journal Entry"
+  },
+  {
+   "fieldname": "journal_entry_docstatus",
+   "fieldtype": "Int",
+   "label": "Journal Entry Docstatus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "journal_entry_status",
+   "fieldtype": "Data",
+   "label": "Journal Entry Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "standard_gl_entry_count",
+   "fieldtype": "Int",
+   "label": "Standard GL Entry Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "document_links_section",
+   "fieldtype": "Section Break",
+   "label": "Document Links"
+  },
+  {
+   "fieldname": "ndis_remittance_import",
+   "fieldtype": "Link",
+   "label": "NDIS Remittance Import",
+   "options": "NDIS Remittance Import"
+  },
+  {
+   "fieldname": "ndis_remittance_import_docstatus",
+   "fieldtype": "Int",
+   "label": "NDIS Remittance Import Docstatus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ndis_remittance_import_status",
+   "fieldtype": "Data",
+   "label": "NDIS Remittance Import Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_entry",
+   "fieldtype": "Link",
+   "label": "Payment Entry",
+   "options": "Payment Entry"
+  },
+  {
+   "fieldname": "payment_entry_docstatus",
+   "fieldtype": "Int",
+   "label": "Payment Entry Docstatus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_entry_status",
+   "fieldtype": "Data",
+   "label": "Payment Entry Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "sales_invoice_docstatus",
+   "fieldtype": "Int",
+   "label": "Sales Invoice Docstatus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice_status",
+   "fieldtype": "Data",
+   "label": "Sales Invoice Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice_outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Sales Invoice Outstanding Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ndis_claim_batch",
+   "fieldtype": "Link",
+   "label": "NDIS Claim Batch",
+   "options": "NDIS Claim Batch"
+  },
+  {
+   "fieldname": "ndis_claim_line",
+   "fieldtype": "Link",
+   "label": "NDIS Claim Line",
+   "options": "NDIS Claim Line"
+  },
+  {
+   "fieldname": "service_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Service Snapshot"
+  },
+  {
+   "fieldname": "service_line",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Line",
+   "options": "NDIS Service Line"
+  },
+  {
+   "fieldname": "service_code",
+   "fieldtype": "Data",
+   "label": "Service Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_model",
+   "fieldtype": "Data",
+   "label": "Service Model"
+  },
+  {
+   "fieldname": "service_date",
+   "fieldtype": "Date",
+   "label": "Service Date"
+  },
+  {
+   "fieldname": "support_item",
+   "fieldtype": "Data",
+   "label": "Support Item"
+  },
+  {
+   "fieldname": "finance_service_type",
+   "fieldtype": "Data",
+   "label": "Finance Service Type"
+  },
+  {
+   "fieldname": "plan_budget",
+   "fieldtype": "Data",
+   "label": "NDIS Plan Budget"
+  },
+  {
+   "fieldname": "service_booking",
+   "fieldtype": "Data",
+   "label": "NDIS Service Booking"
+  },
+  {
+   "fieldname": "funding_source",
+   "fieldtype": "Data",
+   "label": "Funding Source"
+  },
+  {
+   "fieldname": "default_house",
+   "fieldtype": "Data",
+   "label": "Default House"
+  },
+  {
+   "fieldname": "external_references_section",
+   "fieldtype": "Section Break",
+   "label": "External References"
+  },
+  {
+   "fieldname": "external_lodgement_reference",
+   "fieldtype": "Data",
+   "label": "External Lodgement Reference"
+  },
+  {
+   "fieldname": "external_batch_reference",
+   "fieldtype": "Data",
+   "label": "External Batch Reference"
+  },
+  {
+   "fieldname": "external_line_reference",
+   "fieldtype": "Data",
+   "label": "External Line Reference"
+  },
+  {
+   "fieldname": "actual_payment_reference",
+   "fieldtype": "Data",
+   "label": "Actual Payment Reference"
+  },
+  {
+   "fieldname": "actual_payment_date",
+   "fieldtype": "Date",
+   "label": "Actual Payment Date"
+  },
+  {
+   "fieldname": "recovery_values_section",
+   "fieldtype": "Section Break",
+   "label": "Recovery Values"
+  },
+  {
+   "fieldname": "review_category",
+   "fieldtype": "Data",
+   "label": "Review Category",
+   "read_only": 1
+  },
+  {
+   "fieldname": "recommended_resolution",
+   "fieldtype": "Data",
+   "label": "Recommended Resolution",
+   "read_only": 1
+  },
+  {
+   "fieldname": "matching_result",
+   "fieldtype": "Data",
+   "label": "Matching Result",
+   "read_only": 1
+  },
+  {
+   "fieldname": "allocation_type",
+   "fieldtype": "Data",
+   "label": "Allocation Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "claim_amount",
+   "fieldtype": "Currency",
+   "label": "Claim Amount"
+  },
+  {
+   "fieldname": "expected_paid_amount",
+   "fieldtype": "Currency",
+   "label": "Expected Paid Amount"
+  },
+  {
+   "fieldname": "actual_paid_amount",
+   "fieldtype": "Currency",
+   "label": "Actual Paid Amount"
+  },
+  {
+   "fieldname": "actual_rejected_amount",
+   "fieldtype": "Currency",
+   "label": "Actual Rejected Amount"
+  },
+  {
+   "fieldname": "variance_amount",
+   "fieldtype": "Currency",
+   "label": "Variance Amount"
+  },
+  {
+   "fieldname": "short_paid_amount",
+   "fieldtype": "Currency",
+   "label": "Short Paid Amount"
+  },
+  {
+   "fieldname": "rejected_amount",
+   "fieldtype": "Currency",
+   "label": "Rejected Amount"
+  },
+  {
+   "fieldname": "proposed_recovery_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Proposed Recovery Amount"
+  },
+  {
+   "fieldname": "recovery_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Recovery Type"
+  },
+  {
+   "fieldname": "recovery_route",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Recovery Route"
+  },
+  {
+   "fieldname": "recovery_reason",
+   "fieldtype": "Small Text",
+   "label": "Recovery Reason"
+  },
+  {
+   "default": "Customer",
+   "fieldname": "recovery_party_type",
+   "fieldtype": "Data",
+   "label": "Recovery Party Type"
+  },
+  {
+   "fieldname": "recovery_party",
+   "fieldtype": "Link",
+   "label": "Recovery Party",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "recovery_contact_name",
+   "fieldtype": "Data",
+   "label": "Recovery Contact Name"
+  },
+  {
+   "fieldname": "recovery_contact_email",
+   "fieldtype": "Data",
+   "label": "Recovery Contact Email"
+  },
+  {
+   "fieldname": "recovery_due_date",
+   "fieldtype": "Date",
+   "label": "Recovery Due Date"
+  },
+  {
+   "fieldname": "draft_controls_section",
+   "fieldtype": "Section Break",
+   "label": "Draft Controls"
+  },
+  {
+   "default": "0",
+   "fieldname": "recovery_case_draft_source_ready",
+   "fieldtype": "Check",
+   "label": "Recovery Case Draft Source Ready"
+  },
+  {
+   "default": "0",
+   "fieldname": "recovery_case_draft_review_complete",
+   "fieldtype": "Check",
+   "label": "Recovery Case Draft Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "recovery_case_draft_authorized",
+   "fieldtype": "Check",
+   "label": "Recovery Case Draft Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 38.",
+   "fieldname": "recovery_case_submit_authorized",
+   "fieldtype": "Check",
+   "label": "Recovery Case Submit Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 38.",
+   "fieldname": "journal_entry_authorized",
+   "fieldtype": "Check",
+   "label": "Journal Entry Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 38.",
+   "fieldname": "manual_gl_authorized",
+   "fieldtype": "Check",
+   "label": "Manual GL Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 38.",
+   "fieldname": "payment_entry_authorized",
+   "fieldtype": "Check",
+   "label": "Payment Entry Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 38.",
+   "fieldname": "sales_invoice_authorized",
+   "fieldtype": "Check",
+   "label": "Sales Invoice Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 38.",
+   "fieldname": "adjustment_authorized",
+   "fieldtype": "Check",
+   "label": "Adjustment Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 38.",
+   "fieldname": "bank_reconciliation_authorized",
+   "fieldtype": "Check",
+   "label": "Bank Reconciliation Authorized"
+  },
+  {
+   "default": "1",
+   "fieldname": "recovery_case_draft_hold",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Recovery Case Draft Hold"
+  },
+  {
+   "fieldname": "recovery_case_draft_hold_reason",
+   "fieldtype": "Small Text",
+   "label": "Recovery Case Draft Hold Reason"
+  },
+  {
+   "fieldname": "line_status_section",
+   "fieldtype": "Section Break",
+   "label": "Line Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "line_ready_for_recovery_case_draft",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Line Ready for Recovery Case Draft"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "recovery_case_draft_line_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Recovery Case Draft Line Status",
+   "options": "Draft\nReady\nApproved\nCRM Recovery Case Draft Prepared\nExternal Recovery Case Draft Created\nReturned\nCancelled"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-10 19:55:03.872332",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Recovery Case Draft Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
