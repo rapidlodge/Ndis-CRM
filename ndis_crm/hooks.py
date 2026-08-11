@@ -3857,3 +3857,147 @@ fixtures.extend([
         ]
     }
 ])
+
+# -------------------------------
+# NDIS CRM Phase 39 - Controlled Recovery Case Submission Hooks
+# -------------------------------
+
+try:
+    doc_events
+except NameError:
+    doc_events = {}
+
+doc_events.setdefault("CRM Deal", {})
+doc_events["CRM Deal"]["validate"] = "ndis_crm.phase39_recovery_case_submission.validate_crm_deal_phase39_combined"
+
+doc_events.setdefault("NDIS CRM Recovery Case Submission Run", {})
+doc_events["NDIS CRM Recovery Case Submission Run"]["validate"] = "ndis_crm.phase39_recovery_case_submission.validate_recovery_case_submission_run"
+doc_events["NDIS CRM Recovery Case Submission Run"]["on_update"] = "ndis_crm.phase39_recovery_case_submission.on_recovery_case_submission_run_update"
+
+doc_events.setdefault("NDIS Recovery Case", {})
+doc_events["NDIS Recovery Case"]["before_submit"] = "ndis_crm.phase39_recovery_case_submission.validate_optional_recovery_case_phase39_submit_guard"
+
+try:
+    fixtures
+except NameError:
+    fixtures = []
+
+fixtures.extend([
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            [
+                "dt",
+                "in",
+                [
+                    "CRM Deal",
+                    "Journal Entry",
+                    "NDIS Recovery Case",
+                    "NDIS CRM Handover",
+                    "NDIS CRM Finance Onboarding",
+                    "NDIS CRM Operations Setup",
+                    "NDIS CRM Service Schedule Draft",
+                    "NDIS CRM Roster Build Request",
+                    "NDIS Participant Service File",
+                    "NDIS CRM Service Session Draft",
+                    "NDIS CRM Service Delivery Evidence Review",
+                    "NDIS CRM Downstream Preparation",
+                    "NDIS CRM Attendance Draft",
+                    "NDIS CRM Billing Draft",
+                    "NDIS CRM Claim Draft",
+                    "NDIS CRM Invoice Draft",
+                    "NDIS CRM Sales Invoice Draft Run",
+                    "NDIS CRM Sales Invoice Submission Run",
+                    "NDIS CRM Claim Batch Draft Run",
+                    "NDIS CRM Claim Batch Submission Run",
+                    "NDIS CRM Claim Export Preparation Run",
+                    "NDIS CRM Claim Lodgement Confirmation Run",
+                    "NDIS CRM Remittance Import Preparation Run",
+                    "NDIS CRM Actual Remittance Import Run",
+                    "NDIS CRM Remittance Matching Review Run",
+                    "NDIS CRM Payment Allocation Preparation Run",
+                    "NDIS CRM Payment Entry Draft Run",
+                    "NDIS CRM Payment Entry Submission Run",
+                    "NDIS CRM Remittance Import Finalisation Run",
+                    "NDIS CRM Variance Rejection Review Run",
+                    "NDIS CRM Write Off Preparation Run",
+                    "NDIS CRM Write Off Draft Run",
+                    "NDIS CRM Write Off JE Draft Run",
+                    "NDIS CRM Write Off JE Submission Run",
+                    "NDIS CRM Write Off Finalisation Run",
+                    "NDIS CRM Recovery Preparation Run",
+                    "NDIS CRM Recovery Case Draft Run",
+                    "NDIS Participant Intake"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "CRM Form Script",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "NDIS CRM Deal Actions"
+                ]
+            ]
+        ]
+    },
+    {
+        "doctype": "Client Script",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "NDIS Participant Intake Actions",
+                    "NDIS CRM Handover Actions",
+                    "NDIS CRM Finance Onboarding Actions",
+                    "NDIS CRM Operations Setup Actions",
+                    "NDIS CRM Service Schedule Draft Actions",
+                    "NDIS CRM Roster Build Request Actions",
+                    "NDIS Participant Service File Actions",
+                    "NDIS CRM Service Session Draft Actions",
+                    "NDIS CRM Service Delivery Evidence Review Actions",
+                    "NDIS CRM Downstream Preparation Actions",
+                    "NDIS CRM Attendance Draft Actions",
+                    "NDIS CRM Billing Draft Actions",
+                    "NDIS CRM Claim Draft Actions",
+                    "NDIS CRM Invoice Draft Actions",
+                    "NDIS CRM Sales Invoice Draft Run Actions",
+                    "NDIS CRM Sales Invoice Submission Run Actions",
+                    "NDIS CRM Claim Batch Draft Run Actions",
+                    "NDIS CRM Claim Batch Submission Run Actions",
+                    "NDIS CRM Claim Export Preparation Run Actions",
+                    "NDIS CRM Claim Lodgement Confirmation Run Actions",
+                    "NDIS CRM Remittance Import Preparation Run Actions",
+                    "NDIS CRM Actual Remittance Import Run Actions",
+                    "NDIS CRM Remittance Matching Review Run Actions",
+                    "NDIS CRM Payment Allocation Preparation Run Actions",
+                    "NDIS CRM Payment Entry Draft Run Actions",
+                    "NDIS CRM Payment Entry Submission Run Actions",
+                    "NDIS CRM Remittance Import Finalisation Run Actions",
+                    "NDIS CRM Variance Rejection Review Run Actions",
+                    "NDIS CRM Variance Review Phase32 Actions",
+                    "NDIS CRM Write Off Preparation Run Actions",
+                    "NDIS CRM Write Off Preparation Phase33 Actions",
+                    "NDIS CRM Write Off Draft Run Actions",
+                    "NDIS CRM Write Off Draft Phase34 Actions",
+                    "NDIS CRM Write Off JE Draft Run Actions",
+                    "NDIS CRM Write Off JE Draft Phase35 Actions",
+                    "NDIS CRM Write Off JE Submission Run Actions",
+                    "NDIS CRM Write Off JE Submission Phase36 Actions",
+                    "NDIS CRM Write Off Finalisation Run Actions",
+                    "NDIS CRM Variance Review Phase37 Recovery Actions",
+                    "NDIS CRM Write Off Finalisation Phase37 Actions",
+                    "NDIS CRM Recovery Preparation Run Actions",
+                    "NDIS CRM Recovery Preparation Phase38 Actions",
+                    "NDIS CRM Recovery Case Draft Run Actions",
+                    "NDIS CRM Recovery Case Draft Phase39 Actions",
+                    "NDIS CRM Recovery Case Submission Run Actions"
+                ]
+            ]
+        ]
+    }
+])
