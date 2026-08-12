@@ -1,0 +1,858 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-08-12 12:11:51.955598",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "status_section",
+  "status",
+  "readiness_percent",
+  "recovery_communication_draft_creation_run_ready",
+  "no_recovery_communication_draft_creation_candidate_found",
+  "target_creation_mode",
+  "optional_communication_doctype_available",
+  "optional_email_queue_doctype_available",
+  "communication_draft_creation_allowed",
+  "communication_record_creation_allowed",
+  "email_queue_creation_allowed",
+  "communication_send_allowed",
+  "event_creation_allowed",
+  "todo_creation_allowed",
+  "task_creation_allowed",
+  "journal_entry_creation_allowed",
+  "manual_gl_creation_allowed",
+  "payment_entry_creation_allowed",
+  "sales_invoice_creation_allowed",
+  "adjustment_creation_allowed",
+  "bank_reconciliation_allowed",
+  "summary_section",
+  "recovery_communication_draft_creation_line_count",
+  "recovery_communication_draft_creation_amount_total",
+  "recovery_communication_draft_creation_ready_count",
+  "recovery_communication_draft_creation_hold_count",
+  "crm_communication_draft_count",
+  "communication_record_draft_count",
+  "communication_draft_created_count",
+  "blocked_communication_send_count",
+  "blocked_email_queue_count",
+  "blocked_event_count",
+  "blocked_todo_count",
+  "blocked_task_count",
+  "blocked_journal_entry_count",
+  "blocked_manual_gl_count",
+  "blocked_payment_entry_count",
+  "blocked_sales_invoice_count",
+  "blocked_adjustment_count",
+  "blocked_bank_reconciliation_count",
+  "source_links_section",
+  "crm_lead",
+  "crm_deal",
+  "participant_intake",
+  "handover",
+  "finance_onboarding",
+  "operations_setup",
+  "service_schedule_draft",
+  "roster_build_request",
+  "participant_service_file",
+  "service_session_draft",
+  "delivery_evidence_review",
+  "downstream_preparation",
+  "attendance_draft",
+  "billing_draft",
+  "claim_draft",
+  "invoice_draft",
+  "sales_invoice_draft_run",
+  "sales_invoice_submission_run",
+  "claim_batch_draft_run",
+  "claim_batch_submission_run",
+  "claim_export_preparation_run",
+  "claim_lodgement_confirmation_run",
+  "remittance_import_preparation_run",
+  "actual_remittance_import_run",
+  "remittance_matching_review_run",
+  "payment_allocation_preparation_run",
+  "payment_entry_draft_run",
+  "payment_entry_submission_run",
+  "remittance_import_finalisation_run",
+  "variance_rejection_review_run",
+  "write_off_preparation_run",
+  "write_off_draft_run",
+  "write_off_je_draft_run",
+  "write_off_je_submission_run",
+  "write_off_finalisation_run",
+  "recovery_preparation_run",
+  "recovery_case_draft_run",
+  "recovery_case_submission_run",
+  "recovery_follow_up_preparation_run",
+  "recovery_follow_up_task_draft_run",
+  "recovery_follow_up_task_activation_run",
+  "recovery_communication_draft_preparation_run",
+  "ndis_remittance_import",
+  "participant_customer",
+  "ndis_financial_profile",
+  "participant_details_section",
+  "participant_name",
+  "ndis_number",
+  "plan_start_date",
+  "plan_end_date",
+  "company",
+  "claim_window_section",
+  "claim_period_start",
+  "claim_period_end",
+  "owners_section",
+  "recovery_communication_draft_creation_owner",
+  "recovery_communication_draft_preparation_owner",
+  "created_by",
+  "created_on",
+  "recovery_communication_draft_creation_lines_section",
+  "recovery_communication_draft_creation_lines",
+  "notes_section",
+  "recovery_communication_draft_creation_notes",
+  "returned_notes"
+ ],
+ "fields": [
+  {
+   "default": "NDIS-RECOVERY-COMM-DRAFT-CREATE-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "NDIS-RECOVERY-COMM-DRAFT-CREATE-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nIn Review\nReady for Communication Draft Creation\nCommunication Draft Creation Approved\nCommunication Draft Records Created\nReturned to Communication Draft Preparation\nCancelled"
+  },
+  {
+   "fieldname": "readiness_percent",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Readiness %",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "recovery_communication_draft_creation_run_ready",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Recovery Communication Draft Creation Run Ready",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "no_recovery_communication_draft_creation_candidate_found",
+   "fieldtype": "Check",
+   "label": "No Recovery Communication Draft Creation Candidate Found",
+   "read_only": 1
+  },
+  {
+   "default": "CRM Communication Draft Only",
+   "fieldname": "target_creation_mode",
+   "fieldtype": "Select",
+   "label": "Target Creation Mode",
+   "options": "CRM Communication Draft Only\nCommunication Draft Record If Available"
+  },
+  {
+   "default": "0",
+   "fieldname": "optional_communication_doctype_available",
+   "fieldtype": "Check",
+   "label": "Optional Communication DocType Available",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "optional_email_queue_doctype_available",
+   "fieldtype": "Check",
+   "label": "Optional Email Queue DocType Available",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "communication_draft_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Communication Draft Creation Allowed"
+  },
+  {
+   "default": "0",
+   "fieldname": "communication_record_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Communication Record Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 44.",
+   "fieldname": "email_queue_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Email Queue Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 44.",
+   "fieldname": "communication_send_allowed",
+   "fieldtype": "Check",
+   "label": "Communication Send Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 44.",
+   "fieldname": "event_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Event Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 44.",
+   "fieldname": "todo_creation_allowed",
+   "fieldtype": "Check",
+   "label": "ToDo Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 44.",
+   "fieldname": "task_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Task Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 44.",
+   "fieldname": "journal_entry_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Journal Entry Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 44.",
+   "fieldname": "manual_gl_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Manual GL Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 44.",
+   "fieldname": "payment_entry_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Payment Entry Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 44.",
+   "fieldname": "sales_invoice_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Sales Invoice Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 44.",
+   "fieldname": "adjustment_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Adjustment Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 44.",
+   "fieldname": "bank_reconciliation_allowed",
+   "fieldtype": "Check",
+   "label": "Bank Reconciliation Allowed"
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "recovery_communication_draft_creation_line_count",
+   "fieldtype": "Int",
+   "label": "Recovery Communication Draft Creation Line Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "recovery_communication_draft_creation_amount_total",
+   "fieldtype": "Currency",
+   "label": "Recovery Communication Draft Creation Amount Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "recovery_communication_draft_creation_ready_count",
+   "fieldtype": "Int",
+   "label": "Recovery Communication Draft Creation Ready Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "recovery_communication_draft_creation_hold_count",
+   "fieldtype": "Int",
+   "label": "Recovery Communication Draft Creation Hold Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "crm_communication_draft_count",
+   "fieldtype": "Int",
+   "label": "CRM Communication Draft Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "communication_record_draft_count",
+   "fieldtype": "Int",
+   "label": "Communication Record Draft Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "communication_draft_created_count",
+   "fieldtype": "Int",
+   "label": "Communication Draft Created Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_communication_send_count",
+   "fieldtype": "Int",
+   "label": "Blocked Communication Send Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_email_queue_count",
+   "fieldtype": "Int",
+   "label": "Blocked Email Queue Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_event_count",
+   "fieldtype": "Int",
+   "label": "Blocked Event Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_todo_count",
+   "fieldtype": "Int",
+   "label": "Blocked ToDo Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_task_count",
+   "fieldtype": "Int",
+   "label": "Blocked Task Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_journal_entry_count",
+   "fieldtype": "Int",
+   "label": "Blocked Journal Entry Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_manual_gl_count",
+   "fieldtype": "Int",
+   "label": "Blocked Manual GL Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_payment_entry_count",
+   "fieldtype": "Int",
+   "label": "Blocked Payment Entry Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_sales_invoice_count",
+   "fieldtype": "Int",
+   "label": "Blocked Sales Invoice Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_adjustment_count",
+   "fieldtype": "Int",
+   "label": "Blocked Adjustment Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_bank_reconciliation_count",
+   "fieldtype": "Int",
+   "label": "Blocked Bank Reconciliation Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_links_section",
+   "fieldtype": "Section Break",
+   "label": "Source Links"
+  },
+  {
+   "fieldname": "crm_lead",
+   "fieldtype": "Link",
+   "label": "CRM Lead",
+   "options": "CRM Lead"
+  },
+  {
+   "fieldname": "crm_deal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "CRM Deal",
+   "options": "CRM Deal"
+  },
+  {
+   "fieldname": "participant_intake",
+   "fieldtype": "Link",
+   "label": "NDIS Participant Intake",
+   "options": "NDIS Participant Intake"
+  },
+  {
+   "fieldname": "handover",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Handover",
+   "options": "NDIS CRM Handover"
+  },
+  {
+   "fieldname": "finance_onboarding",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Finance Onboarding",
+   "options": "NDIS CRM Finance Onboarding"
+  },
+  {
+   "fieldname": "operations_setup",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Operations Setup",
+   "options": "NDIS CRM Operations Setup"
+  },
+  {
+   "fieldname": "service_schedule_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Service Schedule Draft",
+   "options": "NDIS CRM Service Schedule Draft"
+  },
+  {
+   "fieldname": "roster_build_request",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Roster Build Request",
+   "options": "NDIS CRM Roster Build Request"
+  },
+  {
+   "fieldname": "participant_service_file",
+   "fieldtype": "Link",
+   "label": "NDIS Participant Service File",
+   "options": "NDIS Participant Service File"
+  },
+  {
+   "fieldname": "service_session_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Service Session Draft",
+   "options": "NDIS CRM Service Session Draft"
+  },
+  {
+   "fieldname": "delivery_evidence_review",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Delivery Evidence Review",
+   "options": "NDIS CRM Service Delivery Evidence Review"
+  },
+  {
+   "fieldname": "downstream_preparation",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Downstream Preparation",
+   "options": "NDIS CRM Downstream Preparation"
+  },
+  {
+   "fieldname": "attendance_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Attendance Draft",
+   "options": "NDIS CRM Attendance Draft"
+  },
+  {
+   "fieldname": "billing_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Billing Draft",
+   "options": "NDIS CRM Billing Draft"
+  },
+  {
+   "fieldname": "claim_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Claim Draft",
+   "options": "NDIS CRM Claim Draft"
+  },
+  {
+   "fieldname": "invoice_draft",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Invoice Draft",
+   "options": "NDIS CRM Invoice Draft"
+  },
+  {
+   "fieldname": "sales_invoice_draft_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Sales Invoice Draft Run",
+   "options": "NDIS CRM Sales Invoice Draft Run"
+  },
+  {
+   "fieldname": "sales_invoice_submission_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Sales Invoice Submission Run",
+   "options": "NDIS CRM Sales Invoice Submission Run"
+  },
+  {
+   "fieldname": "claim_batch_draft_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Claim Batch Draft Run",
+   "options": "NDIS CRM Claim Batch Draft Run"
+  },
+  {
+   "fieldname": "claim_batch_submission_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Claim Batch Submission Run",
+   "options": "NDIS CRM Claim Batch Submission Run"
+  },
+  {
+   "fieldname": "claim_export_preparation_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Claim Export Preparation Run",
+   "options": "NDIS CRM Claim Export Preparation Run"
+  },
+  {
+   "fieldname": "claim_lodgement_confirmation_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Claim Lodgement Confirmation Run",
+   "options": "NDIS CRM Claim Lodgement Confirmation Run"
+  },
+  {
+   "fieldname": "remittance_import_preparation_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Remittance Import Preparation Run",
+   "options": "NDIS CRM Remittance Import Preparation Run"
+  },
+  {
+   "fieldname": "actual_remittance_import_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Actual Remittance Import Run",
+   "options": "NDIS CRM Actual Remittance Import Run"
+  },
+  {
+   "fieldname": "remittance_matching_review_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Remittance Matching Review Run",
+   "options": "NDIS CRM Remittance Matching Review Run"
+  },
+  {
+   "fieldname": "payment_allocation_preparation_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Payment Allocation Preparation Run",
+   "options": "NDIS CRM Payment Allocation Preparation Run"
+  },
+  {
+   "fieldname": "payment_entry_draft_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Payment Entry Draft Run",
+   "options": "NDIS CRM Payment Entry Draft Run"
+  },
+  {
+   "fieldname": "payment_entry_submission_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Payment Entry Submission Run",
+   "options": "NDIS CRM Payment Entry Submission Run"
+  },
+  {
+   "fieldname": "remittance_import_finalisation_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Remittance Import Finalisation Run",
+   "options": "NDIS CRM Remittance Import Finalisation Run"
+  },
+  {
+   "fieldname": "variance_rejection_review_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Variance Rejection Review Run",
+   "options": "NDIS CRM Variance Rejection Review Run"
+  },
+  {
+   "fieldname": "write_off_preparation_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Write Off Preparation Run",
+   "options": "NDIS CRM Write Off Preparation Run"
+  },
+  {
+   "fieldname": "write_off_draft_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Write Off Draft Run",
+   "options": "NDIS CRM Write Off Draft Run"
+  },
+  {
+   "fieldname": "write_off_je_draft_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Write Off JE Draft Run",
+   "options": "NDIS CRM Write Off JE Draft Run"
+  },
+  {
+   "fieldname": "write_off_je_submission_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Write Off JE Submission Run",
+   "options": "NDIS CRM Write Off JE Submission Run"
+  },
+  {
+   "fieldname": "write_off_finalisation_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Write Off Finalisation Run",
+   "options": "NDIS CRM Write Off Finalisation Run"
+  },
+  {
+   "fieldname": "recovery_preparation_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Recovery Preparation Run",
+   "options": "NDIS CRM Recovery Preparation Run"
+  },
+  {
+   "fieldname": "recovery_case_draft_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Recovery Case Draft Run",
+   "options": "NDIS CRM Recovery Case Draft Run"
+  },
+  {
+   "fieldname": "recovery_case_submission_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Recovery Case Submission Run",
+   "options": "NDIS CRM Recovery Case Submission Run"
+  },
+  {
+   "fieldname": "recovery_follow_up_preparation_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Recovery Follow Up Preparation Run",
+   "options": "NDIS CRM Recovery Follow Up Preparation Run"
+  },
+  {
+   "fieldname": "recovery_follow_up_task_draft_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Recovery Follow Up Task Draft Run",
+   "options": "NDIS CRM Recovery Follow Up Task Draft Run"
+  },
+  {
+   "fieldname": "recovery_follow_up_task_activation_run",
+   "fieldtype": "Link",
+   "label": "NDIS CRM Recovery Follow Up Task Activation Run",
+   "options": "NDIS CRM Recovery Follow Up Task Activation Run"
+  },
+  {
+   "fieldname": "recovery_communication_draft_preparation_run",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NDIS CRM Recovery Communication Draft Preparation Run",
+   "options": "NDIS CRM Recovery Communication Draft Preparation Run",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ndis_remittance_import",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NDIS Remittance Import",
+   "options": "NDIS Remittance Import"
+  },
+  {
+   "fieldname": "participant_customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Participant Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "ndis_financial_profile",
+   "fieldtype": "Link",
+   "label": "NDIS Financial Profile",
+   "options": "NDIS Participant Financial Profile"
+  },
+  {
+   "fieldname": "participant_details_section",
+   "fieldtype": "Section Break",
+   "label": "Participant Details"
+  },
+  {
+   "fieldname": "participant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Participant Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ndis_number",
+   "fieldtype": "Data",
+   "label": "NDIS Number"
+  },
+  {
+   "fieldname": "plan_start_date",
+   "fieldtype": "Date",
+   "label": "Plan Start Date"
+  },
+  {
+   "fieldname": "plan_end_date",
+   "fieldtype": "Date",
+   "label": "Plan End Date"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "claim_window_section",
+   "fieldtype": "Section Break",
+   "label": "Claim Window"
+  },
+  {
+   "fieldname": "claim_period_start",
+   "fieldtype": "Date",
+   "label": "Claim Period Start"
+  },
+  {
+   "fieldname": "claim_period_end",
+   "fieldtype": "Date",
+   "label": "Claim Period End"
+  },
+  {
+   "fieldname": "owners_section",
+   "fieldtype": "Section Break",
+   "label": "Owners"
+  },
+  {
+   "fieldname": "recovery_communication_draft_creation_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Recovery Communication Draft Creation Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "recovery_communication_draft_preparation_owner",
+   "fieldtype": "Link",
+   "label": "Recovery Communication Draft Preparation Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "created_on",
+   "fieldtype": "Datetime",
+   "label": "Created On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "recovery_communication_draft_creation_lines_section",
+   "fieldtype": "Section Break",
+   "label": "Recovery Communication Draft Creation Lines"
+  },
+  {
+   "fieldname": "recovery_communication_draft_creation_lines",
+   "fieldtype": "Table",
+   "label": "Recovery Communication Draft Creation Lines",
+   "options": "NDIS CRM Recovery Communication Draft Creation Line"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "recovery_communication_draft_creation_notes",
+   "fieldtype": "Small Text",
+   "label": "Recovery Communication Draft Creation Notes"
+  },
+  {
+   "fieldname": "returned_notes",
+   "fieldtype": "Small Text",
+   "label": "Returned / Blocker Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-12 12:11:51.955598",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Recovery Communication Draft Creation Run",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Plan Management Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Read Only",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "participant_name",
+ "track_changes": 1
+}
