@@ -1,0 +1,736 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-13 12:51:17.670342",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "source_section",
+  "recovery_outcome_action_draft_source_key",
+  "draft_targets_section",
+  "target_action_mode_snapshot",
+  "target_action_doctype",
+  "target_action_name",
+  "target_action_status",
+  "target_todo",
+  "target_todo_status",
+  "target_task",
+  "target_task_status",
+  "outcome_snapshot_section",
+  "outcome_status_snapshot",
+  "outcome_summary",
+  "response_received_on",
+  "response_received_from",
+  "response_reference",
+  "promised_payment_date",
+  "promised_payment_amount",
+  "evidence_requested",
+  "dispute_reason",
+  "correct_contact_name",
+  "correct_contact_email",
+  "correct_contact_phone",
+  "next_action_recommendation",
+  "dispatch_snapshot_section",
+  "target_dispatch_mode_snapshot",
+  "target_communication",
+  "target_communication_status",
+  "target_email_queue_status",
+  "dispatch_reference",
+  "dispatch_line_status_snapshot",
+  "earlier_target_snapshot_section",
+  "target_creation_mode_snapshot",
+  "target_task_mode_snapshot",
+  "source_target_todo",
+  "source_target_todo_status",
+  "source_target_task",
+  "source_target_task_status",
+  "target_case_doctype",
+  "target_case_name",
+  "target_case_docstatus",
+  "target_case_status",
+  "references_section",
+  "service_line",
+  "service_code",
+  "service_date",
+  "sales_invoice",
+  "payment_entry",
+  "journal_entry",
+  "ndis_remittance_import",
+  "ndis_claim_batch",
+  "ndis_claim_line",
+  "recovery_values_section",
+  "proposed_recovery_amount",
+  "recovery_type",
+  "recovery_route",
+  "recovery_reason",
+  "recovery_party_type",
+  "recovery_party",
+  "recovery_contact_name",
+  "recovery_contact_email",
+  "recovery_due_date",
+  "recipient_snapshot_section",
+  "recipient_name",
+  "recipient_email",
+  "recipient_phone",
+  "action_draft_section",
+  "recovery_outcome_action_draft_source_ready",
+  "action_type",
+  "action_route",
+  "action_priority",
+  "action_owner",
+  "action_due_date",
+  "action_instruction",
+  "action_decision_summary",
+  "action_draft_review_complete",
+  "action_draft_authorized",
+  "todo_draft_authorized",
+  "task_draft_authorized",
+  "blocked_downstream_section",
+  "todo_activation_authorized",
+  "task_activation_authorized",
+  "task_completion_authorized",
+  "communication_creation_authorized",
+  "email_send_authorized",
+  "event_creation_authorized",
+  "recovery_case_creation_authorized",
+  "journal_entry_authorized",
+  "manual_gl_authorized",
+  "payment_entry_authorized",
+  "sales_invoice_authorized",
+  "adjustment_authorized",
+  "bank_reconciliation_authorized",
+  "claim_batch_authorized",
+  "claim_line_authorized",
+  "remittance_import_authorized",
+  "line_status_section",
+  "recovery_outcome_action_draft_hold",
+  "recovery_outcome_action_draft_hold_reason",
+  "line_ready_for_recovery_outcome_action_draft",
+  "recovery_outcome_action_draft_line_status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_section",
+   "fieldtype": "Section Break",
+   "label": "Source"
+  },
+  {
+   "fieldname": "recovery_outcome_action_draft_source_key",
+   "fieldtype": "Data",
+   "label": "Recovery Outcome Action Draft Source Key",
+   "read_only": 1
+  },
+  {
+   "fieldname": "draft_targets_section",
+   "fieldtype": "Section Break",
+   "label": "Draft Targets"
+  },
+  {
+   "fieldname": "target_action_mode_snapshot",
+   "fieldtype": "Data",
+   "label": "Target Action Mode Snapshot",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_action_doctype",
+   "fieldtype": "Data",
+   "label": "Target Action DocType",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_action_name",
+   "fieldtype": "Data",
+   "label": "Target Action Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_action_status",
+   "fieldtype": "Data",
+   "label": "Target Action Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_todo",
+   "fieldtype": "Data",
+   "label": "Target ToDo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_todo_status",
+   "fieldtype": "Data",
+   "label": "Target ToDo Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_task",
+   "fieldtype": "Data",
+   "label": "Target Task",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_task_status",
+   "fieldtype": "Data",
+   "label": "Target Task Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "outcome_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Outcome Snapshot"
+  },
+  {
+   "fieldname": "outcome_status_snapshot",
+   "fieldtype": "Data",
+   "label": "Outcome Status Snapshot",
+   "read_only": 1
+  },
+  {
+   "fieldname": "outcome_summary",
+   "fieldtype": "Small Text",
+   "label": "Outcome Summary"
+  },
+  {
+   "fieldname": "response_received_on",
+   "fieldtype": "Datetime",
+   "label": "Response Received On"
+  },
+  {
+   "fieldname": "response_received_from",
+   "fieldtype": "Data",
+   "label": "Response Received From"
+  },
+  {
+   "fieldname": "response_reference",
+   "fieldtype": "Data",
+   "label": "Response Reference"
+  },
+  {
+   "fieldname": "promised_payment_date",
+   "fieldtype": "Date",
+   "label": "Promised Payment Date"
+  },
+  {
+   "fieldname": "promised_payment_amount",
+   "fieldtype": "Currency",
+   "label": "Promised Payment Amount"
+  },
+  {
+   "default": "0",
+   "fieldname": "evidence_requested",
+   "fieldtype": "Check",
+   "label": "Evidence Requested"
+  },
+  {
+   "fieldname": "dispute_reason",
+   "fieldtype": "Small Text",
+   "label": "Dispute Reason"
+  },
+  {
+   "fieldname": "correct_contact_name",
+   "fieldtype": "Data",
+   "label": "Correct Contact Name"
+  },
+  {
+   "fieldname": "correct_contact_email",
+   "fieldtype": "Data",
+   "label": "Correct Contact Email"
+  },
+  {
+   "fieldname": "correct_contact_phone",
+   "fieldtype": "Data",
+   "label": "Correct Contact Phone"
+  },
+  {
+   "fieldname": "next_action_recommendation",
+   "fieldtype": "Small Text",
+   "label": "Next Action Recommendation"
+  },
+  {
+   "fieldname": "dispatch_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Dispatch Snapshot"
+  },
+  {
+   "fieldname": "target_dispatch_mode_snapshot",
+   "fieldtype": "Data",
+   "label": "Target Dispatch Mode Snapshot",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_communication",
+   "fieldtype": "Data",
+   "label": "Target Communication",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_communication_status",
+   "fieldtype": "Data",
+   "label": "Target Communication Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_email_queue_status",
+   "fieldtype": "Data",
+   "label": "Target Email Queue Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "dispatch_reference",
+   "fieldtype": "Small Text",
+   "label": "Dispatch Reference",
+   "read_only": 1
+  },
+  {
+   "fieldname": "dispatch_line_status_snapshot",
+   "fieldtype": "Data",
+   "label": "Dispatch Line Status Snapshot",
+   "read_only": 1
+  },
+  {
+   "fieldname": "earlier_target_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Earlier Target Snapshot"
+  },
+  {
+   "fieldname": "target_creation_mode_snapshot",
+   "fieldtype": "Data",
+   "label": "Target Creation Mode Snapshot",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_task_mode_snapshot",
+   "fieldtype": "Data",
+   "label": "Target Task Mode Snapshot",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_target_todo",
+   "fieldtype": "Data",
+   "label": "Source Target ToDo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_target_todo_status",
+   "fieldtype": "Data",
+   "label": "Source Target ToDo Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_target_task",
+   "fieldtype": "Data",
+   "label": "Source Target Task",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_target_task_status",
+   "fieldtype": "Data",
+   "label": "Source Target Task Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_case_doctype",
+   "fieldtype": "Data",
+   "label": "Target Case DocType",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_case_name",
+   "fieldtype": "Data",
+   "label": "Target Case Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_case_docstatus",
+   "fieldtype": "Int",
+   "label": "Target Case Docstatus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_case_status",
+   "fieldtype": "Data",
+   "label": "Target Case Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "references_section",
+   "fieldtype": "Section Break",
+   "label": "References"
+  },
+  {
+   "fieldname": "service_line",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service Line"
+  },
+  {
+   "fieldname": "service_code",
+   "fieldtype": "Data",
+   "label": "Service Code"
+  },
+  {
+   "fieldname": "service_date",
+   "fieldtype": "Date",
+   "label": "Service Date"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "payment_entry",
+   "fieldtype": "Link",
+   "label": "Payment Entry",
+   "options": "Payment Entry"
+  },
+  {
+   "fieldname": "journal_entry",
+   "fieldtype": "Link",
+   "label": "Journal Entry",
+   "options": "Journal Entry"
+  },
+  {
+   "fieldname": "ndis_remittance_import",
+   "fieldtype": "Link",
+   "label": "NDIS Remittance Import",
+   "options": "NDIS Remittance Import"
+  },
+  {
+   "fieldname": "ndis_claim_batch",
+   "fieldtype": "Link",
+   "label": "NDIS Claim Batch",
+   "options": "NDIS Claim Batch"
+  },
+  {
+   "fieldname": "ndis_claim_line",
+   "fieldtype": "Link",
+   "label": "NDIS Claim Line",
+   "options": "NDIS Claim Line"
+  },
+  {
+   "fieldname": "recovery_values_section",
+   "fieldtype": "Section Break",
+   "label": "Recovery Values"
+  },
+  {
+   "fieldname": "proposed_recovery_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Proposed Recovery Amount"
+  },
+  {
+   "fieldname": "recovery_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Recovery Type"
+  },
+  {
+   "fieldname": "recovery_route",
+   "fieldtype": "Data",
+   "label": "Recovery Route"
+  },
+  {
+   "fieldname": "recovery_reason",
+   "fieldtype": "Small Text",
+   "label": "Recovery Reason"
+  },
+  {
+   "default": "Customer",
+   "fieldname": "recovery_party_type",
+   "fieldtype": "Data",
+   "label": "Recovery Party Type"
+  },
+  {
+   "fieldname": "recovery_party",
+   "fieldtype": "Link",
+   "label": "Recovery Party",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "recovery_contact_name",
+   "fieldtype": "Data",
+   "label": "Recovery Contact Name"
+  },
+  {
+   "fieldname": "recovery_contact_email",
+   "fieldtype": "Data",
+   "label": "Recovery Contact Email"
+  },
+  {
+   "fieldname": "recovery_due_date",
+   "fieldtype": "Date",
+   "label": "Recovery Due Date"
+  },
+  {
+   "fieldname": "recipient_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Recipient Snapshot"
+  },
+  {
+   "fieldname": "recipient_name",
+   "fieldtype": "Data",
+   "label": "Recipient Name"
+  },
+  {
+   "fieldname": "recipient_email",
+   "fieldtype": "Data",
+   "label": "Recipient Email"
+  },
+  {
+   "fieldname": "recipient_phone",
+   "fieldtype": "Data",
+   "label": "Recipient Phone"
+  },
+  {
+   "fieldname": "action_draft_section",
+   "fieldtype": "Section Break",
+   "label": "Action Draft"
+  },
+  {
+   "default": "0",
+   "fieldname": "recovery_outcome_action_draft_source_ready",
+   "fieldtype": "Check",
+   "label": "Recovery Outcome Action Draft Source Ready"
+  },
+  {
+   "fieldname": "action_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Action Type"
+  },
+  {
+   "fieldname": "action_route",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Action Route"
+  },
+  {
+   "default": "Normal",
+   "fieldname": "action_priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Action Priority",
+   "options": "High\nNormal\nLow"
+  },
+  {
+   "fieldname": "action_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Action Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "action_due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Action Due Date"
+  },
+  {
+   "fieldname": "action_instruction",
+   "fieldtype": "Small Text",
+   "label": "Action Instruction"
+  },
+  {
+   "fieldname": "action_decision_summary",
+   "fieldtype": "Small Text",
+   "label": "Action Decision Summary"
+  },
+  {
+   "default": "0",
+   "fieldname": "action_draft_review_complete",
+   "fieldtype": "Check",
+   "label": "Action Draft Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "action_draft_authorized",
+   "fieldtype": "Check",
+   "label": "Action Draft Authorized"
+  },
+  {
+   "default": "0",
+   "fieldname": "todo_draft_authorized",
+   "fieldtype": "Check",
+   "label": "ToDo Draft Authorized"
+  },
+  {
+   "default": "0",
+   "fieldname": "task_draft_authorized",
+   "fieldtype": "Check",
+   "label": "Task Draft Authorized"
+  },
+  {
+   "fieldname": "blocked_downstream_section",
+   "fieldtype": "Section Break",
+   "label": "Blocked Activation / Downstream Controls"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 48.",
+   "fieldname": "todo_activation_authorized",
+   "fieldtype": "Check",
+   "label": "ToDo Activation Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 48.",
+   "fieldname": "task_activation_authorized",
+   "fieldtype": "Check",
+   "label": "Task Activation Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 48.",
+   "fieldname": "task_completion_authorized",
+   "fieldtype": "Check",
+   "label": "Task Completion Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 48.",
+   "fieldname": "communication_creation_authorized",
+   "fieldtype": "Check",
+   "label": "Communication Creation Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 48.",
+   "fieldname": "email_send_authorized",
+   "fieldtype": "Check",
+   "label": "Email Send Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 48.",
+   "fieldname": "event_creation_authorized",
+   "fieldtype": "Check",
+   "label": "Event Creation Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 48.",
+   "fieldname": "recovery_case_creation_authorized",
+   "fieldtype": "Check",
+   "label": "Recovery Case Creation Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 48.",
+   "fieldname": "journal_entry_authorized",
+   "fieldtype": "Check",
+   "label": "Journal Entry Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 48.",
+   "fieldname": "manual_gl_authorized",
+   "fieldtype": "Check",
+   "label": "Manual GL Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 48.",
+   "fieldname": "payment_entry_authorized",
+   "fieldtype": "Check",
+   "label": "Payment Entry Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 48.",
+   "fieldname": "sales_invoice_authorized",
+   "fieldtype": "Check",
+   "label": "Sales Invoice Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 48.",
+   "fieldname": "adjustment_authorized",
+   "fieldtype": "Check",
+   "label": "Adjustment Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 48.",
+   "fieldname": "bank_reconciliation_authorized",
+   "fieldtype": "Check",
+   "label": "Bank Reconciliation Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 48.",
+   "fieldname": "claim_batch_authorized",
+   "fieldtype": "Check",
+   "label": "Claim Batch Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 48.",
+   "fieldname": "claim_line_authorized",
+   "fieldtype": "Check",
+   "label": "Claim Line Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 48.",
+   "fieldname": "remittance_import_authorized",
+   "fieldtype": "Check",
+   "label": "Remittance Import Authorized"
+  },
+  {
+   "fieldname": "line_status_section",
+   "fieldtype": "Section Break",
+   "label": "Line Status"
+  },
+  {
+   "default": "1",
+   "fieldname": "recovery_outcome_action_draft_hold",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Recovery Outcome Action Draft Hold"
+  },
+  {
+   "fieldname": "recovery_outcome_action_draft_hold_reason",
+   "fieldtype": "Small Text",
+   "label": "Recovery Outcome Action Draft Hold Reason"
+  },
+  {
+   "default": "0",
+   "fieldname": "line_ready_for_recovery_outcome_action_draft",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Line Ready for Recovery Outcome Action Draft"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "recovery_outcome_action_draft_line_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Recovery Outcome Action Draft Line Status",
+   "options": "Draft\nReady\nApproved\nCRM Action Draft Prepared\nDraft ToDo Created\nDraft Task Created\nDraft ToDo and Task Created\nReturned\nCancelled"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-13 12:51:17.670342",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Recovery Outcome Action Draft Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
