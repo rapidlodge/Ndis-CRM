@@ -1,0 +1,653 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-16 18:18:27.882120",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "source_section",
+  "post_closure_routing_preparation_source_key",
+  "source_finalisation_section",
+  "source_finalisation_doctype",
+  "source_finalisation_name",
+  "source_finalisation_status",
+  "target_routing_doctype",
+  "target_routing_name",
+  "target_routing_status",
+  "case_snapshot_section",
+  "target_case_doctype",
+  "target_case_name",
+  "target_case_docstatus",
+  "target_case_status",
+  "financial_refs_section",
+  "service_line",
+  "service_code",
+  "service_date",
+  "sales_invoice",
+  "payment_entry",
+  "journal_entry",
+  "ndis_remittance_import",
+  "ndis_claim_batch",
+  "ndis_claim_line",
+  "recovery_values_section",
+  "proposed_recovery_amount",
+  "recovery_type",
+  "recovery_route",
+  "recovery_reason",
+  "recovery_party_type",
+  "recovery_party",
+  "recovery_contact_name",
+  "recovery_contact_email",
+  "recovery_due_date",
+  "recipient_snapshot_section",
+  "recipient_name",
+  "recipient_email",
+  "recipient_phone",
+  "outcome_snapshot_section",
+  "outcome_status_snapshot",
+  "outcome_summary",
+  "response_reference",
+  "promised_payment_date",
+  "promised_payment_amount",
+  "evidence_requested",
+  "dispute_reason",
+  "correct_contact_name",
+  "correct_contact_email",
+  "correct_contact_phone",
+  "closure_snapshot_section",
+  "closure_decision",
+  "closure_route",
+  "closure_priority",
+  "closure_owner",
+  "closure_due_date",
+  "final_closure_outcome",
+  "final_closure_summary",
+  "post_closure_routing_section",
+  "post_closure_routing_source_ready",
+  "post_closure_route",
+  "post_closure_route_priority",
+  "post_closure_route_owner",
+  "post_closure_route_due_date",
+  "post_closure_route_instruction",
+  "post_closure_route_decision_summary",
+  "routing_review_complete",
+  "routing_decision_recorded",
+  "routing_authorized",
+  "blocked_downstream_section",
+  "actual_recovery_case_closure_authorized",
+  "communication_creation_authorized",
+  "email_send_authorized",
+  "event_creation_authorized",
+  "todo_creation_authorized",
+  "task_creation_authorized",
+  "recovery_case_creation_authorized",
+  "journal_entry_authorized",
+  "manual_gl_authorized",
+  "payment_entry_authorized",
+  "sales_invoice_authorized",
+  "adjustment_authorized",
+  "bank_reconciliation_authorized",
+  "claim_batch_authorized",
+  "claim_line_authorized",
+  "remittance_import_authorized",
+  "line_status_section",
+  "post_closure_routing_preparation_hold",
+  "post_closure_routing_preparation_hold_reason",
+  "line_ready_for_post_closure_routing_preparation",
+  "post_closure_routing_preparation_line_status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_section",
+   "fieldtype": "Section Break",
+   "label": "Source"
+  },
+  {
+   "fieldname": "post_closure_routing_preparation_source_key",
+   "fieldtype": "Data",
+   "label": "Post Closure Routing Preparation Source Key",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_finalisation_section",
+   "fieldtype": "Section Break",
+   "label": "Source Finalisation"
+  },
+  {
+   "fieldname": "source_finalisation_doctype",
+   "fieldtype": "Data",
+   "label": "Source Finalisation DocType",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_finalisation_name",
+   "fieldtype": "Data",
+   "label": "Source Finalisation Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_finalisation_status",
+   "fieldtype": "Data",
+   "label": "Source Finalisation Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_routing_doctype",
+   "fieldtype": "Data",
+   "label": "Target Routing DocType",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_routing_name",
+   "fieldtype": "Data",
+   "label": "Target Routing Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_routing_status",
+   "fieldtype": "Data",
+   "label": "Target Routing Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "case_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Existing Recovery Case Snapshot"
+  },
+  {
+   "fieldname": "target_case_doctype",
+   "fieldtype": "Data",
+   "label": "Target Case DocType",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_case_name",
+   "fieldtype": "Data",
+   "label": "Target Case Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_case_docstatus",
+   "fieldtype": "Int",
+   "label": "Target Case Docstatus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_case_status",
+   "fieldtype": "Data",
+   "label": "Target Case Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "financial_refs_section",
+   "fieldtype": "Section Break",
+   "label": "Financial References"
+  },
+  {
+   "fieldname": "service_line",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service Line"
+  },
+  {
+   "fieldname": "service_code",
+   "fieldtype": "Data",
+   "label": "Service Code"
+  },
+  {
+   "fieldname": "service_date",
+   "fieldtype": "Date",
+   "label": "Service Date"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "payment_entry",
+   "fieldtype": "Link",
+   "label": "Payment Entry",
+   "options": "Payment Entry"
+  },
+  {
+   "fieldname": "journal_entry",
+   "fieldtype": "Link",
+   "label": "Journal Entry",
+   "options": "Journal Entry"
+  },
+  {
+   "fieldname": "ndis_remittance_import",
+   "fieldtype": "Link",
+   "label": "NDIS Remittance Import",
+   "options": "NDIS Remittance Import"
+  },
+  {
+   "fieldname": "ndis_claim_batch",
+   "fieldtype": "Link",
+   "label": "NDIS Claim Batch",
+   "options": "NDIS Claim Batch"
+  },
+  {
+   "fieldname": "ndis_claim_line",
+   "fieldtype": "Link",
+   "label": "NDIS Claim Line",
+   "options": "NDIS Claim Line"
+  },
+  {
+   "fieldname": "recovery_values_section",
+   "fieldtype": "Section Break",
+   "label": "Recovery Values"
+  },
+  {
+   "fieldname": "proposed_recovery_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Proposed Recovery Amount"
+  },
+  {
+   "fieldname": "recovery_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Recovery Type"
+  },
+  {
+   "fieldname": "recovery_route",
+   "fieldtype": "Data",
+   "label": "Recovery Route"
+  },
+  {
+   "fieldname": "recovery_reason",
+   "fieldtype": "Small Text",
+   "label": "Recovery Reason"
+  },
+  {
+   "default": "Customer",
+   "fieldname": "recovery_party_type",
+   "fieldtype": "Data",
+   "label": "Recovery Party Type"
+  },
+  {
+   "fieldname": "recovery_party",
+   "fieldtype": "Link",
+   "label": "Recovery Party",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "recovery_contact_name",
+   "fieldtype": "Data",
+   "label": "Recovery Contact Name"
+  },
+  {
+   "fieldname": "recovery_contact_email",
+   "fieldtype": "Data",
+   "label": "Recovery Contact Email"
+  },
+  {
+   "fieldname": "recovery_due_date",
+   "fieldtype": "Date",
+   "label": "Recovery Due Date"
+  },
+  {
+   "fieldname": "recipient_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Recipient Snapshot"
+  },
+  {
+   "fieldname": "recipient_name",
+   "fieldtype": "Data",
+   "label": "Recipient Name"
+  },
+  {
+   "fieldname": "recipient_email",
+   "fieldtype": "Data",
+   "label": "Recipient Email"
+  },
+  {
+   "fieldname": "recipient_phone",
+   "fieldtype": "Data",
+   "label": "Recipient Phone"
+  },
+  {
+   "fieldname": "outcome_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Outcome Snapshot"
+  },
+  {
+   "fieldname": "outcome_status_snapshot",
+   "fieldtype": "Data",
+   "label": "Outcome Status Snapshot",
+   "read_only": 1
+  },
+  {
+   "fieldname": "outcome_summary",
+   "fieldtype": "Small Text",
+   "label": "Outcome Summary"
+  },
+  {
+   "fieldname": "response_reference",
+   "fieldtype": "Data",
+   "label": "Response Reference"
+  },
+  {
+   "fieldname": "promised_payment_date",
+   "fieldtype": "Date",
+   "label": "Promised Payment Date"
+  },
+  {
+   "fieldname": "promised_payment_amount",
+   "fieldtype": "Currency",
+   "label": "Promised Payment Amount"
+  },
+  {
+   "default": "0",
+   "fieldname": "evidence_requested",
+   "fieldtype": "Check",
+   "label": "Evidence Requested"
+  },
+  {
+   "fieldname": "dispute_reason",
+   "fieldtype": "Small Text",
+   "label": "Dispute Reason"
+  },
+  {
+   "fieldname": "correct_contact_name",
+   "fieldtype": "Data",
+   "label": "Correct Contact Name"
+  },
+  {
+   "fieldname": "correct_contact_email",
+   "fieldtype": "Data",
+   "label": "Correct Contact Email"
+  },
+  {
+   "fieldname": "correct_contact_phone",
+   "fieldtype": "Data",
+   "label": "Correct Contact Phone"
+  },
+  {
+   "fieldname": "closure_snapshot_section",
+   "fieldtype": "Section Break",
+   "label": "Closure Snapshot"
+  },
+  {
+   "fieldname": "closure_decision",
+   "fieldtype": "Data",
+   "label": "Closure Decision"
+  },
+  {
+   "fieldname": "closure_route",
+   "fieldtype": "Data",
+   "label": "Closure Route"
+  },
+  {
+   "default": "Normal",
+   "fieldname": "closure_priority",
+   "fieldtype": "Select",
+   "label": "Closure Priority",
+   "options": "High\nNormal\nLow"
+  },
+  {
+   "fieldname": "closure_owner",
+   "fieldtype": "Link",
+   "label": "Closure Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "closure_due_date",
+   "fieldtype": "Date",
+   "label": "Closure Due Date"
+  },
+  {
+   "fieldname": "final_closure_outcome",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Final Closure Outcome"
+  },
+  {
+   "fieldname": "final_closure_summary",
+   "fieldtype": "Small Text",
+   "label": "Final Closure Summary"
+  },
+  {
+   "fieldname": "post_closure_routing_section",
+   "fieldtype": "Section Break",
+   "label": "Post Closure Routing"
+  },
+  {
+   "default": "0",
+   "fieldname": "post_closure_routing_source_ready",
+   "fieldtype": "Check",
+   "label": "Post Closure Routing Source Ready"
+  },
+  {
+   "fieldname": "post_closure_route",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Post Closure Route",
+   "options": "Exit Recovery Cycle\nRepeat Follow-Up Cycle\nPayment Promise Monitoring\nEvidence Follow-Up Review\nDispute Review\nContact Correction Review\nEscalation Review\nManual Review"
+  },
+  {
+   "default": "Normal",
+   "fieldname": "post_closure_route_priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Post Closure Route Priority",
+   "options": "High\nNormal\nLow"
+  },
+  {
+   "fieldname": "post_closure_route_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Post Closure Route Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "post_closure_route_due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Post Closure Route Due Date"
+  },
+  {
+   "fieldname": "post_closure_route_instruction",
+   "fieldtype": "Small Text",
+   "label": "Post Closure Route Instruction"
+  },
+  {
+   "fieldname": "post_closure_route_decision_summary",
+   "fieldtype": "Small Text",
+   "label": "Post Closure Route Decision Summary"
+  },
+  {
+   "default": "0",
+   "fieldname": "routing_review_complete",
+   "fieldtype": "Check",
+   "label": "Routing Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "routing_decision_recorded",
+   "fieldtype": "Check",
+   "label": "Routing Decision Recorded"
+  },
+  {
+   "default": "0",
+   "fieldname": "routing_authorized",
+   "fieldtype": "Check",
+   "label": "Routing Authorized"
+  },
+  {
+   "fieldname": "blocked_downstream_section",
+   "fieldtype": "Section Break",
+   "label": "Blocked Downstream Controls"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 54.",
+   "fieldname": "actual_recovery_case_closure_authorized",
+   "fieldtype": "Check",
+   "label": "Actual Recovery Case Closure Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 54.",
+   "fieldname": "communication_creation_authorized",
+   "fieldtype": "Check",
+   "label": "Communication Creation Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 54.",
+   "fieldname": "email_send_authorized",
+   "fieldtype": "Check",
+   "label": "Email Send Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 54.",
+   "fieldname": "event_creation_authorized",
+   "fieldtype": "Check",
+   "label": "Event Creation Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 54.",
+   "fieldname": "todo_creation_authorized",
+   "fieldtype": "Check",
+   "label": "ToDo Creation Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 54.",
+   "fieldname": "task_creation_authorized",
+   "fieldtype": "Check",
+   "label": "Task Creation Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 54.",
+   "fieldname": "recovery_case_creation_authorized",
+   "fieldtype": "Check",
+   "label": "Recovery Case Creation Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 54.",
+   "fieldname": "journal_entry_authorized",
+   "fieldtype": "Check",
+   "label": "Journal Entry Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 54.",
+   "fieldname": "manual_gl_authorized",
+   "fieldtype": "Check",
+   "label": "Manual GL Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 54.",
+   "fieldname": "payment_entry_authorized",
+   "fieldtype": "Check",
+   "label": "Payment Entry Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 54.",
+   "fieldname": "sales_invoice_authorized",
+   "fieldtype": "Check",
+   "label": "Sales Invoice Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 54.",
+   "fieldname": "adjustment_authorized",
+   "fieldtype": "Check",
+   "label": "Adjustment Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 54.",
+   "fieldname": "bank_reconciliation_authorized",
+   "fieldtype": "Check",
+   "label": "Bank Reconciliation Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 54.",
+   "fieldname": "claim_batch_authorized",
+   "fieldtype": "Check",
+   "label": "Claim Batch Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 54.",
+   "fieldname": "claim_line_authorized",
+   "fieldtype": "Check",
+   "label": "Claim Line Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 54.",
+   "fieldname": "remittance_import_authorized",
+   "fieldtype": "Check",
+   "label": "Remittance Import Authorized"
+  },
+  {
+   "fieldname": "line_status_section",
+   "fieldtype": "Section Break",
+   "label": "Line Status"
+  },
+  {
+   "default": "1",
+   "fieldname": "post_closure_routing_preparation_hold",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Post Closure Routing Preparation Hold"
+  },
+  {
+   "fieldname": "post_closure_routing_preparation_hold_reason",
+   "fieldtype": "Small Text",
+   "label": "Post Closure Routing Preparation Hold Reason"
+  },
+  {
+   "default": "0",
+   "fieldname": "line_ready_for_post_closure_routing_preparation",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Line Ready for Post Closure Routing Preparation"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "post_closure_routing_preparation_line_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Post Closure Routing Preparation Line Status",
+   "options": "Draft\nReady\nApproved\nRoute Prepared\nReturned\nCancelled"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-16 18:18:27.882120",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Post Closure Routing Preparation Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
