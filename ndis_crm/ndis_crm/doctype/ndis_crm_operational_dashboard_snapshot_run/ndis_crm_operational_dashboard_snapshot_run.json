@@ -1,0 +1,664 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-08-17 13:13:46.997616",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "status_section",
+  "status",
+  "snapshot_mode",
+  "readiness_percent",
+  "overall_completion_percent",
+  "operational_dashboard_snapshot_run_ready",
+  "dashboard_review_complete",
+  "dashboard_data_verified",
+  "dashboard_completion_allowed",
+  "blocked_controls_section",
+  "record_creation_allowed",
+  "record_update_allowed",
+  "communication_creation_allowed",
+  "email_send_allowed",
+  "event_creation_allowed",
+  "todo_creation_allowed",
+  "task_creation_allowed",
+  "finance_document_creation_allowed",
+  "claim_document_creation_allowed",
+  "remittance_document_creation_allowed",
+  "accounting_document_creation_allowed",
+  "source_links_section",
+  "crm_lead",
+  "crm_deal",
+  "participant_customer",
+  "participant_service_file",
+  "care_management_integration_run",
+  "post_closure_routing_finalisation_run",
+  "participant_details_section",
+  "participant_name",
+  "ndis_number",
+  "plan_start_date",
+  "plan_end_date",
+  "company",
+  "summary_section",
+  "snapshot_line_count",
+  "ready_stage_count",
+  "in_progress_stage_count",
+  "attention_stage_count",
+  "not_started_stage_count",
+  "linked_stage_count",
+  "dashboard_completed_line_count",
+  "area_summary_section",
+  "crm_stage_count",
+  "finance_stage_count",
+  "operations_stage_count",
+  "care_management_stage_count",
+  "service_delivery_stage_count",
+  "billing_stage_count",
+  "claim_stage_count",
+  "invoice_stage_count",
+  "remittance_stage_count",
+  "payment_stage_count",
+  "variance_stage_count",
+  "write_off_stage_count",
+  "recovery_stage_count",
+  "post_closure_stage_count",
+  "blocked_summary_section",
+  "blocked_record_creation_count",
+  "blocked_record_update_count",
+  "blocked_communication_count",
+  "blocked_email_send_count",
+  "blocked_event_count",
+  "blocked_todo_count",
+  "blocked_task_count",
+  "blocked_finance_creation_count",
+  "blocked_claim_creation_count",
+  "blocked_remittance_creation_count",
+  "blocked_accounting_creation_count",
+  "owners_section",
+  "operational_dashboard_owner",
+  "completed_by",
+  "completed_on",
+  "snapshot_lines_section",
+  "operational_dashboard_snapshot_lines",
+  "notes_section",
+  "dashboard_notes",
+  "returned_notes"
+ ],
+ "fields": [
+  {
+   "default": "NDIS-OPS-DASH-SNAPSHOT-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "NDIS-OPS-DASH-SNAPSHOT-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nIn Review\nReady for Dashboard Completion\nDashboard Snapshot Approved\nDashboard Snapshot Completed\nReturned\nCancelled"
+  },
+  {
+   "default": "Read Only Operational Snapshot",
+   "fieldname": "snapshot_mode",
+   "fieldtype": "Select",
+   "label": "Snapshot Mode",
+   "options": "Read Only Operational Snapshot"
+  },
+  {
+   "fieldname": "readiness_percent",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Readiness %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "overall_completion_percent",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Overall Completion %",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "operational_dashboard_snapshot_run_ready",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Operational Dashboard Snapshot Run Ready",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "dashboard_review_complete",
+   "fieldtype": "Check",
+   "label": "Dashboard Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "dashboard_data_verified",
+   "fieldtype": "Check",
+   "label": "Dashboard Data Verified"
+  },
+  {
+   "default": "0",
+   "fieldname": "dashboard_completion_allowed",
+   "fieldtype": "Check",
+   "label": "Dashboard Completion Allowed"
+  },
+  {
+   "fieldname": "blocked_controls_section",
+   "fieldtype": "Section Break",
+   "label": "Blocked Controls"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 57.",
+   "fieldname": "record_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Record Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 57.",
+   "fieldname": "record_update_allowed",
+   "fieldtype": "Check",
+   "label": "Record Update Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 57.",
+   "fieldname": "communication_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Communication Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 57.",
+   "fieldname": "email_send_allowed",
+   "fieldtype": "Check",
+   "label": "Email Send Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 57.",
+   "fieldname": "event_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Event Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 57.",
+   "fieldname": "todo_creation_allowed",
+   "fieldtype": "Check",
+   "label": "ToDo Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 57.",
+   "fieldname": "task_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Task Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 57.",
+   "fieldname": "finance_document_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Finance Document Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 57.",
+   "fieldname": "claim_document_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Claim Document Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 57.",
+   "fieldname": "remittance_document_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Remittance Document Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 57.",
+   "fieldname": "accounting_document_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Accounting Document Creation Allowed"
+  },
+  {
+   "fieldname": "source_links_section",
+   "fieldtype": "Section Break",
+   "label": "Source Links"
+  },
+  {
+   "fieldname": "crm_lead",
+   "fieldtype": "Data",
+   "label": "CRM Lead"
+  },
+  {
+   "fieldname": "crm_deal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "CRM Deal",
+   "options": "CRM Deal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "participant_customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Participant Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "participant_service_file",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Participant Service File",
+   "options": "NDIS Participant Service File"
+  },
+  {
+   "fieldname": "care_management_integration_run",
+   "fieldtype": "Link",
+   "label": "Care Management Integration Run",
+   "options": "NDIS CRM Care Management Integration Run"
+  },
+  {
+   "fieldname": "post_closure_routing_finalisation_run",
+   "fieldtype": "Link",
+   "label": "Post Closure Routing Finalisation Run",
+   "options": "NDIS CRM Post Closure Routing Finalisation Run"
+  },
+  {
+   "fieldname": "participant_details_section",
+   "fieldtype": "Section Break",
+   "label": "Participant Details"
+  },
+  {
+   "fieldname": "participant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Participant Name"
+  },
+  {
+   "fieldname": "ndis_number",
+   "fieldtype": "Data",
+   "label": "NDIS Number"
+  },
+  {
+   "fieldname": "plan_start_date",
+   "fieldtype": "Date",
+   "label": "Plan Start Date"
+  },
+  {
+   "fieldname": "plan_end_date",
+   "fieldtype": "Date",
+   "label": "Plan End Date"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "snapshot_line_count",
+   "fieldtype": "Int",
+   "label": "Snapshot Line Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ready_stage_count",
+   "fieldtype": "Int",
+   "label": "Ready Stage Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "in_progress_stage_count",
+   "fieldtype": "Int",
+   "label": "In Progress Stage Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attention_stage_count",
+   "fieldtype": "Int",
+   "label": "Attention Stage Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "not_started_stage_count",
+   "fieldtype": "Int",
+   "label": "Not Started Stage Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "linked_stage_count",
+   "fieldtype": "Int",
+   "label": "Linked Stage Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "dashboard_completed_line_count",
+   "fieldtype": "Int",
+   "label": "Dashboard Completed Line Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "area_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Area Summary"
+  },
+  {
+   "fieldname": "crm_stage_count",
+   "fieldtype": "Int",
+   "label": "CRM Stage Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "finance_stage_count",
+   "fieldtype": "Int",
+   "label": "Finance Stage Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "operations_stage_count",
+   "fieldtype": "Int",
+   "label": "Operations Stage Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "care_management_stage_count",
+   "fieldtype": "Int",
+   "label": "Care Management Stage Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_delivery_stage_count",
+   "fieldtype": "Int",
+   "label": "Service Delivery Stage Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "billing_stage_count",
+   "fieldtype": "Int",
+   "label": "Billing Stage Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "claim_stage_count",
+   "fieldtype": "Int",
+   "label": "Claim Stage Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "invoice_stage_count",
+   "fieldtype": "Int",
+   "label": "Invoice Stage Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remittance_stage_count",
+   "fieldtype": "Int",
+   "label": "Remittance Stage Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_stage_count",
+   "fieldtype": "Int",
+   "label": "Payment Stage Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "variance_stage_count",
+   "fieldtype": "Int",
+   "label": "Variance Stage Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "write_off_stage_count",
+   "fieldtype": "Int",
+   "label": "Write Off Stage Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "recovery_stage_count",
+   "fieldtype": "Int",
+   "label": "Recovery Stage Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "post_closure_stage_count",
+   "fieldtype": "Int",
+   "label": "Post Closure Stage Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Blocked Summary"
+  },
+  {
+   "fieldname": "blocked_record_creation_count",
+   "fieldtype": "Int",
+   "label": "Blocked Record Creation Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_record_update_count",
+   "fieldtype": "Int",
+   "label": "Blocked Record Update Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_communication_count",
+   "fieldtype": "Int",
+   "label": "Blocked Communication Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_email_send_count",
+   "fieldtype": "Int",
+   "label": "Blocked Email Send Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_event_count",
+   "fieldtype": "Int",
+   "label": "Blocked Event Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_todo_count",
+   "fieldtype": "Int",
+   "label": "Blocked ToDo Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_task_count",
+   "fieldtype": "Int",
+   "label": "Blocked Task Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_finance_creation_count",
+   "fieldtype": "Int",
+   "label": "Blocked Finance Creation Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_claim_creation_count",
+   "fieldtype": "Int",
+   "label": "Blocked Claim Creation Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_remittance_creation_count",
+   "fieldtype": "Int",
+   "label": "Blocked Remittance Creation Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocked_accounting_creation_count",
+   "fieldtype": "Int",
+   "label": "Blocked Accounting Creation Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "owners_section",
+   "fieldtype": "Section Break",
+   "label": "Owners"
+  },
+  {
+   "fieldname": "operational_dashboard_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Operational Dashboard Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "completed_by",
+   "fieldtype": "Link",
+   "label": "Completed By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "completed_on",
+   "fieldtype": "Datetime",
+   "label": "Completed On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "snapshot_lines_section",
+   "fieldtype": "Section Break",
+   "label": "Snapshot Lines"
+  },
+  {
+   "fieldname": "operational_dashboard_snapshot_lines",
+   "fieldtype": "Table",
+   "label": "Operational Dashboard Snapshot Lines",
+   "options": "NDIS CRM Operational Dashboard Snapshot Line"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "dashboard_notes",
+   "fieldtype": "Small Text",
+   "label": "Dashboard Notes"
+  },
+  {
+   "fieldname": "returned_notes",
+   "fieldtype": "Small Text",
+   "label": "Returned / Blocker Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-17 13:13:46.997616",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Operational Dashboard Snapshot Run",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Plan Management Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Read Only",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "participant_name",
+ "track_changes": 1
+}

@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-17 13:13:45.419362",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "module_area",
+  "module_stage",
+  "source_section",
+  "source_doctype",
+  "source_record",
+  "source_status",
+  "source_ready",
+  "stage_category",
+  "action_required",
+  "review_section",
+  "snapshot_review_complete",
+  "snapshot_data_verified",
+  "line_ready_for_dashboard",
+  "dashboard_line_status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "module_area",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Module Area"
+  },
+  {
+   "fieldname": "module_stage",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Module Stage"
+  },
+  {
+   "fieldname": "source_section",
+   "fieldtype": "Section Break",
+   "label": "Source"
+  },
+  {
+   "fieldname": "source_doctype",
+   "fieldtype": "Data",
+   "label": "Source DocType"
+  },
+  {
+   "fieldname": "source_record",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Source Record"
+  },
+  {
+   "fieldname": "source_status",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Source Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "source_ready",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Source Ready"
+  },
+  {
+   "fieldname": "stage_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Stage Category",
+   "options": "Ready / Complete\nIn Progress\nNeeds Attention\nNot Started"
+  },
+  {
+   "fieldname": "action_required",
+   "fieldtype": "Small Text",
+   "label": "Action Required"
+  },
+  {
+   "fieldname": "review_section",
+   "fieldtype": "Section Break",
+   "label": "Review"
+  },
+  {
+   "default": "0",
+   "fieldname": "snapshot_review_complete",
+   "fieldtype": "Check",
+   "label": "Snapshot Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "snapshot_data_verified",
+   "fieldtype": "Check",
+   "label": "Snapshot Data Verified"
+  },
+  {
+   "default": "0",
+   "fieldname": "line_ready_for_dashboard",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Line Ready for Dashboard"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "dashboard_line_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Dashboard Line Status",
+   "options": "Draft\nReady\nApproved\nDashboard Line Completed\nReturned\nCancelled"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-17 13:13:45.419362",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Operational Dashboard Snapshot Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
