@@ -1,0 +1,527 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-08-17 13:44:00.841245",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "status_section",
+  "status",
+  "hardening_mode",
+  "readiness_percent",
+  "hardening_completion_percent",
+  "permission_workflow_hardening_run_ready",
+  "review_controls_section",
+  "final_hardening_review_complete",
+  "boundary_review_complete",
+  "fixture_review_complete",
+  "permission_review_complete",
+  "workflow_review_complete",
+  "hardening_completion_allowed",
+  "blocked_controls_section",
+  "role_creation_allowed",
+  "permission_mutation_allowed",
+  "workflow_mutation_allowed",
+  "business_record_creation_allowed",
+  "communication_creation_allowed",
+  "email_send_allowed",
+  "event_creation_allowed",
+  "todo_creation_allowed",
+  "task_creation_allowed",
+  "finance_document_creation_allowed",
+  "claim_document_creation_allowed",
+  "remittance_document_creation_allowed",
+  "accounting_document_creation_allowed",
+  "source_links_section",
+  "crm_lead",
+  "crm_deal",
+  "participant_customer",
+  "participant_service_file",
+  "care_management_integration_run",
+  "operational_dashboard_snapshot_run",
+  "participant_details_section",
+  "participant_name",
+  "ndis_number",
+  "plan_start_date",
+  "plan_end_date",
+  "company",
+  "summary_section",
+  "hardening_line_count",
+  "passed_control_count",
+  "manual_review_count",
+  "attention_control_count",
+  "ready_hardening_line_count",
+  "completed_hardening_line_count",
+  "implementation_required_count",
+  "high_risk_count",
+  "medium_risk_count",
+  "low_risk_count",
+  "owners_section",
+  "hardening_owner",
+  "completed_by",
+  "completed_on",
+  "hardening_lines_section",
+  "permission_workflow_hardening_lines",
+  "notes_section",
+  "hardening_notes",
+  "returned_notes"
+ ],
+ "fields": [
+  {
+   "default": "NDIS-PERM-WORKFLOW-HARDEN-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "NDIS-PERM-WORKFLOW-HARDEN-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nIn Review\nReady for Hardening Approval\nHardening Approved\nHardening Completed\nReturned\nCancelled"
+  },
+  {
+   "default": "Assessment and Controlled Readiness Only",
+   "fieldname": "hardening_mode",
+   "fieldtype": "Select",
+   "label": "Hardening Mode",
+   "options": "Assessment and Controlled Readiness Only"
+  },
+  {
+   "fieldname": "readiness_percent",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Readiness %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "hardening_completion_percent",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Hardening Completion %",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "permission_workflow_hardening_run_ready",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Permission Workflow Hardening Run Ready",
+   "read_only": 1
+  },
+  {
+   "fieldname": "review_controls_section",
+   "fieldtype": "Section Break",
+   "label": "Review Controls"
+  },
+  {
+   "default": "0",
+   "fieldname": "final_hardening_review_complete",
+   "fieldtype": "Check",
+   "label": "Final Hardening Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "boundary_review_complete",
+   "fieldtype": "Check",
+   "label": "Boundary Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "fixture_review_complete",
+   "fieldtype": "Check",
+   "label": "Fixture Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "permission_review_complete",
+   "fieldtype": "Check",
+   "label": "Permission Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "workflow_review_complete",
+   "fieldtype": "Check",
+   "label": "Workflow Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "hardening_completion_allowed",
+   "fieldtype": "Check",
+   "label": "Hardening Completion Allowed"
+  },
+  {
+   "fieldname": "blocked_controls_section",
+   "fieldtype": "Section Break",
+   "label": "Blocked Controls"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 58.",
+   "fieldname": "role_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Role Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 58.",
+   "fieldname": "permission_mutation_allowed",
+   "fieldtype": "Check",
+   "label": "Permission Mutation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 58.",
+   "fieldname": "workflow_mutation_allowed",
+   "fieldtype": "Check",
+   "label": "Workflow Mutation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 58.",
+   "fieldname": "business_record_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Business Record Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 58.",
+   "fieldname": "communication_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Communication Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 58.",
+   "fieldname": "email_send_allowed",
+   "fieldtype": "Check",
+   "label": "Email Send Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 58.",
+   "fieldname": "event_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Event Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 58.",
+   "fieldname": "todo_creation_allowed",
+   "fieldtype": "Check",
+   "label": "ToDo Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 58.",
+   "fieldname": "task_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Task Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 58.",
+   "fieldname": "finance_document_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Finance Document Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 58.",
+   "fieldname": "claim_document_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Claim Document Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 58.",
+   "fieldname": "remittance_document_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Remittance Document Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 58.",
+   "fieldname": "accounting_document_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Accounting Document Creation Allowed"
+  },
+  {
+   "fieldname": "source_links_section",
+   "fieldtype": "Section Break",
+   "label": "Source Links"
+  },
+  {
+   "fieldname": "crm_lead",
+   "fieldtype": "Data",
+   "label": "CRM Lead"
+  },
+  {
+   "fieldname": "crm_deal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "CRM Deal",
+   "options": "CRM Deal"
+  },
+  {
+   "fieldname": "participant_customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Participant Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "participant_service_file",
+   "fieldtype": "Data",
+   "label": "Participant Service File"
+  },
+  {
+   "fieldname": "care_management_integration_run",
+   "fieldtype": "Data",
+   "label": "Care Management Integration Run"
+  },
+  {
+   "fieldname": "operational_dashboard_snapshot_run",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Operational Dashboard Snapshot Run",
+   "options": "NDIS CRM Operational Dashboard Snapshot Run",
+   "reqd": 1
+  },
+  {
+   "fieldname": "participant_details_section",
+   "fieldtype": "Section Break",
+   "label": "Participant Details"
+  },
+  {
+   "fieldname": "participant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Participant Name"
+  },
+  {
+   "fieldname": "ndis_number",
+   "fieldtype": "Data",
+   "label": "NDIS Number"
+  },
+  {
+   "fieldname": "plan_start_date",
+   "fieldtype": "Date",
+   "label": "Plan Start Date"
+  },
+  {
+   "fieldname": "plan_end_date",
+   "fieldtype": "Date",
+   "label": "Plan End Date"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "hardening_line_count",
+   "fieldtype": "Int",
+   "label": "Hardening Line Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "passed_control_count",
+   "fieldtype": "Int",
+   "label": "Passed Control Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "manual_review_count",
+   "fieldtype": "Int",
+   "label": "Manual Review Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attention_control_count",
+   "fieldtype": "Int",
+   "label": "Attention Control Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ready_hardening_line_count",
+   "fieldtype": "Int",
+   "label": "Ready Hardening Line Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "completed_hardening_line_count",
+   "fieldtype": "Int",
+   "label": "Completed Hardening Line Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "implementation_required_count",
+   "fieldtype": "Int",
+   "label": "Implementation Required Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "high_risk_count",
+   "fieldtype": "Int",
+   "label": "High Risk Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "medium_risk_count",
+   "fieldtype": "Int",
+   "label": "Medium Risk Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "low_risk_count",
+   "fieldtype": "Int",
+   "label": "Low Risk Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "owners_section",
+   "fieldtype": "Section Break",
+   "label": "Owners"
+  },
+  {
+   "fieldname": "hardening_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Hardening Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "completed_by",
+   "fieldtype": "Link",
+   "label": "Completed By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "completed_on",
+   "fieldtype": "Datetime",
+   "label": "Completed On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "hardening_lines_section",
+   "fieldtype": "Section Break",
+   "label": "Hardening Lines"
+  },
+  {
+   "fieldname": "permission_workflow_hardening_lines",
+   "fieldtype": "Table",
+   "label": "Permission Workflow Hardening Lines",
+   "options": "NDIS CRM Permission Workflow Hardening Line"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "hardening_notes",
+   "fieldtype": "Small Text",
+   "label": "Hardening Notes"
+  },
+  {
+   "fieldname": "returned_notes",
+   "fieldtype": "Small Text",
+   "label": "Returned / Blocker Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-17 13:44:00.841245",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Permission Workflow Hardening Run",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Plan Management Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Read Only",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "participant_name",
+ "track_changes": 1
+}

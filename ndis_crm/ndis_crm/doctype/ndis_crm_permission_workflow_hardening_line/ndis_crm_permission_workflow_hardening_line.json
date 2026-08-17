@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-17 13:43:59.392173",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "hardening_area",
+  "target_doctype",
+  "expected_control",
+  "observation_section",
+  "observed_status",
+  "observed_result",
+  "risk_level",
+  "review_section",
+  "hardening_review_complete",
+  "hardening_control_verified",
+  "implementation_required",
+  "implementation_note",
+  "line_ready_for_hardening",
+  "hardening_line_status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "hardening_area",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Hardening Area",
+   "options": "Role Coverage\nDocType Permission Coverage\nCRM Deal Validator Chain\nOperational Dashboard Readiness\nCare Management Boundary\nBusiness Transaction Boundary\nAccounting Boundary\nFixture Scope\nClient Script Coverage\nMigration Fixture Safety\nRuntime Side Effect Safety\nRepository Hygiene"
+  },
+  {
+   "fieldname": "target_doctype",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Target DocType",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "expected_control",
+   "fieldtype": "Small Text",
+   "label": "Expected Control"
+  },
+  {
+   "fieldname": "observation_section",
+   "fieldtype": "Section Break",
+   "label": "Observation"
+  },
+  {
+   "fieldname": "observed_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Observed Status",
+   "options": "Pass\nManual Review\nNeeds Attention"
+  },
+  {
+   "fieldname": "observed_result",
+   "fieldtype": "Small Text",
+   "label": "Observed Result"
+  },
+  {
+   "default": "Low",
+   "fieldname": "risk_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Risk Level",
+   "options": "High\nMedium\nLow"
+  },
+  {
+   "fieldname": "review_section",
+   "fieldtype": "Section Break",
+   "label": "Review Controls"
+  },
+  {
+   "default": "0",
+   "fieldname": "hardening_review_complete",
+   "fieldtype": "Check",
+   "label": "Hardening Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "hardening_control_verified",
+   "fieldtype": "Check",
+   "label": "Hardening Control Verified"
+  },
+  {
+   "default": "0",
+   "fieldname": "implementation_required",
+   "fieldtype": "Check",
+   "label": "Implementation Required"
+  },
+  {
+   "fieldname": "implementation_note",
+   "fieldtype": "Small Text",
+   "label": "Implementation Note"
+  },
+  {
+   "default": "0",
+   "fieldname": "line_ready_for_hardening",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Line Ready for Hardening"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "hardening_line_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Hardening Line Status",
+   "options": "Draft\nReady\nApproved\nHardening Completed\nReturned\nCancelled"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-17 13:43:59.392173",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Permission Workflow Hardening Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
