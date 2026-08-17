@@ -1,0 +1,525 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-08-17 17:30:56.905796",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "status_section",
+  "status",
+  "uat_mode",
+  "readiness_percent",
+  "uat_completion_percent",
+  "uat_regression_evidence_pack_run_ready",
+  "review_controls_section",
+  "final_uat_review_complete",
+  "boundary_evidence_review_complete",
+  "regression_evidence_review_complete",
+  "fixture_evidence_review_complete",
+  "repository_evidence_review_complete",
+  "uat_completion_allowed",
+  "blocked_controls_section",
+  "business_record_creation_allowed",
+  "care_management_mutation_allowed",
+  "communication_creation_allowed",
+  "email_send_allowed",
+  "event_creation_allowed",
+  "todo_creation_allowed",
+  "task_creation_allowed",
+  "finance_document_creation_allowed",
+  "claim_document_creation_allowed",
+  "remittance_document_creation_allowed",
+  "accounting_document_creation_allowed",
+  "source_links_section",
+  "crm_lead",
+  "crm_deal",
+  "participant_customer",
+  "participant_service_file",
+  "care_management_integration_run",
+  "operational_dashboard_snapshot_run",
+  "permission_workflow_hardening_run",
+  "participant_details_section",
+  "participant_name",
+  "ndis_number",
+  "plan_start_date",
+  "plan_end_date",
+  "company",
+  "summary_section",
+  "uat_line_count",
+  "passed_uat_count",
+  "manual_review_count",
+  "attention_uat_count",
+  "ready_uat_line_count",
+  "completed_uat_line_count",
+  "issue_found_count",
+  "issue_resolved_count",
+  "high_risk_count",
+  "medium_risk_count",
+  "low_risk_count",
+  "owners_section",
+  "uat_owner",
+  "completed_by",
+  "completed_on",
+  "uat_lines_section",
+  "uat_regression_evidence_lines",
+  "notes_section",
+  "uat_notes",
+  "returned_notes"
+ ],
+ "fields": [
+  {
+   "default": "NDIS-UAT-REGRESSION-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "NDIS-UAT-REGRESSION-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nIn Review\nReady for UAT Sign Off\nUAT Evidence Approved\nUAT Evidence Completed\nReturned\nCancelled"
+  },
+  {
+   "default": "Controlled Evidence Pack Only",
+   "fieldname": "uat_mode",
+   "fieldtype": "Select",
+   "label": "UAT Mode",
+   "options": "Controlled Evidence Pack Only"
+  },
+  {
+   "fieldname": "readiness_percent",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Readiness %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "uat_completion_percent",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "UAT Completion %",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "uat_regression_evidence_pack_run_ready",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "UAT Regression Evidence Pack Run Ready",
+   "read_only": 1
+  },
+  {
+   "fieldname": "review_controls_section",
+   "fieldtype": "Section Break",
+   "label": "Review Controls"
+  },
+  {
+   "default": "0",
+   "fieldname": "final_uat_review_complete",
+   "fieldtype": "Check",
+   "label": "Final UAT Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "boundary_evidence_review_complete",
+   "fieldtype": "Check",
+   "label": "Boundary Evidence Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "regression_evidence_review_complete",
+   "fieldtype": "Check",
+   "label": "Regression Evidence Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "fixture_evidence_review_complete",
+   "fieldtype": "Check",
+   "label": "Fixture Evidence Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "repository_evidence_review_complete",
+   "fieldtype": "Check",
+   "label": "Repository Evidence Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "uat_completion_allowed",
+   "fieldtype": "Check",
+   "label": "UAT Completion Allowed"
+  },
+  {
+   "fieldname": "blocked_controls_section",
+   "fieldtype": "Section Break",
+   "label": "Blocked Controls"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 59.",
+   "fieldname": "business_record_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Business Record Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 59.",
+   "fieldname": "care_management_mutation_allowed",
+   "fieldtype": "Check",
+   "label": "Care Management Mutation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 59.",
+   "fieldname": "communication_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Communication Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 59.",
+   "fieldname": "email_send_allowed",
+   "fieldtype": "Check",
+   "label": "Email Send Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 59.",
+   "fieldname": "event_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Event Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 59.",
+   "fieldname": "todo_creation_allowed",
+   "fieldtype": "Check",
+   "label": "ToDo Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 59.",
+   "fieldname": "task_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Task Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 59.",
+   "fieldname": "finance_document_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Finance Document Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 59.",
+   "fieldname": "claim_document_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Claim Document Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 59.",
+   "fieldname": "remittance_document_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Remittance Document Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 59.",
+   "fieldname": "accounting_document_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Accounting Document Creation Allowed"
+  },
+  {
+   "fieldname": "source_links_section",
+   "fieldtype": "Section Break",
+   "label": "Source Links"
+  },
+  {
+   "fieldname": "crm_lead",
+   "fieldtype": "Data",
+   "label": "CRM Lead"
+  },
+  {
+   "fieldname": "crm_deal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "CRM Deal",
+   "options": "CRM Deal"
+  },
+  {
+   "fieldname": "participant_customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Participant Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "participant_service_file",
+   "fieldtype": "Data",
+   "label": "Participant Service File"
+  },
+  {
+   "fieldname": "care_management_integration_run",
+   "fieldtype": "Data",
+   "label": "Care Management Integration Run"
+  },
+  {
+   "fieldname": "operational_dashboard_snapshot_run",
+   "fieldtype": "Link",
+   "label": "Operational Dashboard Snapshot Run",
+   "options": "NDIS CRM Operational Dashboard Snapshot Run"
+  },
+  {
+   "fieldname": "permission_workflow_hardening_run",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Permission Workflow Hardening Run",
+   "options": "NDIS CRM Permission Workflow Hardening Run",
+   "reqd": 1
+  },
+  {
+   "fieldname": "participant_details_section",
+   "fieldtype": "Section Break",
+   "label": "Participant Details"
+  },
+  {
+   "fieldname": "participant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Participant Name"
+  },
+  {
+   "fieldname": "ndis_number",
+   "fieldtype": "Data",
+   "label": "NDIS Number"
+  },
+  {
+   "fieldname": "plan_start_date",
+   "fieldtype": "Date",
+   "label": "Plan Start Date"
+  },
+  {
+   "fieldname": "plan_end_date",
+   "fieldtype": "Date",
+   "label": "Plan End Date"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "uat_line_count",
+   "fieldtype": "Int",
+   "label": "UAT Line Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "passed_uat_count",
+   "fieldtype": "Int",
+   "label": "Passed UAT Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "manual_review_count",
+   "fieldtype": "Int",
+   "label": "Manual Review Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attention_uat_count",
+   "fieldtype": "Int",
+   "label": "Attention UAT Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ready_uat_line_count",
+   "fieldtype": "Int",
+   "label": "Ready UAT Line Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "completed_uat_line_count",
+   "fieldtype": "Int",
+   "label": "Completed UAT Line Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "issue_found_count",
+   "fieldtype": "Int",
+   "label": "Issue Found Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "issue_resolved_count",
+   "fieldtype": "Int",
+   "label": "Issue Resolved Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "high_risk_count",
+   "fieldtype": "Int",
+   "label": "High Risk Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "medium_risk_count",
+   "fieldtype": "Int",
+   "label": "Medium Risk Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "low_risk_count",
+   "fieldtype": "Int",
+   "label": "Low Risk Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "owners_section",
+   "fieldtype": "Section Break",
+   "label": "Owners"
+  },
+  {
+   "fieldname": "uat_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UAT Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "completed_by",
+   "fieldtype": "Link",
+   "label": "Completed By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "completed_on",
+   "fieldtype": "Datetime",
+   "label": "Completed On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "uat_lines_section",
+   "fieldtype": "Section Break",
+   "label": "UAT Evidence Lines"
+  },
+  {
+   "fieldname": "uat_regression_evidence_lines",
+   "fieldtype": "Table",
+   "label": "UAT Regression Evidence Lines",
+   "options": "NDIS CRM UAT Regression Evidence Pack Line"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "uat_notes",
+   "fieldtype": "Small Text",
+   "label": "UAT Notes"
+  },
+  {
+   "fieldname": "returned_notes",
+   "fieldtype": "Small Text",
+   "label": "Returned / Blocker Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-17 17:30:56.905796",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM UAT Regression Evidence Pack Run",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Plan Management Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Read Only",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "participant_name",
+ "track_changes": 1
+}

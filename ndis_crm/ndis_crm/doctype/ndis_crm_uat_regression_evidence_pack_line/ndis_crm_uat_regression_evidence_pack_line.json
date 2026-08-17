@@ -1,0 +1,159 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-17 17:30:55.124745",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "uat_area",
+  "uat_scenario",
+  "expected_result",
+  "observed_section",
+  "observed_status",
+  "observed_result",
+  "risk_level",
+  "evidence_reference",
+  "tester",
+  "tested_on",
+  "issue_section",
+  "uat_review_complete",
+  "uat_evidence_recorded",
+  "issue_found",
+  "issue_summary",
+  "issue_resolved",
+  "line_ready_for_uat_sign_off",
+  "uat_line_status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "uat_area",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "UAT Area"
+  },
+  {
+   "fieldname": "uat_scenario",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "UAT Scenario"
+  },
+  {
+   "fieldname": "expected_result",
+   "fieldtype": "Small Text",
+   "label": "Expected Result"
+  },
+  {
+   "fieldname": "observed_section",
+   "fieldtype": "Section Break",
+   "label": "Observed Evidence"
+  },
+  {
+   "fieldname": "observed_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Observed Status",
+   "options": "Pass\nManual Review\nNeeds Attention"
+  },
+  {
+   "fieldname": "observed_result",
+   "fieldtype": "Small Text",
+   "label": "Observed Result"
+  },
+  {
+   "default": "Medium",
+   "fieldname": "risk_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Risk Level",
+   "options": "High\nMedium\nLow"
+  },
+  {
+   "fieldname": "evidence_reference",
+   "fieldtype": "Small Text",
+   "label": "Evidence Reference"
+  },
+  {
+   "fieldname": "tester",
+   "fieldtype": "Link",
+   "label": "Tester",
+   "options": "User"
+  },
+  {
+   "fieldname": "tested_on",
+   "fieldtype": "Datetime",
+   "label": "Tested On"
+  },
+  {
+   "fieldname": "issue_section",
+   "fieldtype": "Section Break",
+   "label": "Issue Controls"
+  },
+  {
+   "default": "0",
+   "fieldname": "uat_review_complete",
+   "fieldtype": "Check",
+   "label": "UAT Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "uat_evidence_recorded",
+   "fieldtype": "Check",
+   "label": "UAT Evidence Recorded"
+  },
+  {
+   "default": "0",
+   "fieldname": "issue_found",
+   "fieldtype": "Check",
+   "label": "Issue Found"
+  },
+  {
+   "fieldname": "issue_summary",
+   "fieldtype": "Small Text",
+   "label": "Issue Summary"
+  },
+  {
+   "default": "0",
+   "fieldname": "issue_resolved",
+   "fieldtype": "Check",
+   "label": "Issue Resolved"
+  },
+  {
+   "default": "0",
+   "fieldname": "line_ready_for_uat_sign_off",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Line Ready for UAT Sign Off"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "uat_line_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "UAT Line Status",
+   "options": "Draft\nReady\nApproved\nUAT Completed\nReturned\nCancelled"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-17 17:30:55.124745",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM UAT Regression Evidence Pack Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
