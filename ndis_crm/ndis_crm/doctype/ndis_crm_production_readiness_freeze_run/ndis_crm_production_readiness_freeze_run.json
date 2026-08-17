@@ -1,0 +1,547 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-08-17 18:27:55.331421",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "status_section",
+  "status",
+  "freeze_mode",
+  "readiness_percent",
+  "freeze_completion_percent",
+  "production_readiness_freeze_run_ready",
+  "review_controls_section",
+  "final_production_readiness_review_complete",
+  "boundary_freeze_review_complete",
+  "regression_freeze_review_complete",
+  "fixture_freeze_review_complete",
+  "repository_freeze_review_complete",
+  "production_readiness_sign_off_confirmed",
+  "production_freeze_completion_allowed",
+  "blocked_controls_section",
+  "production_activation_allowed",
+  "business_record_creation_allowed",
+  "care_management_mutation_allowed",
+  "communication_creation_allowed",
+  "email_send_allowed",
+  "event_creation_allowed",
+  "todo_creation_allowed",
+  "task_creation_allowed",
+  "finance_document_creation_allowed",
+  "claim_document_creation_allowed",
+  "remittance_document_creation_allowed",
+  "accounting_document_creation_allowed",
+  "source_links_section",
+  "crm_lead",
+  "crm_deal",
+  "participant_customer",
+  "participant_service_file",
+  "care_management_integration_run",
+  "operational_dashboard_snapshot_run",
+  "permission_workflow_hardening_run",
+  "uat_regression_evidence_pack_run",
+  "participant_details_section",
+  "participant_name",
+  "ndis_number",
+  "plan_start_date",
+  "plan_end_date",
+  "company",
+  "summary_section",
+  "freeze_line_count",
+  "passed_condition_count",
+  "manual_review_count",
+  "attention_condition_count",
+  "ready_freeze_line_count",
+  "completed_freeze_line_count",
+  "blocker_found_count",
+  "blocker_resolved_count",
+  "high_risk_count",
+  "medium_risk_count",
+  "low_risk_count",
+  "owners_section",
+  "freeze_owner",
+  "completed_by",
+  "completed_on",
+  "freeze_lines_section",
+  "production_readiness_freeze_lines",
+  "notes_section",
+  "production_readiness_freeze_notes",
+  "returned_notes"
+ ],
+ "fields": [
+  {
+   "default": "NDIS-PROD-READINESS-FREEZE-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "NDIS-PROD-READINESS-FREEZE-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nIn Review\nReady for Production Freeze Approval\nProduction Freeze Approved\nProduction Readiness Frozen\nReturned\nCancelled"
+  },
+  {
+   "default": "Readiness Freeze Only",
+   "fieldname": "freeze_mode",
+   "fieldtype": "Select",
+   "label": "Freeze Mode",
+   "options": "Readiness Freeze Only"
+  },
+  {
+   "fieldname": "readiness_percent",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Readiness %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "freeze_completion_percent",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Freeze Completion %",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "production_readiness_freeze_run_ready",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Production Readiness Freeze Run Ready",
+   "read_only": 1
+  },
+  {
+   "fieldname": "review_controls_section",
+   "fieldtype": "Section Break",
+   "label": "Review Controls"
+  },
+  {
+   "default": "0",
+   "fieldname": "final_production_readiness_review_complete",
+   "fieldtype": "Check",
+   "label": "Final Production Readiness Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "boundary_freeze_review_complete",
+   "fieldtype": "Check",
+   "label": "Boundary Freeze Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "regression_freeze_review_complete",
+   "fieldtype": "Check",
+   "label": "Regression Freeze Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "fixture_freeze_review_complete",
+   "fieldtype": "Check",
+   "label": "Fixture Freeze Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "repository_freeze_review_complete",
+   "fieldtype": "Check",
+   "label": "Repository Freeze Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "production_readiness_sign_off_confirmed",
+   "fieldtype": "Check",
+   "label": "Production Readiness Sign Off Confirmed"
+  },
+  {
+   "default": "0",
+   "fieldname": "production_freeze_completion_allowed",
+   "fieldtype": "Check",
+   "label": "Production Freeze Completion Allowed"
+  },
+  {
+   "fieldname": "blocked_controls_section",
+   "fieldtype": "Section Break",
+   "label": "Blocked Controls"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 60. This phase freezes readiness only.",
+   "fieldname": "production_activation_allowed",
+   "fieldtype": "Check",
+   "label": "Production Activation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 60.",
+   "fieldname": "business_record_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Business Record Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 60.",
+   "fieldname": "care_management_mutation_allowed",
+   "fieldtype": "Check",
+   "label": "Care Management Mutation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 60.",
+   "fieldname": "communication_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Communication Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 60.",
+   "fieldname": "email_send_allowed",
+   "fieldtype": "Check",
+   "label": "Email Send Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 60.",
+   "fieldname": "event_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Event Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 60.",
+   "fieldname": "todo_creation_allowed",
+   "fieldtype": "Check",
+   "label": "ToDo Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 60.",
+   "fieldname": "task_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Task Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 60.",
+   "fieldname": "finance_document_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Finance Document Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 60.",
+   "fieldname": "claim_document_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Claim Document Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 60.",
+   "fieldname": "remittance_document_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Remittance Document Creation Allowed"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 60.",
+   "fieldname": "accounting_document_creation_allowed",
+   "fieldtype": "Check",
+   "label": "Accounting Document Creation Allowed"
+  },
+  {
+   "fieldname": "source_links_section",
+   "fieldtype": "Section Break",
+   "label": "Source Links"
+  },
+  {
+   "fieldname": "crm_lead",
+   "fieldtype": "Data",
+   "label": "CRM Lead"
+  },
+  {
+   "fieldname": "crm_deal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "CRM Deal",
+   "options": "CRM Deal"
+  },
+  {
+   "fieldname": "participant_customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Participant Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "participant_service_file",
+   "fieldtype": "Data",
+   "label": "Participant Service File"
+  },
+  {
+   "fieldname": "care_management_integration_run",
+   "fieldtype": "Data",
+   "label": "Care Management Integration Run"
+  },
+  {
+   "fieldname": "operational_dashboard_snapshot_run",
+   "fieldtype": "Link",
+   "label": "Operational Dashboard Snapshot Run",
+   "options": "NDIS CRM Operational Dashboard Snapshot Run"
+  },
+  {
+   "fieldname": "permission_workflow_hardening_run",
+   "fieldtype": "Link",
+   "label": "Permission Workflow Hardening Run",
+   "options": "NDIS CRM Permission Workflow Hardening Run"
+  },
+  {
+   "fieldname": "uat_regression_evidence_pack_run",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UAT Regression Evidence Pack Run",
+   "options": "NDIS CRM UAT Regression Evidence Pack Run",
+   "reqd": 1
+  },
+  {
+   "fieldname": "participant_details_section",
+   "fieldtype": "Section Break",
+   "label": "Participant Details"
+  },
+  {
+   "fieldname": "participant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Participant Name"
+  },
+  {
+   "fieldname": "ndis_number",
+   "fieldtype": "Data",
+   "label": "NDIS Number"
+  },
+  {
+   "fieldname": "plan_start_date",
+   "fieldtype": "Date",
+   "label": "Plan Start Date"
+  },
+  {
+   "fieldname": "plan_end_date",
+   "fieldtype": "Date",
+   "label": "Plan End Date"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "summary_section",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "freeze_line_count",
+   "fieldtype": "Int",
+   "label": "Freeze Line Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "passed_condition_count",
+   "fieldtype": "Int",
+   "label": "Passed Condition Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "manual_review_count",
+   "fieldtype": "Int",
+   "label": "Manual Review Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attention_condition_count",
+   "fieldtype": "Int",
+   "label": "Attention Condition Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ready_freeze_line_count",
+   "fieldtype": "Int",
+   "label": "Ready Freeze Line Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "completed_freeze_line_count",
+   "fieldtype": "Int",
+   "label": "Completed Freeze Line Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocker_found_count",
+   "fieldtype": "Int",
+   "label": "Blocker Found Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "blocker_resolved_count",
+   "fieldtype": "Int",
+   "label": "Blocker Resolved Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "high_risk_count",
+   "fieldtype": "Int",
+   "label": "High Risk Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "medium_risk_count",
+   "fieldtype": "Int",
+   "label": "Medium Risk Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "low_risk_count",
+   "fieldtype": "Int",
+   "label": "Low Risk Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "owners_section",
+   "fieldtype": "Section Break",
+   "label": "Owners"
+  },
+  {
+   "fieldname": "freeze_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Freeze Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "completed_by",
+   "fieldtype": "Link",
+   "label": "Completed By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "completed_on",
+   "fieldtype": "Datetime",
+   "label": "Completed On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "freeze_lines_section",
+   "fieldtype": "Section Break",
+   "label": "Freeze Lines"
+  },
+  {
+   "fieldname": "production_readiness_freeze_lines",
+   "fieldtype": "Table",
+   "label": "Production Readiness Freeze Lines",
+   "options": "NDIS CRM Production Readiness Freeze Line"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "production_readiness_freeze_notes",
+   "fieldtype": "Small Text",
+   "label": "Production Readiness Freeze Notes"
+  },
+  {
+   "fieldname": "returned_notes",
+   "fieldtype": "Small Text",
+   "label": "Returned / Blocker Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-17 18:27:55.331421",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Production Readiness Freeze Run",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS Plan Management Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "NDIS CRM Read Only",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "participant_name",
+ "track_changes": 1
+}

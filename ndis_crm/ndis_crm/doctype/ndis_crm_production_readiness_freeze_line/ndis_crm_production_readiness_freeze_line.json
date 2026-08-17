@@ -1,0 +1,159 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-17 18:27:53.782600",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "freeze_area",
+  "freeze_item",
+  "expected_condition",
+  "observed_section",
+  "observed_status",
+  "observed_result",
+  "risk_level",
+  "evidence_reference",
+  "review_owner",
+  "reviewed_on",
+  "blocker_section",
+  "freeze_review_complete",
+  "condition_verified",
+  "blocker_found",
+  "blocker_summary",
+  "blocker_resolved",
+  "line_ready_for_freeze",
+  "freeze_line_status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "freeze_area",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Freeze Area"
+  },
+  {
+   "fieldname": "freeze_item",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Freeze Item"
+  },
+  {
+   "fieldname": "expected_condition",
+   "fieldtype": "Small Text",
+   "label": "Expected Condition"
+  },
+  {
+   "fieldname": "observed_section",
+   "fieldtype": "Section Break",
+   "label": "Observed Evidence"
+  },
+  {
+   "fieldname": "observed_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Observed Status",
+   "options": "Pass\nManual Review\nNeeds Attention"
+  },
+  {
+   "fieldname": "observed_result",
+   "fieldtype": "Small Text",
+   "label": "Observed Result"
+  },
+  {
+   "default": "Medium",
+   "fieldname": "risk_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Risk Level",
+   "options": "High\nMedium\nLow"
+  },
+  {
+   "fieldname": "evidence_reference",
+   "fieldtype": "Small Text",
+   "label": "Evidence Reference"
+  },
+  {
+   "fieldname": "review_owner",
+   "fieldtype": "Link",
+   "label": "Review Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "reviewed_on",
+   "fieldtype": "Datetime",
+   "label": "Reviewed On"
+  },
+  {
+   "fieldname": "blocker_section",
+   "fieldtype": "Section Break",
+   "label": "Blocker Controls"
+  },
+  {
+   "default": "0",
+   "fieldname": "freeze_review_complete",
+   "fieldtype": "Check",
+   "label": "Freeze Review Complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "condition_verified",
+   "fieldtype": "Check",
+   "label": "Condition Verified"
+  },
+  {
+   "default": "0",
+   "fieldname": "blocker_found",
+   "fieldtype": "Check",
+   "label": "Blocker Found"
+  },
+  {
+   "fieldname": "blocker_summary",
+   "fieldtype": "Small Text",
+   "label": "Blocker Summary"
+  },
+  {
+   "default": "0",
+   "fieldname": "blocker_resolved",
+   "fieldtype": "Check",
+   "label": "Blocker Resolved"
+  },
+  {
+   "default": "0",
+   "fieldname": "line_ready_for_freeze",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Line Ready for Freeze"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "freeze_line_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Freeze Line Status",
+   "options": "Draft\nReady\nApproved\nFreeze Completed\nReturned\nCancelled"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-17 18:27:53.782600",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Production Readiness Freeze Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
