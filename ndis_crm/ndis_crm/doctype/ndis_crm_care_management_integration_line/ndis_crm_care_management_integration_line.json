@@ -1,0 +1,393 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-17 12:08:41.755505",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "integration_area",
+  "integration_description",
+  "record_required",
+  "target_care_section",
+  "target_care_doctype",
+  "target_care_record",
+  "target_care_record_title",
+  "target_care_record_status",
+  "target_care_record_owner",
+  "target_care_last_checked_on",
+  "participant_section",
+  "participant_customer",
+  "participant_service_file",
+  "crm_deal",
+  "participant_name",
+  "ndis_number",
+  "integration_controls_section",
+  "integration_source_ready",
+  "link_confirmed",
+  "data_scope_confirmed",
+  "no_duplicate_record_confirmed",
+  "read_only_bridge_confirmed",
+  "owner_confirmed",
+  "operational_visibility_confirmed",
+  "integration_authorized",
+  "blocked_controls_section",
+  "care_management_record_creation_authorized",
+  "care_management_record_update_authorized",
+  "care_management_record_delete_authorized",
+  "communication_creation_authorized",
+  "email_send_authorized",
+  "event_creation_authorized",
+  "todo_creation_authorized",
+  "task_creation_authorized",
+  "recovery_case_creation_authorized",
+  "journal_entry_authorized",
+  "manual_gl_authorized",
+  "payment_entry_authorized",
+  "sales_invoice_authorized",
+  "adjustment_authorized",
+  "bank_reconciliation_authorized",
+  "claim_batch_authorized",
+  "claim_line_authorized",
+  "remittance_import_authorized",
+  "line_status_section",
+  "integration_hold",
+  "integration_hold_reason",
+  "line_ready_for_integration",
+  "integration_line_status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "integration_area",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Integration Area",
+   "options": "Care Management Profile\nCare Plan / Daily Activity Plan\nMedication Plan\nIncident Management\nNDIS Task Library\nStaff Assignment / Responsibility\nService Delivery / Shift Execution\nProgress Notes / Evidence"
+  },
+  {
+   "fieldname": "integration_description",
+   "fieldtype": "Small Text",
+   "label": "Integration Description"
+  },
+  {
+   "default": "0",
+   "fieldname": "record_required",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Record Required"
+  },
+  {
+   "fieldname": "target_care_section",
+   "fieldtype": "Section Break",
+   "label": "Target Care Management Record"
+  },
+  {
+   "fieldname": "target_care_doctype",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Target Care DocType",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "target_care_record",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Target Care Record",
+   "options": "target_care_doctype"
+  },
+  {
+   "fieldname": "target_care_record_title",
+   "fieldtype": "Data",
+   "label": "Target Care Record Title"
+  },
+  {
+   "fieldname": "target_care_record_status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Target Care Record Status"
+  },
+  {
+   "fieldname": "target_care_record_owner",
+   "fieldtype": "Link",
+   "label": "Target Care Record Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "target_care_last_checked_on",
+   "fieldtype": "Datetime",
+   "label": "Target Care Last Checked On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "participant_section",
+   "fieldtype": "Section Break",
+   "label": "Participant Snapshot"
+  },
+  {
+   "fieldname": "participant_customer",
+   "fieldtype": "Link",
+   "label": "Participant Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "participant_service_file",
+   "fieldtype": "Link",
+   "label": "Participant Service File",
+   "options": "NDIS Participant Service File"
+  },
+  {
+   "fieldname": "crm_deal",
+   "fieldtype": "Link",
+   "label": "CRM Deal",
+   "options": "CRM Deal"
+  },
+  {
+   "fieldname": "participant_name",
+   "fieldtype": "Data",
+   "label": "Participant Name"
+  },
+  {
+   "fieldname": "ndis_number",
+   "fieldtype": "Data",
+   "label": "NDIS Number"
+  },
+  {
+   "fieldname": "integration_controls_section",
+   "fieldtype": "Section Break",
+   "label": "Integration Controls"
+  },
+  {
+   "default": "0",
+   "fieldname": "integration_source_ready",
+   "fieldtype": "Check",
+   "label": "Integration Source Ready"
+  },
+  {
+   "default": "0",
+   "fieldname": "link_confirmed",
+   "fieldtype": "Check",
+   "label": "Link Confirmed"
+  },
+  {
+   "default": "0",
+   "fieldname": "data_scope_confirmed",
+   "fieldtype": "Check",
+   "label": "Data Scope Confirmed"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_duplicate_record_confirmed",
+   "fieldtype": "Check",
+   "label": "No Duplicate Record Confirmed"
+  },
+  {
+   "default": "0",
+   "fieldname": "read_only_bridge_confirmed",
+   "fieldtype": "Check",
+   "label": "Read Only Bridge Confirmed"
+  },
+  {
+   "default": "0",
+   "fieldname": "owner_confirmed",
+   "fieldtype": "Check",
+   "label": "Owner Confirmed"
+  },
+  {
+   "default": "0",
+   "fieldname": "operational_visibility_confirmed",
+   "fieldtype": "Check",
+   "label": "Operational Visibility Confirmed"
+  },
+  {
+   "default": "0",
+   "fieldname": "integration_authorized",
+   "fieldtype": "Check",
+   "label": "Integration Authorized"
+  },
+  {
+   "fieldname": "blocked_controls_section",
+   "fieldtype": "Section Break",
+   "label": "Blocked Controls"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 56.",
+   "fieldname": "care_management_record_creation_authorized",
+   "fieldtype": "Check",
+   "label": "Care Management Record Creation Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 56.",
+   "fieldname": "care_management_record_update_authorized",
+   "fieldtype": "Check",
+   "label": "Care Management Record Update Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 56.",
+   "fieldname": "care_management_record_delete_authorized",
+   "fieldtype": "Check",
+   "label": "Care Management Record Delete Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 56.",
+   "fieldname": "communication_creation_authorized",
+   "fieldtype": "Check",
+   "label": "Communication Creation Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 56.",
+   "fieldname": "email_send_authorized",
+   "fieldtype": "Check",
+   "label": "Email Send Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 56.",
+   "fieldname": "event_creation_authorized",
+   "fieldtype": "Check",
+   "label": "Event Creation Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 56.",
+   "fieldname": "todo_creation_authorized",
+   "fieldtype": "Check",
+   "label": "ToDo Creation Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 56.",
+   "fieldname": "task_creation_authorized",
+   "fieldtype": "Check",
+   "label": "Task Creation Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 56.",
+   "fieldname": "recovery_case_creation_authorized",
+   "fieldtype": "Check",
+   "label": "Recovery Case Creation Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 56.",
+   "fieldname": "journal_entry_authorized",
+   "fieldtype": "Check",
+   "label": "Journal Entry Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 56.",
+   "fieldname": "manual_gl_authorized",
+   "fieldtype": "Check",
+   "label": "Manual GL Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 56.",
+   "fieldname": "payment_entry_authorized",
+   "fieldtype": "Check",
+   "label": "Payment Entry Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 56.",
+   "fieldname": "sales_invoice_authorized",
+   "fieldtype": "Check",
+   "label": "Sales Invoice Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 56.",
+   "fieldname": "adjustment_authorized",
+   "fieldtype": "Check",
+   "label": "Adjustment Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 56.",
+   "fieldname": "bank_reconciliation_authorized",
+   "fieldtype": "Check",
+   "label": "Bank Reconciliation Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 56.",
+   "fieldname": "claim_batch_authorized",
+   "fieldtype": "Check",
+   "label": "Claim Batch Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 56.",
+   "fieldname": "claim_line_authorized",
+   "fieldtype": "Check",
+   "label": "Claim Line Authorized"
+  },
+  {
+   "default": "0",
+   "description": "Blocked in Phase 56.",
+   "fieldname": "remittance_import_authorized",
+   "fieldtype": "Check",
+   "label": "Remittance Import Authorized"
+  },
+  {
+   "fieldname": "line_status_section",
+   "fieldtype": "Section Break",
+   "label": "Line Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "integration_hold",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Integration Hold"
+  },
+  {
+   "fieldname": "integration_hold_reason",
+   "fieldtype": "Small Text",
+   "label": "Integration Hold Reason"
+  },
+  {
+   "default": "0",
+   "fieldname": "line_ready_for_integration",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Line Ready for Integration"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "integration_line_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Integration Line Status",
+   "options": "Draft\nReady\nApproved\nIntegration Completed\nReturned\nCancelled"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-17 12:08:41.755505",
+ "modified_by": "Administrator",
+ "module": "NDIS CRM",
+ "name": "NDIS CRM Care Management Integration Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
