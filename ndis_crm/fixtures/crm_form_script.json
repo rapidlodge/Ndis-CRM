@@ -2,6 +2,17 @@
  {
   "docstatus": 0,
   "doctype": "CRM Form Script",
+  "dt": "CRM Lead",
+  "enabled": 1,
+  "is_standard": 0,
+  "modified": "2026-04-30 17:32:32.510845",
+  "name": "NDIS CRM Lead Actions",
+  "script": "function setupForm({ doc, call, router, createToast }) {\n  return {\n    actions: [\n      {\n        label: \"Create NDIS Intake\",\n        onClick: () => {\n          call(\"ndis_crm.phase2_api.create_intake_from_crm_lead\", {\n            lead: doc.name\n          }).then((data) => {\n            if (data && data.name) {\n              createToast({\n                title: data.created ? \"NDIS Intake Created\" : \"Existing NDIS Intake Found\",\n                icon: \"check\",\n                iconClasses: \"text-green-600\",\n              })\n              window.open(`/app/ndis-participant-intake/${data.name}`, \"_blank\")\n            } else {\n              createToast({\n                title: \"Could not create NDIS Intake\",\n                icon: \"x\",\n                iconClasses: \"text-red-600\",\n              })\n            }\n          })\n        }\n      },\n      {\n        label: \"Create CRM Deal\",\n        onClick: () => {\n          call(\"ndis_crm.phase2_api.create_crm_deal_from_lead\", {\n            lead: doc.name\n          }).then((data) => {\n            if (data && data.name) {\n              createToast({\n                title: data.created ? \"CRM Deal Created\" : \"Existing CRM Deal Found\",\n                icon: \"check\",\n                iconClasses: \"text-green-600\",\n              })\n              window.open(`/crm/deals/${data.name}`, \"_blank\")\n            } else {\n              createToast({\n                title: \"Could not create CRM Deal\",\n                icon: \"x\",\n                iconClasses: \"text-red-600\",\n              })\n            }\n          })\n        }\n      }\n    ]\n  }\n}",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "CRM Form Script",
   "dt": "CRM Deal",
   "enabled": 1,
   "is_standard": 0,

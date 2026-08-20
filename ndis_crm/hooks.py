@@ -469,7 +469,18 @@ fixtures.extend([
     },
     {
         "doctype": "CRM Form Script",
-        "filters": [["name", "in", ["NDIS CRM Deal Actions"]]],
+        "filters": [["name", "in", ["NDIS CRM Lead Actions", "NDIS CRM Deal Actions"]]],
+    },
+    {
+        "doctype": "CRM Fields Layout",
+        "filters": [["name", "in", [
+            "CRM Lead-Data Fields",
+            "CRM Lead-Quick Entry",
+            "CRM Lead-Side Panel",
+            "CRM Deal-Data Fields",
+            "CRM Deal-Quick Entry",
+            "CRM Deal-Side Panel",
+        ]]],
     },
     {
         "doctype": "Client Script",
@@ -6223,7 +6234,18 @@ fixtures.extend([
     },
     {
         "doctype": "CRM Form Script",
-        "filters": [["name", "in", ["NDIS CRM Deal Actions"]]],
+        "filters": [["name", "in", ["NDIS CRM Lead Actions", "NDIS CRM Deal Actions"]]],
+    },
+    {
+        "doctype": "CRM Fields Layout",
+        "filters": [["name", "in", [
+            "CRM Lead-Data Fields",
+            "CRM Lead-Quick Entry",
+            "CRM Lead-Side Panel",
+            "CRM Deal-Data Fields",
+            "CRM Deal-Quick Entry",
+            "CRM Deal-Side Panel",
+        ]]],
     },
     {
         "doctype": "Client Script",
